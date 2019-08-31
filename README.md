@@ -1,2 +1,2 @@
 # ProjetoEstagio
-Projeto de Software da turma de Estagio da UniaAGES
+Projeto de Software da turma de Estagio da UniAGES
