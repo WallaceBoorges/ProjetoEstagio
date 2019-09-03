@@ -1,0 +1,54 @@
+C:\Users\Wallace\source\repos\projetoEstagio\DAL\bin\Debug\DAL.dll
+C:\Users\Wallace\source\repos\projetoEstagio\DAL\bin\Debug\DAL.pdb
+C:\Users\Wallace\source\repos\projetoEstagio\DAL\bin\Debug\Modelo.dll
+C:\Users\Wallace\source\repos\projetoEstagio\DAL\bin\Debug\Modelo.pdb
+C:\Users\Wallace\source\repos\projetoEstagio\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Users\Wallace\source\repos\projetoEstagio\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Wallace\source\repos\projetoEstagio\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\Wallace\source\repos\projetoEstagio\DAL\obj\Debug\DAL.dll
+C:\Users\Wallace\source\repos\projetoEstagio\DAL\obj\Debug\DAL.pdb
+C:\projetoEstagio1\DAL\bin\Debug\DAL.dll
+C:\projetoEstagio1\DAL\bin\Debug\DAL.pdb
+C:\projetoEstagio1\DAL\bin\Debug\Modelo.dll
+C:\projetoEstagio1\DAL\bin\Debug\Modelo.pdb
+C:\projetoEstagio1\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\projetoEstagio1\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\projetoEstagio1\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\projetoEstagio1\DAL\obj\Debug\DAL.dll
+C:\projetoEstagio1\DAL\obj\Debug\DAL.pdb
+C:\projetoEstagio2\DAL\bin\Debug\DAL.dll
+C:\projetoEstagio2\DAL\bin\Debug\DAL.pdb
+C:\projetoEstagio2\DAL\bin\Debug\Modelo.dll
+C:\projetoEstagio2\DAL\bin\Debug\Modelo.pdb
+C:\projetoEstagio2\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\projetoEstagio2\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\projetoEstagio2\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\projetoEstagio2\DAL\obj\Debug\DAL.dll
+C:\projetoEstagio2\DAL\obj\Debug\DAL.pdb
+C:\Users\Wallace\Documents\projetoEstagio2\DAL\bin\Debug\DAL.dll
+C:\Users\Wallace\Documents\projetoEstagio2\DAL\bin\Debug\DAL.pdb
+C:\Users\Wallace\Documents\projetoEstagio2\DAL\bin\Debug\Modelo.dll
+C:\Users\Wallace\Documents\projetoEstagio2\DAL\bin\Debug\Modelo.pdb
+C:\Users\Wallace\Documents\projetoEstagio2\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Users\Wallace\Documents\projetoEstagio2\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Wallace\Documents\projetoEstagio2\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\Wallace\Documents\projetoEstagio2\DAL\obj\Debug\DAL.dll
+C:\Users\Wallace\Documents\projetoEstagio2\DAL\obj\Debug\DAL.pdb
+C:\Users\Matheus Gois\Desktop\Nova pasta\ProjetoEstagio\DAL\bin\Debug\DAL.dll
+C:\Users\Matheus Gois\Desktop\Nova pasta\ProjetoEstagio\DAL\bin\Debug\DAL.pdb
+C:\Users\Matheus Gois\Desktop\Nova pasta\ProjetoEstagio\DAL\bin\Debug\Modelo.dll
+C:\Users\Matheus Gois\Desktop\Nova pasta\ProjetoEstagio\DAL\bin\Debug\Modelo.pdb
+C:\Users\Matheus Gois\Desktop\Nova pasta\ProjetoEstagio\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Users\Matheus Gois\Desktop\Nova pasta\ProjetoEstagio\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Matheus Gois\Desktop\Nova pasta\ProjetoEstagio\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\Matheus Gois\Desktop\Nova pasta\ProjetoEstagio\DAL\obj\Debug\DAL.dll
+C:\Users\Matheus Gois\Desktop\Nova pasta\ProjetoEstagio\DAL\obj\Debug\DAL.pdb
+C:\Users\Matheus Gois\Desktop\ProjetoEstagio\DAL\bin\Debug\DAL.dll
+C:\Users\Matheus Gois\Desktop\ProjetoEstagio\DAL\bin\Debug\DAL.pdb
+C:\Users\Matheus Gois\Desktop\ProjetoEstagio\DAL\bin\Debug\Modelo.dll
+C:\Users\Matheus Gois\Desktop\ProjetoEstagio\DAL\bin\Debug\Modelo.pdb
+C:\Users\Matheus Gois\Desktop\ProjetoEstagio\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Users\Matheus Gois\Desktop\ProjetoEstagio\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Matheus Gois\Desktop\ProjetoEstagio\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\Matheus Gois\Desktop\ProjetoEstagio\DAL\obj\Debug\DAL.dll
+C:\Users\Matheus Gois\Desktop\ProjetoEstagio\DAL\obj\Debug\DAL.pdb
