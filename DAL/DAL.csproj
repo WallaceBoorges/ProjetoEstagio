@@ -44,6 +44,7 @@
     <Compile Include="ConexaoBD.cs" />
     <Compile Include="DALCategoria.cs" />
     <Compile Include="DALSubCategoria.cs" />
+    <Compile Include="DALUnidadeMedida.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
