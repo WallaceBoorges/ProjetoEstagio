@@ -114,3 +114,23 @@ C:\Users\Matheus Gois\Desktop\ProjetoEstagio\GUI\obj\Debug\GUI.csproj.CoreCompil
 C:\Users\Matheus Gois\Desktop\ProjetoEstagio\GUI\obj\Debug\GUI.csproj.CopyComplete
 C:\Users\Matheus Gois\Desktop\ProjetoEstagio\GUI\obj\Debug\GUI.exe
 C:\Users\Matheus Gois\Desktop\ProjetoEstagio\GUI\obj\Debug\GUI.pdb
+C:\Users\Bia\Documents\ProjetoEstagio\GUI\bin\Debug\GUI.exe.config
+C:\Users\Bia\Documents\ProjetoEstagio\GUI\bin\Debug\GUI.exe
+C:\Users\Bia\Documents\ProjetoEstagio\GUI\bin\Debug\GUI.pdb
+C:\Users\Bia\Documents\ProjetoEstagio\GUI\bin\Debug\BLL.dll
+C:\Users\Bia\Documents\ProjetoEstagio\GUI\bin\Debug\DAL.dll
+C:\Users\Bia\Documents\ProjetoEstagio\GUI\bin\Debug\Modelo.dll
+C:\Users\Bia\Documents\ProjetoEstagio\GUI\bin\Debug\BLL.pdb
+C:\Users\Bia\Documents\ProjetoEstagio\GUI\bin\Debug\DAL.pdb
+C:\Users\Bia\Documents\ProjetoEstagio\GUI\bin\Debug\Modelo.pdb
+C:\Users\Bia\Documents\ProjetoEstagio\GUI\obj\Debug\GUI.csprojAssemblyReference.cache
+C:\Users\Bia\Documents\ProjetoEstagio\GUI\obj\Debug\GUI.frmCadastroCategoria.resources
+C:\Users\Bia\Documents\ProjetoEstagio\GUI\obj\Debug\GUI.frmCadastroSubCategoria.resources
+C:\Users\Bia\Documents\ProjetoEstagio\GUI\obj\Debug\GUI.frmPrincipal.resources
+C:\Users\Bia\Documents\ProjetoEstagio\GUI\obj\Debug\GUI.frmUnidadeMedida.resources
+C:\Users\Bia\Documents\ProjetoEstagio\GUI\obj\Debug\GUI.Properties.Resources.resources
+C:\Users\Bia\Documents\ProjetoEstagio\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
+C:\Users\Bia\Documents\ProjetoEstagio\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+C:\Users\Bia\Documents\ProjetoEstagio\GUI\obj\Debug\GUI.csproj.CopyComplete
+C:\Users\Bia\Documents\ProjetoEstagio\GUI\obj\Debug\GUI.exe
+C:\Users\Bia\Documents\ProjetoEstagio\GUI\obj\Debug\GUI.pdb

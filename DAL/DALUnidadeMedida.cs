@@ -55,7 +55,7 @@ namespace DAL
                     conn.Open(); //Abrindo a conexão
                     using (var comm = conn.CreateCommand()) //Criando o comando SQL
                     {
-                        comm.CommandText = "DELETE FROM undMedida WHERE uniMedida_cod = @id";
+                        comm.CommandText = "DELETE FROM undmedida WHERE uniMedida_cod = @id";
                         //Passando o valores por parametro
                         comm.Parameters.Add(new SqlParameter("@id", codigo));
                         //Executando o comando

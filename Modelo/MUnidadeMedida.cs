@@ -23,7 +23,10 @@ namespace Modelo
             this.codigoUniMedida = codigo;
             this.nomeUniMedida = nome;
         }
+        public MUnidadeMedida(string NomeUniMedida)
+        {
+            nomeUniMedida = NomeUniMedida;
+        }
 
-        
     }
 }
