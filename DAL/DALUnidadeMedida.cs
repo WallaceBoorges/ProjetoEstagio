@@ -11,7 +11,29 @@ namespace DAL
 {
     public class DALUnidadeMedida
     {
-        public static DataTable LocalizarDados(String valor)
+        //Método para carregar os dados do banco no combobox da unidade de medida 
+        public static DataTable CarregarGrid()
+        {
+            using (var conn = ConexaoBD.AbrirConexao()) //Passando a string de conexão
+            {
+                conn.Open(); //Abrindo a conexão
+                using (var comm = conn.CreateCommand()) //Criando o comando SQL
+                {
+                    comm.CommandText = "Select* from undmedida order by uniMedida_cod desc";
+                    var reader = comm.ExecuteReader(); //Passando o comando 
+                    var table = new DataTable(); //Passando a tabela
+                    table.Load(reader); //Carregando a tabela 
+                    return table; //Retornando a consulta ao Banco de Dados
+                }
+            }
+        }
+
+        /*Optei por deixar tudo comentado pq se caso a gente precise desses métodos algum dia, é só tirar do
+         * do comentário 
+         Os métodos abaixo são referentes ao CRUD.*/
+       
+        
+        /*public static DataTable LocalizarDados(String valor)
         {
             using (var conn = ConexaoBD.AbrirConexao()) //Passando a string de conexão
             {
@@ -29,23 +51,7 @@ namespace DAL
             }
         }
 
-        /* Método para carregar os dados da tabela no DataGridView*/
-        public static DataTable CarregarGrid()
-        {
-            using (var conn = ConexaoBD.AbrirConexao()) //Passando a string de conexão
-            {
-                conn.Open(); //Abrindo a conexão
-                using (var comm = conn.CreateCommand()) //Criando o comando SQL
-                {
-                    comm.CommandText = "Select* from undmedida order by uniMedida_cod desc";
-                    var reader = comm.ExecuteReader(); //Passando o comando 
-                    var table = new DataTable(); //Passando a tabela
-                    table.Load(reader); //Carregando a tabela 
-                    return table; //Retornando a consulta ao Banco de Dados
-                }
-            }
-        }
-
+        /*
         public static void Excluir(int codigo)
         {
             try
@@ -117,5 +123,6 @@ namespace DAL
 
 
         }
+        */
     }
 }

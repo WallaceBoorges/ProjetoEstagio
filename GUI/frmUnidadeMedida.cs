@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DAL;
 
 namespace GUI
 {
@@ -137,6 +138,19 @@ namespace GUI
         private void frmUnidadeMedida_Load(object sender, EventArgs e)
         {
             Alterarbotoes(1);
+            this.cbxUniMedida.DataSource = DALUnidadeMedida.CarregarGrid();
+            this.cbxUniMedida.DisplayMember = "uniMedida_nome";
+            this.cbxUniMedida.ValueMember = "uniMedida_cod";
+        }
+
+        private void cbxUniMedida_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbxUniMedida_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }

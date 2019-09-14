@@ -21,8 +21,8 @@ namespace DAL
                     {
                         comm.CommandText = "Insert into subcategoria(categoria_cod, subCategoria_nome) values (@codigo, @nome); select @@IDENTITY;";
                         //Passando valores por parametro
-                        comm.Parameters.Add(new SqlParameter("@nome", modelo.subNomeCategoria));
-                        comm.Parameters.Add(new SqlParameter("@codigo", modelo.CodigoCategoria));
+                        comm.Parameters.Add(new SqlParameter("@nome", modelo.subCategoria_nome));
+                        comm.Parameters.Add(new SqlParameter("@codigo", modelo.subCategoria_cod));
                         //Executando o comando
                         comm.ExecuteNonQuery();
                     }
@@ -45,9 +45,9 @@ namespace DAL
                     {
                         comm.CommandText = "Update subcategoria set subCategoria_nome = @nome, categoria_cod = @codigo where subCategoria_cod = @subcodigo; ";
                         //Passando valores por parametro
-                        comm.Parameters.Add(new SqlParameter("@nome", modelo.subNomeCategoria));
-                        comm.Parameters.Add(new SqlParameter("@subcodigo", modelo.subCodigoCategoria));
-                        comm.Parameters.Add(new SqlParameter("@codigo", modelo.CodigoCategoria));
+                        comm.Parameters.Add(new SqlParameter("@nome", modelo.subCategoria_nome));
+                        comm.Parameters.Add(new SqlParameter("@subcodigo", modelo.subCategoria_cod));
+                        comm.Parameters.Add(new SqlParameter("@codigo", modelo.subCategoria_cod));
                         //Executando o comando
                         comm.ExecuteNonQuery();
                     }

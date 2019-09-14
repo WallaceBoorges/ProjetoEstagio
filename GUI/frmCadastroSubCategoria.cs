@@ -62,7 +62,7 @@ namespace GUI
             cbxCodCat.DataSource = DALCategoria.CarregarGrid();
             cbxCodCat.ValueMember = "categoria_cod";
             cbxCodCat.DisplayMember = "categoria_nome";
-
+            
             Alterarbotoes(1);
             dgvSubCategoria.DataSource = DALSubCategoria.CarregarGrid();
         }
@@ -85,7 +85,7 @@ namespace GUI
                 }
                 else
                 {
-                    modelo.subCodigoCategoria = int.Parse(txtCodigo.Text); //Pegando o ID
+                    modelo.subCategoria_cod = int.Parse(txtCodigo.Text); //Pegando o ID
                     BLLSubCategoria.Alterar(modelo);
                     MessageBox.Show("Cadastro alterado com sucesso!");
                 }
@@ -149,6 +149,11 @@ namespace GUI
                 MessageBox.Show("Impossível excluir o registro. \n O registro está sendo utilizado em outro local");
                 Alterarbotoes(1);
             }
+        }
+
+        private void cbxCodCat_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

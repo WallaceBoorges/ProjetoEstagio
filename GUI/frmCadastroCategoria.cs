@@ -96,7 +96,7 @@ namespace GUI
                 }
                 else
                 {
-                    modelo.CodigoCategoria = Convert.ToInt32(txtCodigo.Text); //Pegando o ID
+                    modelo.categoria_cod = Convert.ToInt32(txtCodigo.Text); //Pegando o ID
                     BLLCategoria.Alterar(modelo);
                     MessageBox.Show("Cadastro alterado com sucesso!");
                 }

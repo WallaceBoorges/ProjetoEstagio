@@ -42,6 +42,7 @@
             this.dgvUniMedida = new System.Windows.Forms.DataGridView();
             this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cbxUniMedida = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUniMedida)).BeginInit();
             this.SuspendLayout();
             // 
@@ -186,11 +187,23 @@
             this.Nome.ReadOnly = true;
             this.Nome.Width = 450;
             // 
+            // cbxUniMedida
+            // 
+            this.cbxUniMedida.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxUniMedida.FormattingEnabled = true;
+            this.cbxUniMedida.Location = new System.Drawing.Point(484, 159);
+            this.cbxUniMedida.Name = "cbxUniMedida";
+            this.cbxUniMedida.Size = new System.Drawing.Size(121, 24);
+            this.cbxUniMedida.TabIndex = 37;
+            this.cbxUniMedida.SelectedIndexChanged += new System.EventHandler(this.cbxUniMedida_SelectedIndexChanged);
+            this.cbxUniMedida.Click += new System.EventHandler(this.cbxUniMedida_Click);
+            // 
             // frmUnidadeMedida
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cbxUniMedida);
             this.Controls.Add(this.dgvUniMedida);
             this.Controls.Add(this.txtConsultaUniMedida);
             this.Controls.Add(this.lblUniMedida);
@@ -228,5 +241,6 @@
         private System.Windows.Forms.DataGridView dgvUniMedida;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
+        private System.Windows.Forms.ComboBox cbxUniMedida;
     }
 }

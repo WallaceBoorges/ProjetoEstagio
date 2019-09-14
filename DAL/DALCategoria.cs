@@ -83,7 +83,7 @@ namespace DAL
                     {
                         comm.CommandText = "INSERT INTO categoria (categoria_nome) VALUES (@nome)";
                         //Passando valores por parametro
-                        comm.Parameters.Add(new SqlParameter("@nome", modelo.NomeCategoria));
+                        comm.Parameters.Add(new SqlParameter("@nome", modelo.categoria_nome));
                         //Executando o comando
                         comm.ExecuteNonQuery();
                     }
@@ -106,8 +106,8 @@ namespace DAL
                     {
                         comm.CommandText = "Update categoria set categoria_nome = @nome where categoria_cod = @codigo;";
                         //Passando valores por parametro
-                        comm.Parameters.Add(new SqlParameter("@nome", modelo.NomeCategoria));
-                        comm.Parameters.Add(new SqlParameter("@codigo", modelo.CodigoCategoria));
+                        comm.Parameters.Add(new SqlParameter("@nome", modelo.categoria_nome));
+                        comm.Parameters.Add(new SqlParameter("@codigo", modelo.categoria_cod));
                         //Executando o comando
                         comm.ExecuteNonQuery();
                     }

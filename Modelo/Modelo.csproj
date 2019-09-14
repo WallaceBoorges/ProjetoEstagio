@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MCategoria.cs" />
+    <Compile Include="MProduto.cs" />
     <Compile Include="MSubCategoria.cs" />
     <Compile Include="MUnidadeMedida.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

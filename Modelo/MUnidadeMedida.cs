@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Modelo
 {
+    
     public class MUnidadeMedida
     {
         public int codigoUniMedida { get; set; }

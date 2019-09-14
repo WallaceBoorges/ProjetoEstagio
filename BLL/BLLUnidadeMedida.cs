@@ -11,6 +11,9 @@ namespace BLL
 {
     public class BLLUnidadeMedida
     {
+        /* Vou deixar tudo comentado também. Nçao vamos mais utilizar esses métodos, mas caso venha a ser 
+         * necessário, é só tirar dos comentários.
+        
         public static void Incluir(MUnidadeMedida modelo)
         {
             if (modelo.nomeUniMedida.Trim().Length == 0)
@@ -21,7 +24,7 @@ namespace BLL
             modelo.nomeUniMedida = modelo.nomeUniMedida.ToUpper();
             DALUnidadeMedida.Incluir(modelo);
         }
-        /* Aqui foi criada uma pequena restrição para o usuário*/
+        /* Aqui foi criada uma pequena restrição para o usuário
         public static void Alterar(MUnidadeMedida modelo)
         {
             if (modelo.codigoUniMedida <= 0)
@@ -58,6 +61,7 @@ namespace BLL
         {
             return DALUnidadeMedida.CarregarGrid();
         }
+        */
     }
 }
 

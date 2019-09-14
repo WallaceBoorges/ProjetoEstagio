@@ -8,11 +8,11 @@ namespace Modelo
 {
     public class MSubCategoria
     {
-        public int subCodigoCategoria { get; set; }
-        public String subNomeCategoria { get; set; }
+        public int subCategoria_cod { get; set; }
+        public String subCategoria_nome { get; set; }
         /*CodigoCategoria foi criado nesta classe SubCategoria por conta do relacionamento entre elas. Na tabela, Codigo Categoria é
          chave estrangeira em subcategoria.*/
-        public int CodigoCategoria { get; set; }
+        public int categoria_cod { get; set; }
 
 
         /*Esse é o construtor da classe. Ele deve ser criado sempre que um objeto é instanciado.
@@ -20,23 +20,23 @@ namespace Modelo
          No caso elas irão iniciar recebendo um valor. */
         public MSubCategoria()
         {
-            this.CodigoCategoria = 0;
-            this.subCodigoCategoria = 0;
-            this.subNomeCategoria = "";
+            this.categoria_cod = 0;
+            this.subCategoria_cod = 0;
+            this.subCategoria_nome = "";
         }
         /*Esse segundo construtor foi criado para passar uma informação para o objeto quando ele for criado. As informações 
          são as que estão dentro dos parâmetros.*/
-        public MSubCategoria(int subCatCod, int subCatNome, String CatCod)
+        public MSubCategoria(int subCatCod, String subCatNome, int CatCod)
         {
-            this.CodigoCategoria = subCatCod;
-            this.subCodigoCategoria = subCatNome;
-            this.subNomeCategoria = CatCod;
+            this.categoria_cod = subCatCod;
+            this.subCategoria_nome = subCatNome;
+            this.subCategoria_cod = CatCod;
         }
 
-        public MSubCategoria(string subNomeCategoria, int codigoCategoria)
+        public MSubCategoria(string subCategoriaNome, int codigoCategoria)
         {
-            this.subNomeCategoria = subNomeCategoria;
-            CodigoCategoria = codigoCategoria;
+            this.subCategoria_nome = subCategoriaNome;
+            categoria_cod = codigoCategoria;
         }
     }
 }
