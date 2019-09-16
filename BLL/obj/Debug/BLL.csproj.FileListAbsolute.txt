@@ -75,3 +75,14 @@ C:\Users\Bia\Documents\ProjetoEstagio\BLL\obj\Debug\BLL.csproj.CoreCompileInputs
 C:\Users\Bia\Documents\ProjetoEstagio\BLL\obj\Debug\BLL.csproj.CopyComplete
 C:\Users\Bia\Documents\ProjetoEstagio\BLL\obj\Debug\BLL.dll
 C:\Users\Bia\Documents\ProjetoEstagio\BLL\obj\Debug\BLL.pdb
+C:\Users\Matheus Gois\Desktop\Nova pasta (2)\ProjetoEstagio\BLL\bin\Debug\BLL.dll
+C:\Users\Matheus Gois\Desktop\Nova pasta (2)\ProjetoEstagio\BLL\bin\Debug\BLL.pdb
+C:\Users\Matheus Gois\Desktop\Nova pasta (2)\ProjetoEstagio\BLL\bin\Debug\DAL.dll
+C:\Users\Matheus Gois\Desktop\Nova pasta (2)\ProjetoEstagio\BLL\bin\Debug\Modelo.dll
+C:\Users\Matheus Gois\Desktop\Nova pasta (2)\ProjetoEstagio\BLL\bin\Debug\DAL.pdb
+C:\Users\Matheus Gois\Desktop\Nova pasta (2)\ProjetoEstagio\BLL\bin\Debug\Modelo.pdb
+C:\Users\Matheus Gois\Desktop\Nova pasta (2)\ProjetoEstagio\BLL\obj\Debug\BLL.csprojAssemblyReference.cache
+C:\Users\Matheus Gois\Desktop\Nova pasta (2)\ProjetoEstagio\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\Matheus Gois\Desktop\Nova pasta (2)\ProjetoEstagio\BLL\obj\Debug\BLL.csproj.CopyComplete
+C:\Users\Matheus Gois\Desktop\Nova pasta (2)\ProjetoEstagio\BLL\obj\Debug\BLL.dll
+C:\Users\Matheus Gois\Desktop\Nova pasta (2)\ProjetoEstagio\BLL\obj\Debug\BLL.pdb

@@ -61,3 +61,12 @@ C:\Users\Bia\Documents\ProjetoEstagio\DAL\obj\Debug\DAL.csproj.CoreCompileInputs
 C:\Users\Bia\Documents\ProjetoEstagio\DAL\obj\Debug\DAL.csproj.CopyComplete
 C:\Users\Bia\Documents\ProjetoEstagio\DAL\obj\Debug\DAL.dll
 C:\Users\Bia\Documents\ProjetoEstagio\DAL\obj\Debug\DAL.pdb
+C:\Users\Matheus Gois\Desktop\Nova pasta (2)\ProjetoEstagio\DAL\bin\Debug\DAL.dll
+C:\Users\Matheus Gois\Desktop\Nova pasta (2)\ProjetoEstagio\DAL\bin\Debug\DAL.pdb
+C:\Users\Matheus Gois\Desktop\Nova pasta (2)\ProjetoEstagio\DAL\bin\Debug\Modelo.dll
+C:\Users\Matheus Gois\Desktop\Nova pasta (2)\ProjetoEstagio\DAL\bin\Debug\Modelo.pdb
+C:\Users\Matheus Gois\Desktop\Nova pasta (2)\ProjetoEstagio\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Users\Matheus Gois\Desktop\Nova pasta (2)\ProjetoEstagio\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Matheus Gois\Desktop\Nova pasta (2)\ProjetoEstagio\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\Matheus Gois\Desktop\Nova pasta (2)\ProjetoEstagio\DAL\obj\Debug\DAL.dll
+C:\Users\Matheus Gois\Desktop\Nova pasta (2)\ProjetoEstagio\DAL\obj\Debug\DAL.pdb

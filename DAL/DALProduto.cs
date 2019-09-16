@@ -1,49 +1,24 @@
-﻿using Modelo;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Modelo;
 
 namespace DAL
 {
     public class DALProduto
     {
-        /*
-        public static DataTable LocalizarDados(String valor)
-        {
-            using (var conn = ConexaoBD.AbrirConexao()) //Passando a string de conexão
-            {
-                conn.Open(); //Abrindo a conexão
-                using (var comm = conn.CreateCommand()) //Criando o comando SQL
-                {
-                    comm.CommandText = "Select sub.*, cate.categoria_nome from subcategoria as sub " +
-                        "inner join categoria as cate on sub.categoria_cod = cate.categoria_cod " +
-                        "WHERE subcategoria_nome LIKE @nome order by subcategoria_cod desc";
-                    //Passando valores por parametro
-                    comm.Parameters.Add(new SqlParameter("@nome", valor + "%"));
-                    var reader = comm.ExecuteReader(); //Passando o comando 
-                    var table = new DataTable(); //Passando a tabela
-                    table.Load(reader); //Carregando a tabela 
-                    return table; //Retornando a consulta ao Banco de Dados
-                }
-            }
-        }
-        */
-
         /* Método para carregar os dados da tabela no DataGridView*/
-        /*
         public static DataTable CarregarGrid()
         {
-            
             using (var conn = ConexaoBD.AbrirConexao()) //Passando a string de conexão
             {
                 conn.Open(); //Abrindo a conexão
                 using (var comm = conn.CreateCommand()) //Criando o comando SQL
                 {
-                    comm.CommandText = "Select* from categoria order by categoria_cod desc";
+                    comm.CommandText = "SELECT prod.*, uni.uniMedida_nome, cat.categoria_nome, sub.subCategoria_nome FROM  produto as prod " +
+                        "LEFT JOIN undmedida as uni on prod.uniMedida_cod = uni.uniMedida_cod " +
+                        "LEFT JOIN categoria as cat on prod.categoria_cod = cat.categoria_cod " +
+                        "LEFT JOIN subcategoria as sub on prod.subCategoria_cod = sub.subCategoria_cod";
                     var reader = comm.ExecuteReader(); //Passando o comando 
                     var table = new DataTable(); //Passando a tabela
                     table.Load(reader); //Carregando a tabela 
@@ -51,21 +26,41 @@ namespace DAL
                 }
             }
         }
-        
-
-        public static void Excluir(int codigo)
+        public static void Alterar(MProduto modelo)
         {
             try
             {
-                using (var conn = ConexaoBD.AbrirConexao()) //Passando a string de conexão
+                using (var conn = ConexaoBD.AbrirConexao()) //Passando string de conexão
                 {
-                    conn.Open(); //Abrindo a conexão
-                    using (var comm = conn.CreateCommand()) //Criando o comando SQL
+                    conn.Open(); //Abrindo conexao
+                    using (var comm = conn.CreateCommand()) //CRiando comando SQL
                     {
-                        comm.CommandText = "DELETE FROM categoria WHERE categoria_cod = @id";
-                        //Passando o valores por parametro
-                        comm.Parameters.Add(new SqlParameter("@id", codigo));
-                        //Executando o comando
+                        if (modelo.CodigoSubcategoria != 0)
+                        {
+                            comm.CommandText = "update produto set produto_nome = @nome, produto_descricao = @descricao, "
+                                + " produto_valorpago = @valorpago, produto_valorvenda = @valorvenda, produto_qtde = @qtde, "
+                                + "uniMedida_cod = @uniMedida_cod, categoria_cod = @categoria_cod, subCategoria_cod = @subCategoria_cod where produto_cod = @codigo";
+
+                            comm.Parameters.Add(new SqlParameter("@subCategoria_cod", modelo.CodigoSubcategoria));
+                        }
+                        else
+                        {
+                            comm.CommandText = "update produto set produto_nome = @nome, produto_descricao = @descricao, "
+                                + " produto_valorpago = @valorpago, produto_valorvenda = @valorvenda, produto_qtde = @qtde, "
+                                + "uniMedida_cod = @uniMedida_cod, categoria_cod = @categoria_cod, subCategoria_cod = null where produto_cod = @codigo";
+                        }
+
+                        //Passando valores 
+                        comm.Parameters.Add(new SqlParameter("@nome", modelo.NomeProduto));
+                        comm.Parameters.Add(new SqlParameter("@descricao", modelo.DescricaoProduto));
+                        comm.Parameters.Add(new SqlParameter("@valorpago", Math.Round(modelo.ValorPagoProduto, 2)));
+                        comm.Parameters.Add(new SqlParameter("@valorvenda", Math.Round(modelo.ValorVendaProduto, 2)));
+                        comm.Parameters.Add(new SqlParameter("@uniMedida_cod", modelo.CodigoUnidadeMedida));
+                        comm.Parameters.Add(new SqlParameter("@categoria_cod", modelo.CodigoCategoria));
+                        comm.Parameters.Add(new SqlParameter("@qtde", modelo.QuantProduto));
+                        comm.Parameters.Add(new SqlParameter("@codigo", modelo.CodigoProduto));
+                        //Executando comando
+
                         comm.ExecuteNonQuery();
                     }
                 }
@@ -74,8 +69,8 @@ namespace DAL
             {
                 throw new Exception(erro.Message);
             }
-        }
 
+        }
         public static void Incluir(MProduto modelo)
         {
             try
@@ -85,48 +80,28 @@ namespace DAL
                     conn.Open(); //Abrindo a conexão
                     using (var comm = conn.CreateCommand()) //Criando o comando SQL
                     {
-                        comm.CommandText = "Insert into produto(categoria_cod, subCategoria_cod, uniMedida_cod, produto_nome" +
-                            "produto_descricao, produto_foto, produto_valorpago, produto_valorvenda, " +
-                            "produto_qtde) " +
-                            "values (@procod, @unimedcod, @catcod, @scatcod " +
-                            "@nome, @descricao, @foto, @valorpago, @valorvenda, " +
-                            "@qtde); select @@IDENTITY;"
-;                        //Passando valores por parametro
-                        comm.Parameters.Add(new SqlParameter("@nome", modelo.produto_nome));
-                        comm.Parameters.Add(new SqlParameter("@descricao", modelo.produto_descricao));
-                        comm.Parameters.Add("@foto", System.Data.SqlDbType.Image);
-                        if(modelo.produto_foto == null)
+                        //Analisando se vai ter uma subcategoria
+                        if (modelo.CodigoSubcategoria != 0)
                         {
-                            comm.Parameters["@foto"].Value = DBNull.Value;
+                            comm.CommandText = "INSERT INTO produto (produto_nome, produto_descricao, produto_valorpago, produto_valorvenda, produto_qtde, uniMedida_cod, categoria_cod, subCategoria_cod) " +
+                            "VALUES (@nome, @desc, @pago, @venda, @quant, @unidade, @categoria, @subcategoria)";
+
+                            comm.Parameters.Add(new SqlParameter("@subcategoria", modelo.CodigoSubcategoria));
                         }
                         else
                         {
-                            comm.Parameters["@foto"].Value = modelo.produto_foto;
+                            comm.CommandText = "INSERT INTO produto (produto_nome, produto_descricao, produto_valorpago, produto_valorvenda, produto_qtde, uniMedida_cod, categoria_cod) " +
+                            "VALUES (@nome, @desc, @pago, @venda, @quant, @unidade, @categoria)";
                         }
-                        //Executando o comando
-                        comm.ExecuteNonQuery();
-                    }
-                }
-            }
-            catch (Exception erro)
-            {
-                throw new Exception(erro.Message);
-            }
-        }
 
-        public static void Alterar(MCategoria modelo)
-        {
-            try
-            {
-                using (var conn = ConexaoBD.AbrirConexao())//Passando a string de conexão
-                {
-                    conn.Open(); //Abrindo a conexão
-                    using (var comm = conn.CreateCommand()) //Criando o comando SQL
-                    {
-                        comm.CommandText = "Update categoria set categoria_nome = @nome where categoria_cod = @codigo;";
                         //Passando valores por parametro
-                        comm.Parameters.Add(new SqlParameter("@nome", modelo.categoria_nome));
-                        comm.Parameters.Add(new SqlParameter("@codigo", modelo.categoria_cod));
+                        comm.Parameters.Add(new SqlParameter("@nome", modelo.NomeProduto));
+                        comm.Parameters.Add(new SqlParameter("@desc", modelo.DescricaoProduto));
+                        comm.Parameters.Add(new SqlParameter("@pago", modelo.ValorPagoProduto));
+                        comm.Parameters.Add(new SqlParameter("@venda", modelo.ValorVendaProduto));
+                        comm.Parameters.Add(new SqlParameter("@quant", modelo.QuantProduto));
+                        comm.Parameters.Add(new SqlParameter("@unidade", modelo.CodigoUnidadeMedida));
+                        comm.Parameters.Add(new SqlParameter("@categoria", modelo.CodigoCategoria));
                         //Executando o comando
                         comm.ExecuteNonQuery();
                     }
@@ -136,9 +111,7 @@ namespace DAL
             {
                 throw new Exception(erro.Message);
             }
-
-
         }
-        */
+
     }
 }

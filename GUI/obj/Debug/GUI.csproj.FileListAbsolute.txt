@@ -134,3 +134,23 @@ C:\Users\Bia\Documents\ProjetoEstagio\GUI\obj\Debug\GUI.csproj.CoreCompileInputs
 C:\Users\Bia\Documents\ProjetoEstagio\GUI\obj\Debug\GUI.csproj.CopyComplete
 C:\Users\Bia\Documents\ProjetoEstagio\GUI\obj\Debug\GUI.exe
 C:\Users\Bia\Documents\ProjetoEstagio\GUI\obj\Debug\GUI.pdb
+C:\Users\Matheus Gois\Desktop\Nova pasta (2)\ProjetoEstagio\GUI\obj\Debug\GUI.csprojAssemblyReference.cache
+C:\Users\Matheus Gois\Desktop\Nova pasta (2)\ProjetoEstagio\GUI\obj\Debug\GUI.frmCadastroCategoria.resources
+C:\Users\Matheus Gois\Desktop\Nova pasta (2)\ProjetoEstagio\GUI\obj\Debug\GUI.frmCadastroSubCategoria.resources
+C:\Users\Matheus Gois\Desktop\Nova pasta (2)\ProjetoEstagio\GUI\obj\Debug\GUI.frmPrincipal.resources
+C:\Users\Matheus Gois\Desktop\Nova pasta (2)\ProjetoEstagio\GUI\obj\Debug\GUI.Properties.Resources.resources
+C:\Users\Matheus Gois\Desktop\Nova pasta (2)\ProjetoEstagio\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
+C:\Users\Matheus Gois\Desktop\Nova pasta (2)\ProjetoEstagio\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+C:\Users\Matheus Gois\Desktop\Nova pasta (2)\ProjetoEstagio\GUI\obj\Debug\GUI.exe
+C:\Users\Matheus Gois\Desktop\Nova pasta (2)\ProjetoEstagio\GUI\obj\Debug\GUI.pdb
+C:\Users\Matheus Gois\Desktop\Nova pasta (2)\ProjetoEstagio\GUI\bin\Debug\GUI.exe.config
+C:\Users\Matheus Gois\Desktop\Nova pasta (2)\ProjetoEstagio\GUI\bin\Debug\GUI.exe
+C:\Users\Matheus Gois\Desktop\Nova pasta (2)\ProjetoEstagio\GUI\bin\Debug\GUI.pdb
+C:\Users\Matheus Gois\Desktop\Nova pasta (2)\ProjetoEstagio\GUI\bin\Debug\BLL.dll
+C:\Users\Matheus Gois\Desktop\Nova pasta (2)\ProjetoEstagio\GUI\bin\Debug\DAL.dll
+C:\Users\Matheus Gois\Desktop\Nova pasta (2)\ProjetoEstagio\GUI\bin\Debug\Modelo.dll
+C:\Users\Matheus Gois\Desktop\Nova pasta (2)\ProjetoEstagio\GUI\bin\Debug\BLL.pdb
+C:\Users\Matheus Gois\Desktop\Nova pasta (2)\ProjetoEstagio\GUI\bin\Debug\DAL.pdb
+C:\Users\Matheus Gois\Desktop\Nova pasta (2)\ProjetoEstagio\GUI\bin\Debug\Modelo.pdb
+C:\Users\Matheus Gois\Desktop\Nova pasta (2)\ProjetoEstagio\GUI\obj\Debug\GUI.csproj.CopyComplete
+C:\Users\Matheus Gois\Desktop\Nova pasta (2)\ProjetoEstagio\GUI\obj\Debug\GUI.frmCadastroProduto.resources

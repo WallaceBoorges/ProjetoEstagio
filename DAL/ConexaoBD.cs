@@ -12,7 +12,7 @@ namespace DAL
     {
         public static IDbConnection AbrirConexao()
         {
-            return new SqlConnection("Data Source=LAPTOP-3E6S24H8\\SQLEXPRESS;Initial Catalog=ProjetoEstagio;Integrated Security=True");
+            return new SqlConnection("Data Source=NAVE;Initial Catalog=ProjetoEstagio;Integrated Security=True");
         }
     }
 

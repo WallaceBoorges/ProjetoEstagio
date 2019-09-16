@@ -99,6 +99,27 @@ namespace DAL
                 }
             }
         }
+        /* Método para carregar as subcategorias relacionadas com a categoria informada*/
+        public static DataTable CarregarGrid(int CodigoCategoria)
+        {
+            using (var conn = ConexaoBD.AbrirConexao()) //Passando a string de conexão
+            {
+                conn.Open(); //Abrindo a conexão
+                using (var comm = conn.CreateCommand()) //Criando o comando SQL
+                {
+                    comm.CommandText = "Select sub.*, cate.categoria_nome from subcategoria as sub " +
+                        "inner join categoria as cate on sub.categoria_cod = cate.categoria_cod " +
+                        "WHERE sub.categoria_cod = @categoria_cod " +
+                        "order by subcategoria_cod desc";
+                    //Passando valor por parametro
+                    comm.Parameters.Add(new SqlParameter("@categoria_cod", CodigoCategoria));
+                    var reader = comm.ExecuteReader(); //Passando o comando 
+                    var table = new DataTable(); //Passando a tabela
+                    table.Load(reader); //Carregando a tabela 
+                    return table; //Retornando a consulta ao Banco de Dados
+                }
+            }
+        }
         /* Método para buscar dados na base de dados e trazer para dentro do DataGridView*/
         public static DataTable LocalizarDados(String valor)
         {

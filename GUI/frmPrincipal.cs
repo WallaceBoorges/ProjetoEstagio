@@ -32,9 +32,9 @@ namespace GUI
             f.Dispose();
         }
 
-        private void unidadeDeMedidaToolStripMenuItem_Click(object sender, EventArgs e)
+        private void produtoToolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            frmUnidadeMedida f = new frmUnidadeMedida();
+            frmCadastroProduto f = new frmCadastroProduto();
             f.ShowDialog();
             f.Dispose();
         }
