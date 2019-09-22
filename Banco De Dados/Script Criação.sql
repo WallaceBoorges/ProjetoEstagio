@@ -1,7 +1,7 @@
-CREATE DATABASE ProjetoEstagioo
+CREATE DATABASE ProjetoEstagio
 GO
 
-USE [ProjetoEstagioo]
+USE ProjetoEstagio
 GO
 
 CREATE TABLE itensvenda (
@@ -125,14 +125,14 @@ CREATE TABLE funcionario (
     fun_cpf varchar(14),
     fun_rg varchar(20),
     fun_orgaoemissor varchar(95),
-    fun_rgemissao datetime,
-    fun_datanascimento datetime,
+    fun_rgemissao date,
+    fun_datanascimento date,
     fun_sexo varchar(10),
     fun_estadocivil varchar(20),
     fun_celular varchar(16),
     fun_funcaoexercida varchar(95),
-    fun_admissao datetime,
-    fun_demissao datetime,
+    fun_admissao date,
+    fun_demissao date,
     fun_salariobase money,
     fun_banconome varchar(95),
     fun_bancoagencia varchar(20),

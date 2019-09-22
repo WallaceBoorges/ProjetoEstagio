@@ -38,6 +38,8 @@
             this.MenuFuncionario = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuFinanceiro = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuFerramenta = new System.Windows.Forms.ToolStripMenuItem();
+            this.txtCod = new System.Windows.Forms.TextBox();
+            this.lblCod = new System.Windows.Forms.Label();
             this.menu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -84,21 +86,21 @@
             // produtoToolStripMenuItem2
             // 
             this.produtoToolStripMenuItem2.Name = "produtoToolStripMenuItem2";
-            this.produtoToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.produtoToolStripMenuItem2.Size = new System.Drawing.Size(145, 22);
             this.produtoToolStripMenuItem2.Text = "Produto";
             this.produtoToolStripMenuItem2.Click += new System.EventHandler(this.produtoToolStripMenuItem2_Click);
             // 
             // categoriaToolStripMenuItem2
             // 
             this.categoriaToolStripMenuItem2.Name = "categoriaToolStripMenuItem2";
-            this.categoriaToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.categoriaToolStripMenuItem2.Size = new System.Drawing.Size(145, 22);
             this.categoriaToolStripMenuItem2.Text = "Categoria";
             this.categoriaToolStripMenuItem2.Click += new System.EventHandler(this.categoriaToolStripMenuItem2_Click);
             // 
             // subCategoriaToolStripMenuItem2
             // 
             this.subCategoriaToolStripMenuItem2.Name = "subCategoriaToolStripMenuItem2";
-            this.subCategoriaToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.subCategoriaToolStripMenuItem2.Size = new System.Drawing.Size(145, 22);
             this.subCategoriaToolStripMenuItem2.Text = "SubCategoria";
             this.subCategoriaToolStripMenuItem2.Click += new System.EventHandler(this.subCategoriaToolStripMenuItem2_Click);
             // 
@@ -120,11 +122,31 @@
             this.MenuFerramenta.Size = new System.Drawing.Size(79, 20);
             this.MenuFerramenta.Text = "Fornecedor";
             // 
+            // txtCod
+            // 
+            this.txtCod.Enabled = false;
+            this.txtCod.Location = new System.Drawing.Point(718, 4);
+            this.txtCod.Name = "txtCod";
+            this.txtCod.Size = new System.Drawing.Size(70, 20);
+            this.txtCod.TabIndex = 86;
+            // 
+            // lblCod
+            // 
+            this.lblCod.AutoSize = true;
+            this.lblCod.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblCod.Location = new System.Drawing.Point(669, 9);
+            this.lblCod.Name = "lblCod";
+            this.lblCod.Size = new System.Drawing.Size(43, 13);
+            this.lblCod.TabIndex = 87;
+            this.lblCod.Text = "Código:";
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblCod);
+            this.Controls.Add(this.txtCod);
             this.Controls.Add(this.menu);
             this.Name = "frmPrincipal";
             this.Text = "frmPrincipal";
@@ -147,5 +169,7 @@
         private System.Windows.Forms.ToolStripMenuItem MenuFuncionario;
         private System.Windows.Forms.ToolStripMenuItem MenuFinanceiro;
         private System.Windows.Forms.ToolStripMenuItem MenuFerramenta;
+        public System.Windows.Forms.TextBox txtCod;
+        private System.Windows.Forms.Label lblCod;
     }
 }

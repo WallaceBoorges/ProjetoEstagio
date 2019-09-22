@@ -16,7 +16,17 @@ namespace GUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmPrincipal());
+
+            string cod = frmLogin.Login();
+
+            if (cod != "")
+            {
+                frmPrincipal f = new frmPrincipal();
+
+                f.txtCod.Text = cod;
+
+                Application.Run(f);
+            }                     
         }
     }
 }
