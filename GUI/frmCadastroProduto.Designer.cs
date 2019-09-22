@@ -32,8 +32,7 @@
             this.dgvProduto = new System.Windows.Forms.DataGridView();
             this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descrição = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.foto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.valorpago = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ValorVenda = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quant = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -89,8 +88,7 @@
             this.dgvProduto.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codigo,
             this.nome,
-            this.descrição,
-            this.foto,
+            this.descricao,
             this.valorpago,
             this.ValorVenda,
             this.quant,
@@ -121,21 +119,13 @@
             this.nome.Name = "nome";
             this.nome.ReadOnly = true;
             // 
-            // descrição
+            // descricao
             // 
-            this.descrição.DataPropertyName = "produto_descricao";
-            this.descrição.HeaderText = "Descrição";
-            this.descrição.Name = "descrição";
-            this.descrição.ReadOnly = true;
-            this.descrição.Visible = false;
-            // 
-            // foto
-            // 
-            this.foto.DataPropertyName = "produto_foto";
-            this.foto.HeaderText = "Foto";
-            this.foto.Name = "foto";
-            this.foto.ReadOnly = true;
-            this.foto.Visible = false;
+            this.descricao.DataPropertyName = "produto_descricao";
+            this.descricao.HeaderText = "Descrição";
+            this.descricao.Name = "descricao";
+            this.descricao.ReadOnly = true;
+            this.descricao.Visible = false;
             // 
             // valorpago
             // 
@@ -247,6 +237,7 @@
             this.btnExcluir.TabIndex = 77;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnBuscar
             // 
@@ -256,6 +247,7 @@
             this.btnBuscar.TabIndex = 76;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnAlterar
             // 
@@ -469,19 +461,6 @@
 
         private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.DataGridView dgvProduto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codigo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nome;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descrição;
-        private System.Windows.Forms.DataGridViewTextBoxColumn foto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn valorpago;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ValorVenda;
-        private System.Windows.Forms.DataGridViewTextBoxColumn quant;
-        private System.Windows.Forms.DataGridViewTextBoxColumn uniCod;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CatCod;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SubCod;
-        private System.Windows.Forms.DataGridViewTextBoxColumn UniNome;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CatNome;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SubNome;
         private System.Windows.Forms.TextBox txtConsultaProduto;
         private System.Windows.Forms.Label lblProduto;
         private System.Windows.Forms.Button btnCancelar;
@@ -507,5 +486,17 @@
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label lblCodigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descricao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn valorpago;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ValorVenda;
+        private System.Windows.Forms.DataGridViewTextBoxColumn quant;
+        private System.Windows.Forms.DataGridViewTextBoxColumn uniCod;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CatCod;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SubCod;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UniNome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CatNome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SubNome;
     }
 }

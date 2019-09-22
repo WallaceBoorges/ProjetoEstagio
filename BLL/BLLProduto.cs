@@ -1,6 +1,7 @@
 ﻿using System;
 using Modelo;
 using DAL;
+using System.Data;
 
 namespace BLL
 {
@@ -25,6 +26,32 @@ namespace BLL
             //Chamndo método Alterar
             DALProduto.Alterar(modelo);
 
+        }
+
+        /*Nos métodos abaixo ainda faltam acrescentar as restrições de usuário. Dentro dos métodos só foram apenas abertas as conexões
+         com o banco de dados.*/
+        public static void Excluir(int codigo)
+        {
+            DALProduto.Excluir(codigo);
+        }
+        public static DataTable LocalizarDados(String valor)
+        {
+            if (valor == "")
+            {
+                return DALProduto.CarregarGrid();
+            }
+            else
+            {
+                //Analisando se foi localizado algum registro
+                if (DALProduto.LocalizarDados(valor).Rows.Count > 0)
+                {
+                    return DALProduto.LocalizarDados(valor);
+                }
+                else
+                {
+                    throw new Exception("Não foi encontrado nenhum registro!");
+                }
+            }
         }
     }
 }

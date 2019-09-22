@@ -14,27 +14,27 @@ namespace BLL
         /* Aqui foi criada uma pequena restrição para o usuário*/
         public static void Incluir(MSubCategoria modelo)
         {
-            if (modelo.subCategoria_nome.Trim().Length == 0)
+            if (modelo.SubCategoriaNome.Trim().Length == 0)
             {
                 throw new Exception("O nome da subcategoria é obrigatório!");
             }
             //Para ficar tudo maiúsculo
-            modelo.subCategoria_nome = modelo.subCategoria_nome.ToUpper();
+            modelo.SubCategoriaNome = modelo.SubCategoriaNome.ToUpper();
             DALSubCategoria.Incluir(modelo);
         }
         /* Aqui foi criada uma pequena restrição para o usuário*/
         public static void Alterar(MSubCategoria modelo)
         {
-            if (modelo.subCategoria_cod <= 0)
+            if (modelo.SubCategoriaCod <= 0)
             {
                 throw new Exception("O código da subcategoria é obrigatório!");
             }
-            if (modelo.subCategoria_nome.Trim().Length == 0)
+            if (modelo.SubCategoriaNome.Trim().Length == 0)
             {
                 throw new Exception("O nome da subcategoria é obrigatório!");
             }
             //Para ficar tudo maiúsculo
-            modelo.subCategoria_nome = modelo.subCategoria_nome.ToUpper();
+            modelo.SubCategoriaNome = modelo.SubCategoriaNome.ToUpper();
             DALSubCategoria.Alterar(modelo);
         }
         /*Nos métodos abaixo ainda faltam acrescentar as restrições de usuário. Dentro dos métodos só foram apenas abertas as conexões

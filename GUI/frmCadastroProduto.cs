@@ -2,13 +2,6 @@
 using DAL;
 using Modelo;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GUI
@@ -67,6 +60,8 @@ namespace GUI
                 LimparTela();
                 //Carregando os dados
                 dgvProduto.DataSource = DALProduto.CarregarGrid();
+                dgvProduto.Columns["valorpago"].DefaultCellStyle.Format = "C2";
+                dgvProduto.Columns["ValorVenda"].DefaultCellStyle.Format = "C2";
             }
 
             if (op == 2) //Atualizar
@@ -109,15 +104,21 @@ namespace GUI
             if (dgvProduto.RowCount != 0)
             {
                 //Pegando dados do DataGrid                
-                txtCodigo.Text = dgvProduto.CurrentRow.Cells[0].Value.ToString();
-                txtNome.Text = dgvProduto.CurrentRow.Cells[1].Value.ToString();
-                txtDescricao.Text = dgvProduto.CurrentRow.Cells[2].Value.ToString();
-                txtValorPago.Text = dgvProduto.CurrentRow.Cells[4].Value.ToString();
-                txtValorVenda.Text = dgvProduto.CurrentRow.Cells[5].Value.ToString();
-                cbxCodUnidadeMedida.Text = dgvProduto.CurrentRow.Cells[10].Value.ToString();
-                cbxCodCat.Text = dgvProduto.CurrentRow.Cells[11].Value.ToString();
-                cbxCodSubcat.Text = dgvProduto.CurrentRow.Cells[12].Value.ToString();
-                txtQuantidade.Text = dgvProduto.CurrentRow.Cells[6].Value.ToString();
+                txtCodigo.Text = dgvProduto.CurrentRow.Cells["codigo"].Value.ToString();
+                txtNome.Text = dgvProduto.CurrentRow.Cells["nome"].Value.ToString();
+                txtDescricao.Text = dgvProduto.CurrentRow.Cells["descricao"].Value.ToString();
+
+                //Pegando o valor pago e formatando 
+                double valorPago = double.Parse(dgvProduto.CurrentRow.Cells["valorpago"].Value.ToString());
+                txtValorPago.Text = valorPago.ToString("F2");
+                //Pegando o valor venda e formatando
+                double valorVenda = double.Parse(dgvProduto.CurrentRow.Cells["valorVenda"].Value.ToString());
+                txtValorVenda.Text = valorVenda.ToString("F2");
+
+                cbxCodUnidadeMedida.Text = dgvProduto.CurrentRow.Cells["uniNome"].Value.ToString();
+                cbxCodCat.Text = dgvProduto.CurrentRow.Cells["CatNome"].Value.ToString();
+                cbxCodSubcat.Text = dgvProduto.CurrentRow.Cells["SubNome"].Value.ToString();
+                txtQuantidade.Text = dgvProduto.CurrentRow.Cells["quant"].Value.ToString();
 
                 //Alterar Botões
                 Alterarbotoes(2);
@@ -140,7 +141,7 @@ namespace GUI
             try
             {
                 //Verificando se o usuário informou todos os campos obrigatorios
-                if (txtNome.Text == "" || txtDescricao.Text == "" || cbxCodCat.Text == "" || cbxCodCat.Text == "" || txtValorPago.Text == "")
+                if (txtNome.Text == "" || txtDescricao.Text == "" || cbxCodUnidadeMedida.Text == "" || cbxCodCat.Text == "" || txtValorPago.Text == "")
                 {
                     throw new Exception("Preencha todos os Campos!");
                 }
@@ -174,6 +175,40 @@ namespace GUI
                 MessageBox.Show(erro.Message);
             }
         }
+        //Evento click buscar
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                dgvProduto.DataSource = BLLProduto.LocalizarDados(txtConsultaProduto.Text);
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show(erro.Message);
+            }
+        }
+        //Evento click excluir
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //Aqui ele executa um diálogo perguntando se o usuário deseja ou não excluir o registro.
+                if (MessageBox.Show("Deseja excluir o registro?", "Atenção", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    /*Caso "sim", é aberto a conexão com o banco e executado o método de excluir. */
+                    //Método de excluir sendo chamado.
+                    BLLProduto.Excluir(int.Parse(dgvProduto.CurrentRow.Cells["codigo"].Value.ToString()));
+                    LimparTela();
+                    Alterarbotoes(1);
+                }
+            }
+            catch
+            {
+                //Caso apresente algum erro. Será retornado esta mensagem.
+                MessageBox.Show("Impossível excluir o registro. \n O registro está sendo utilizado em outro local");
+                Alterarbotoes(1);
+            }
+        }
 
         //Evento click limpar
         private void btnLimpar_Click(object sender, EventArgs e)
@@ -199,6 +234,6 @@ namespace GUI
         private void txtQuantidade_KeyPress(object sender, KeyPressEventArgs e)
         {
             VerificaDigito(sender, e);
-        }
+        }        
     }
 }

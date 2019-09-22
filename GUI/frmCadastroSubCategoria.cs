@@ -85,7 +85,7 @@ namespace GUI
                 }
                 else
                 {
-                    modelo.subCategoria_cod = int.Parse(txtCodigo.Text); //Pegando o ID
+                    modelo.SubCategoriaCod = int.Parse(txtCodigo.Text); //Pegando o ID
                     BLLSubCategoria.Alterar(modelo);
                     MessageBox.Show("Cadastro alterado com sucesso!");
                 }

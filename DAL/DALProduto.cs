@@ -113,5 +113,51 @@ namespace DAL
             }
         }
 
+        /* Método para buscar dados na base de dados e trazer para dentro do DataGridView*/
+        public static DataTable LocalizarDados(String valor)
+        {
+            using (var conn = ConexaoBD.AbrirConexao()) //Passando a string de conexão
+            {
+                conn.Open(); //Abrindo a conexão
+                using (var comm = conn.CreateCommand()) //Criando o comando SQL
+                {
+                    comm.CommandText = "SELECT prod.*, uni.uniMedida_nome, cat.categoria_nome, sub.subCategoria_nome FROM  produto as prod " +
+                        "LEFT JOIN undmedida as uni on prod.uniMedida_cod = uni.uniMedida_cod " +
+                        "LEFT JOIN categoria as cat on prod.categoria_cod = cat.categoria_cod " +
+                        "LEFT JOIN subcategoria as sub on prod.subCategoria_cod = sub.subCategoria_cod WHERE produto_nome LIKE @nome";
+
+                    //Passando valores por parametro
+                    comm.Parameters.Add(new SqlParameter("@nome", valor + "%"));
+                    var reader = comm.ExecuteReader(); //Passando o comando 
+                    var table = new DataTable(); //Passando a tabela
+                    table.Load(reader); //Carregando a tabela 
+                    return table; //Retornando a consulta ao Banco de Dados
+                }
+            }
+        }
+
+        public static void Excluir(int codigo)
+        {
+            try
+            {
+                using (var conn = ConexaoBD.AbrirConexao()) //Passando a string de conexão
+                {
+                    conn.Open(); //Abrindo a conexão
+                    using (var comm = conn.CreateCommand()) //Criando o comando SQL
+                    {
+                        comm.CommandText = "DELETE FROM produto WHERE produto_cod = @id";
+                        //Passando o valores por parametro
+                        comm.Parameters.Add(new SqlParameter("@id", codigo));
+                        //Executando o comando
+                        comm.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception erro)
+            {
+                throw new Exception(erro.Message);
+            }
+        }
+
     }
 }
