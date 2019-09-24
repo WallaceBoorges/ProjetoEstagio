@@ -37,7 +37,9 @@
             this.subCategoriaToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuFuncionario = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuFinanceiro = new System.Windows.Forms.ToolStripMenuItem();
-            this.MenuFerramenta = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuFornecedor = new System.Windows.Forms.ToolStripMenuItem();
+            this.fornecedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cadastrarComprasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.txtCod = new System.Windows.Forms.TextBox();
             this.lblCod = new System.Windows.Forms.Label();
             this.menu.SuspendLayout();
@@ -53,7 +55,7 @@
             this.MenuEstoque,
             this.MenuFuncionario,
             this.MenuFinanceiro,
-            this.MenuFerramenta});
+            this.MenuFornecedor});
             this.menu.Location = new System.Drawing.Point(0, 0);
             this.menu.Name = "menu";
             this.menu.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
@@ -116,11 +118,27 @@
             this.MenuFinanceiro.Size = new System.Drawing.Size(74, 20);
             this.MenuFinanceiro.Text = "Financeiro";
             // 
-            // MenuFerramenta
+            // MenuFornecedor
             // 
-            this.MenuFerramenta.Name = "MenuFerramenta";
-            this.MenuFerramenta.Size = new System.Drawing.Size(79, 20);
-            this.MenuFerramenta.Text = "Fornecedor";
+            this.MenuFornecedor.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fornecedoresToolStripMenuItem,
+            this.cadastrarComprasToolStripMenuItem});
+            this.MenuFornecedor.Name = "MenuFornecedor";
+            this.MenuFornecedor.Size = new System.Drawing.Size(79, 20);
+            this.MenuFornecedor.Text = "Fornecedor";
+            // 
+            // fornecedoresToolStripMenuItem
+            // 
+            this.fornecedoresToolStripMenuItem.Name = "fornecedoresToolStripMenuItem";
+            this.fornecedoresToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.fornecedoresToolStripMenuItem.Text = "Fornecedores";
+            // 
+            // cadastrarComprasToolStripMenuItem
+            // 
+            this.cadastrarComprasToolStripMenuItem.Name = "cadastrarComprasToolStripMenuItem";
+            this.cadastrarComprasToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.cadastrarComprasToolStripMenuItem.Text = "Cadastrar Compras";
+            this.cadastrarComprasToolStripMenuItem.Click += new System.EventHandler(this.comprasToolStripMenuItem_Click);
             // 
             // txtCod
             // 
@@ -149,6 +167,7 @@
             this.Controls.Add(this.txtCod);
             this.Controls.Add(this.menu);
             this.Name = "frmPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmPrincipal";
             this.menu.ResumeLayout(false);
             this.menu.PerformLayout();
@@ -168,8 +187,10 @@
         private System.Windows.Forms.ToolStripMenuItem subCategoriaToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem MenuFuncionario;
         private System.Windows.Forms.ToolStripMenuItem MenuFinanceiro;
-        private System.Windows.Forms.ToolStripMenuItem MenuFerramenta;
+        private System.Windows.Forms.ToolStripMenuItem MenuFornecedor;
         public System.Windows.Forms.TextBox txtCod;
         private System.Windows.Forms.Label lblCod;
+        private System.Windows.Forms.ToolStripMenuItem fornecedoresToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cadastrarComprasToolStripMenuItem;
     }
 }

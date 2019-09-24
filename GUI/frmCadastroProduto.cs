@@ -13,10 +13,11 @@ namespace GUI
             InitializeComponent();
         }
 
+        public MProduto Produto { get; set; }
+
         public void LimparTela()
         {
             txtNome.Clear();
-            txtCodigo.Clear();
             txtDescricao.Clear();
             txtValorVenda.Clear();
             txtValorPago.Clear();
@@ -39,6 +40,23 @@ namespace GUI
                 e.Handled = true;
                 MessageBox.Show("este campo aceita somente uma virgula");
             }
+        }
+
+        //Metodo para salvar os dados do produto
+        public static MProduto ListarProduto(string id)
+        {
+            //Criando o obj do tipo MeuMsgBox e configurando a sua exibição
+            var prod = new frmCadastroProduto();
+            //Redefininado o tamanho do formulario
+            prod.Size = new System.Drawing.Size(679, 385);
+            //Pegando o id
+            prod.txtCodigo.Text = id;
+            //Ativando a edição do campo Quantidade produto
+            prod.txtQuantidade.Enabled = true;
+
+             //Chamando o formulario
+             prod.ShowDialog();
+            return prod.Produto;
         }
 
         //Metodo para alterar a exibição dos botões
@@ -87,12 +105,15 @@ namespace GUI
             cbxCodCat.DisplayMember = "categoria_nome";
             cbxCodCat.SelectedIndex = -1;
 
-            //Iniciando os dados do combobox Subcategoria
-            cbxCodSubcat.DataSource = DALSubCategoria.CarregarGrid();
-            cbxCodSubcat.ValueMember = "subCategoria_cod";
-            cbxCodSubcat.DisplayMember = "subCategoria_nome";
-            cbxCodSubcat.SelectedIndex = -1;
-
+            if (cbxCodCat.Text != "") //Analisnado se já foi selecionado alguma categoria
+            {
+                //Iniciando os dados do combobox Subcategoria com todas as subcategoriras pertecentes a aquela categoria selecionada
+                cbxCodSubcat.DataSource = DALSubCategoria.CarregarGrid(int.Parse(cbxCodCat.SelectedValue.ToString()));
+                cbxCodSubcat.ValueMember = "subCategoria_cod";
+                cbxCodSubcat.DisplayMember = "subCategoria_nome";
+                cbxCodSubcat.SelectedIndex = -1;
+            }         
+                       
             //Padrão
             Alterarbotoes(1);
         }
@@ -162,6 +183,20 @@ namespace GUI
                     BLLProduto.Alterar(prod); //Chamando o metodo alterar
                     MessageBox.Show("Alteração realizada com sucesso!");
                 }
+                else if(txtQuantidade.Enabled == true) //Analisando se será adcinando um produto a uma compra
+                {
+                    Produto = new MProduto(txtNome.Text, txtDescricao.Text, double.Parse(txtValorPago.Text), double.Parse(txtValorVenda.Text), double.Parse(txtQuantidade.Text), int.Parse(cbxCodUnidadeMedida.SelectedValue.ToString()), int.Parse(cbxCodCat.SelectedValue.ToString()));
+
+                    //Verificando se tem uma subcategria
+                    if (cbxCodSubcat.Text != "")
+                    {
+                        Produto.CodigoSubcategoria = int.Parse(cbxCodSubcat.SelectedValue.ToString());
+                    }
+
+                    Produto.CodigoProduto = int.Parse(txtCodigo.Text); //Pegando o id
+
+                    Close(); //Fechando o formulario
+                }
                 else
                 {
                     BLLProduto.Incluir(prod); //Chamando o metodo cadastrar
@@ -219,6 +254,7 @@ namespace GUI
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             Alterarbotoes(1);
+            txtCodigo.Clear();
         }
 
 

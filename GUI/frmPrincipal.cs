@@ -38,5 +38,12 @@ namespace GUI
             f.ShowDialog();
             f.Dispose();
         }
+
+        private void comprasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCadastrarCompra f = new frmCadastrarCompra();
+            f.ShowDialog();
+            f.Dispose();
+        }
     }
 }

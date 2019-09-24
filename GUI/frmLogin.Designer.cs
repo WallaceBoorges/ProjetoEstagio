@@ -33,6 +33,7 @@
             this.lblSenha = new System.Windows.Forms.Label();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.lblUsuario = new System.Windows.Forms.Label();
+            this.btnFechar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnAcessar
@@ -52,6 +53,7 @@
             this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(192, 20);
             this.txtSenha.TabIndex = 87;
+            this.txtSenha.Text = "12345678";
             // 
             // lblSenha
             // 
@@ -68,6 +70,7 @@
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(192, 20);
             this.txtUsuario.TabIndex = 85;
+            this.txtUsuario.Text = "admin";
             // 
             // lblUsuario
             // 
@@ -78,17 +81,30 @@
             this.lblUsuario.TabIndex = 84;
             this.lblUsuario.Text = "Usuário:";
             // 
+            // btnFechar
+            // 
+            this.btnFechar.Location = new System.Drawing.Point(63, 220);
+            this.btnFechar.Name = "btnFechar";
+            this.btnFechar.Size = new System.Drawing.Size(75, 23);
+            this.btnFechar.TabIndex = 89;
+            this.btnFechar.Text = "Fechar";
+            this.btnFechar.UseVisualStyleBackColor = true;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(325, 283);
+            this.Controls.Add(this.btnFechar);
             this.Controls.Add(this.btnAcessar);
             this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.lblSenha);
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.lblUsuario);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmLogin";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -102,5 +118,6 @@
         private System.Windows.Forms.Label lblSenha;
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.Label lblUsuario;
+        private System.Windows.Forms.Button btnFechar;
     }
 }

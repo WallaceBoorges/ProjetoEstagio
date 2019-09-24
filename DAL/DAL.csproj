@@ -43,9 +43,14 @@
   <ItemGroup>
     <Compile Include="ConexaoBD.cs" />
     <Compile Include="DALCategoria.cs" />
+    <Compile Include="DALCompra.cs" />
+    <Compile Include="DALFornecedor.cs" />
     <Compile Include="DALFuncionario.cs" />
+    <Compile Include="DALItensCompra.cs" />
+    <Compile Include="DALParcelasCompra.cs" />
     <Compile Include="DALProduto.cs" />
     <Compile Include="DALSubCategoria.cs" />
+    <Compile Include="DALTipoPagamento.cs" />
     <Compile Include="DALUnidadeMedida.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -156,3 +156,4 @@ C:\Users\Matheus Gois\Desktop\Nova pasta (2)\ProjetoEstagio\GUI\obj\Debug\GUI.cs
 C:\Users\Matheus Gois\Desktop\Nova pasta (2)\ProjetoEstagio\GUI\obj\Debug\GUI.frmCadastroProduto.resources
 C:\Users\Matheus Gois\Desktop\ProjetoEstagio\GUI\obj\Debug\GUI.frmCadastroProduto.resources
 C:\Users\Matheus Gois\Desktop\ProjetoEstagio\GUI\obj\Debug\GUI.frmLogin.resources
+C:\Users\Matheus Gois\Desktop\ProjetoEstagio\GUI\obj\Debug\GUI.frmCadastrarCompra.resources

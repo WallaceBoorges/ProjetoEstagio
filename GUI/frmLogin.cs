@@ -19,6 +19,8 @@ namespace GUI
             //Criando o obj do tipo MeuMsgBox e configurando a sua exibição
             var login = new frmLogin();
 
+            login.Resultado = "0";
+
             //Chamando o formulario
             login.ShowDialog();
             return login.Resultado;
@@ -72,6 +74,11 @@ namespace GUI
                 MessageBox.Show("Preencha todos os dados!", "OK"); //Informando que deve ser informado todos os dados
             }
                                    
+        }
+
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

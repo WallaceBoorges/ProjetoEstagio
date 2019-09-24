@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using Modelo;
@@ -26,6 +27,7 @@ namespace DAL
                 }
             }
         }
+                
         public static void Alterar(MProduto modelo)
         {
             try
@@ -112,6 +114,7 @@ namespace DAL
                 throw new Exception(erro.Message);
             }
         }
+        
 
         /* Método para buscar dados na base de dados e trazer para dentro do DataGridView*/
         public static DataTable LocalizarDados(String valor)

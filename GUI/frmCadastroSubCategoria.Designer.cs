@@ -59,11 +59,10 @@
             this.subcategoria_nome,
             this.categoria_cod,
             this.categoria_nome});
-            this.dgvSubCategoria.Location = new System.Drawing.Point(35, 319);
-            this.dgvSubCategoria.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvSubCategoria.Location = new System.Drawing.Point(26, 259);
             this.dgvSubCategoria.Name = "dgvSubCategoria";
             this.dgvSubCategoria.ReadOnly = true;
-            this.dgvSubCategoria.Size = new System.Drawing.Size(755, 188);
+            this.dgvSubCategoria.Size = new System.Drawing.Size(566, 153);
             this.dgvSubCategoria.TabIndex = 44;
             // 
             // codigo
@@ -100,86 +99,77 @@
             // 
             // txtConsultaSubCategoria
             // 
-            this.txtConsultaSubCategoria.Location = new System.Drawing.Point(35, 279);
-            this.txtConsultaSubCategoria.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtConsultaSubCategoria.Location = new System.Drawing.Point(26, 227);
             this.txtConsultaSubCategoria.Name = "txtConsultaSubCategoria";
-            this.txtConsultaSubCategoria.Size = new System.Drawing.Size(592, 22);
+            this.txtConsultaSubCategoria.Size = new System.Drawing.Size(445, 20);
             this.txtConsultaSubCategoria.TabIndex = 43;
             // 
             // lblSubCategoria
             // 
             this.lblSubCategoria.AutoSize = true;
-            this.lblSubCategoria.Location = new System.Drawing.Point(35, 260);
-            this.lblSubCategoria.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSubCategoria.Location = new System.Drawing.Point(26, 211);
             this.lblSubCategoria.Name = "lblSubCategoria";
-            this.lblSubCategoria.Size = new System.Drawing.Size(94, 17);
+            this.lblSubCategoria.Size = new System.Drawing.Size(71, 13);
             this.lblSubCategoria.TabIndex = 42;
             this.lblSubCategoria.Text = "SubCategoria";
             // 
             // lblCodCat
             // 
             this.lblCodCat.AutoSize = true;
-            this.lblCodCat.Location = new System.Drawing.Point(35, 140);
-            this.lblCodCat.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCodCat.Location = new System.Drawing.Point(26, 114);
             this.lblCodCat.Name = "lblCodCat";
-            this.lblCodCat.Size = new System.Drawing.Size(128, 17);
+            this.lblCodCat.Size = new System.Drawing.Size(97, 13);
             this.lblCodCat.TabIndex = 41;
             this.lblCodCat.Text = "Nome da categoria";
             // 
             // lblSubCatNome
             // 
             this.lblSubCatNome.AutoSize = true;
-            this.lblSubCatNome.Location = new System.Drawing.Point(31, 80);
-            this.lblSubCatNome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSubCatNome.Location = new System.Drawing.Point(23, 65);
             this.lblSubCatNome.Name = "lblSubCatNome";
-            this.lblSubCatNome.Size = new System.Drawing.Size(151, 17);
+            this.lblSubCatNome.Size = new System.Drawing.Size(114, 13);
             this.lblSubCatNome.TabIndex = 40;
             this.lblSubCatNome.Text = "Nome da subcategoria";
             // 
             // lblCodigo
             // 
             this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Location = new System.Drawing.Point(35, 16);
-            this.lblCodigo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCodigo.Location = new System.Drawing.Point(26, 13);
             this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(52, 17);
+            this.lblCodigo.Size = new System.Drawing.Size(40, 13);
             this.lblCodigo.TabIndex = 39;
             this.lblCodigo.Text = "Código";
             // 
             // txtSubCatNome
             // 
-            this.txtSubCatNome.Location = new System.Drawing.Point(35, 100);
-            this.txtSubCatNome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSubCatNome.Location = new System.Drawing.Point(26, 81);
             this.txtSubCatNome.Name = "txtSubCatNome";
-            this.txtSubCatNome.Size = new System.Drawing.Size(132, 22);
+            this.txtSubCatNome.Size = new System.Drawing.Size(100, 20);
             this.txtSubCatNome.TabIndex = 38;
             // 
             // txtCodigo
             // 
             this.txtCodigo.Enabled = false;
-            this.txtCodigo.Location = new System.Drawing.Point(35, 36);
-            this.txtCodigo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCodigo.Location = new System.Drawing.Point(26, 29);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(132, 22);
+            this.txtCodigo.Size = new System.Drawing.Size(100, 20);
             this.txtCodigo.TabIndex = 37;
             // 
             // cbxCodCat
             // 
             this.cbxCodCat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxCodCat.FormattingEnabled = true;
-            this.cbxCodCat.Location = new System.Drawing.Point(35, 160);
-            this.cbxCodCat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxCodCat.Location = new System.Drawing.Point(26, 130);
             this.cbxCodCat.Name = "cbxCodCat";
-            this.cbxCodCat.Size = new System.Drawing.Size(160, 24);
+            this.cbxCodCat.Size = new System.Drawing.Size(121, 21);
             this.cbxCodCat.TabIndex = 36;
             this.cbxCodCat.SelectedIndexChanged += new System.EventHandler(this.cbxCodCat_SelectedIndexChanged);
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(147, 213);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancelar.Location = new System.Drawing.Point(110, 173);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(100, 28);
+            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 35;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -187,10 +177,9 @@
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(39, 213);
-            this.btnSalvar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSalvar.Location = new System.Drawing.Point(29, 173);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(100, 28);
+            this.btnSalvar.Size = new System.Drawing.Size(75, 23);
             this.btnSalvar.TabIndex = 34;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
@@ -198,10 +187,9 @@
             // 
             // btnExcluir
             // 
-            this.btnExcluir.Location = new System.Drawing.Point(800, 389);
-            this.btnExcluir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnExcluir.Location = new System.Drawing.Point(600, 316);
             this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(100, 28);
+            this.btnExcluir.Size = new System.Drawing.Size(75, 23);
             this.btnExcluir.TabIndex = 33;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
@@ -209,10 +197,9 @@
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(651, 279);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBuscar.Location = new System.Drawing.Point(488, 227);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(100, 28);
+            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
             this.btnBuscar.TabIndex = 32;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -220,10 +207,9 @@
             // 
             // btnAlterar
             // 
-            this.btnAlterar.Location = new System.Drawing.Point(800, 332);
-            this.btnAlterar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAlterar.Location = new System.Drawing.Point(600, 270);
             this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(100, 28);
+            this.btnAlterar.Size = new System.Drawing.Size(75, 23);
             this.btnAlterar.TabIndex = 31;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = true;
@@ -231,9 +217,9 @@
             // 
             // frmCadastroSubCategoria
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(916, 523);
+            this.ClientSize = new System.Drawing.Size(687, 425);
             this.Controls.Add(this.dgvSubCategoria);
             this.Controls.Add(this.txtConsultaSubCategoria);
             this.Controls.Add(this.lblSubCategoria);
@@ -248,8 +234,8 @@
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnAlterar);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmCadastroSubCategoria";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCadastroSubCategoria";
             this.Load += new System.EventHandler(this.frmCadastroSubCategoria_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubCategoria)).EndInit();

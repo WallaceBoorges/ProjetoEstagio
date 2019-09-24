@@ -46,9 +46,7 @@
             this.lblProduto = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
-            this.btnExcluir = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.btnAlterar = new System.Windows.Forms.Button();
             this.lblSubCat = new System.Windows.Forms.Label();
             this.cbxCodSubcat = new System.Windows.Forms.ComboBox();
             this.lblUnidadeMedida = new System.Windows.Forms.Label();
@@ -67,6 +65,8 @@
             this.lblNome = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.lblCodigo = new System.Windows.Forms.Label();
+            this.btnAlterar = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduto)).BeginInit();
             this.SuspendLayout();
             // 
@@ -229,16 +229,6 @@
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
-            // btnExcluir
-            // 
-            this.btnExcluir.Location = new System.Drawing.Point(565, 444);
-            this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(75, 23);
-            this.btnExcluir.TabIndex = 77;
-            this.btnExcluir.Text = "Excluir";
-            this.btnExcluir.UseVisualStyleBackColor = true;
-            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
-            // 
             // btnBuscar
             // 
             this.btnBuscar.Location = new System.Drawing.Point(484, 366);
@@ -248,16 +238,6 @@
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
-            // btnAlterar
-            // 
-            this.btnAlterar.Location = new System.Drawing.Point(565, 398);
-            this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(75, 23);
-            this.btnAlterar.TabIndex = 75;
-            this.btnAlterar.Text = "Alterar";
-            this.btnAlterar.UseVisualStyleBackColor = true;
-            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // lblSubCat
             // 
@@ -333,6 +313,7 @@
             // 
             // txtQuantidade
             // 
+            this.txtQuantidade.Enabled = false;
             this.txtQuantidade.Location = new System.Drawing.Point(373, 212);
             this.txtQuantidade.Name = "txtQuantidade";
             this.txtQuantidade.Size = new System.Drawing.Size(109, 20);
@@ -416,11 +397,31 @@
             this.lblCodigo.TabIndex = 57;
             this.lblCodigo.Text = "Código";
             // 
+            // btnAlterar
+            // 
+            this.btnAlterar.Location = new System.Drawing.Point(565, 398);
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.Size = new System.Drawing.Size(75, 23);
+            this.btnAlterar.TabIndex = 75;
+            this.btnAlterar.Text = "Alterar";
+            this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
+            // 
+            // btnExcluir
+            // 
+            this.btnExcluir.Location = new System.Drawing.Point(565, 444);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(75, 23);
+            this.btnExcluir.TabIndex = 77;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+            // 
             // frmCadastroProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(663, 566);
+            this.ClientSize = new System.Drawing.Size(663, 567);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.dgvProduto);
             this.Controls.Add(this.txtConsultaProduto);
@@ -449,6 +450,7 @@
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.lblCodigo);
             this.Name = "frmCadastroProduto";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCadastroProduto";
             this.Load += new System.EventHandler(this.frmCadastroProduto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduto)).EndInit();
@@ -464,10 +466,7 @@
         private System.Windows.Forms.TextBox txtConsultaProduto;
         private System.Windows.Forms.Label lblProduto;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button btnSalvar;
-        private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.Label lblSubCat;
         private System.Windows.Forms.ComboBox cbxCodSubcat;
         private System.Windows.Forms.Label lblUnidadeMedida;
@@ -498,5 +497,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn UniNome;
         private System.Windows.Forms.DataGridViewTextBoxColumn CatNome;
         private System.Windows.Forms.DataGridViewTextBoxColumn SubNome;
+        private System.Windows.Forms.Button btnAlterar;
+        private System.Windows.Forms.Button btnExcluir;
+        private System.Windows.Forms.Button btnSalvar;
     }
 }

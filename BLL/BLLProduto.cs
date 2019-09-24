@@ -2,6 +2,7 @@
 using Modelo;
 using DAL;
 using System.Data;
+using System.Collections.Generic;
 
 namespace BLL
 {

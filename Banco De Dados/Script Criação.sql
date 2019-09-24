@@ -4,6 +4,8 @@ GO
 USE ProjetoEstagio
 GO
 
+/* Modelo Logico: */
+
 CREATE TABLE itensvenda (
     itensVenda_cod int IDENTITY(1,1) PRIMARY KEY,
     itensVenda_qtde float,
@@ -71,11 +73,11 @@ CREATE TABLE parcelasvenda (
 
 CREATE TABLE compra (
     compra_cod int IDENTITY(1,1) PRIMARY KEY,
-    compra_data datetime,
-    compra_nfiscal int,
+    compra_data date,
+    compra_nfiscal varchar(95) UNIQUE,
     compra_total money,
     compra_nparcelas int,
-    compra_status int,
+    compra_status varchar(11) NOT NULL CHECK(compra_status IN ('AGUARDANDO', 'FINALIZADA', 'CANCELADA')),
     fornecedor_cod int,
     tipoPag_cod int
 );

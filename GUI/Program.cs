@@ -19,7 +19,7 @@ namespace GUI
 
             string cod = frmLogin.Login();
 
-            if (cod != "")
+            if (cod != "0")
             {
                 frmPrincipal f = new frmPrincipal();
 

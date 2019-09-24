@@ -64,6 +64,12 @@
     <Compile Include="frmCadastroSubCategoria.Designer.cs">
       <DependentUpon>frmCadastroSubCategoria.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCadastrarCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastrarCompra.Designer.cs">
+      <DependentUpon>frmCadastrarCompra.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +97,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCadastroSubCategoria.resx">
       <DependentUpon>frmCadastroSubCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadastrarCompra.resx">
+      <DependentUpon>frmCadastrarCompra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>

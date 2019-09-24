@@ -17,19 +17,7 @@
         {
 
         }
-        //Metodo construtor sem a subcategoria
-        public MProduto(int codigoProduto, string nomeProduto, string descricaoProduto, double valorPagoProduto, double valorVendaProduto, double quantProduto, int codigoUnidadeMedida, int codigoCategoria)
-        {
-            CodigoProduto = codigoProduto;
-            NomeProduto = nomeProduto;
-            DescricaoProduto = descricaoProduto;
-            ValorPagoProduto = valorPagoProduto;
-            ValorVendaProduto = valorVendaProduto;
-            QuantProduto = quantProduto;
-            CodigoUnidadeMedida = codigoUnidadeMedida;
-            CodigoCategoria = codigoCategoria;
-        }
-        //Metodo sem o id e o subcategoria
+
         public MProduto(string nomeProduto, string descricaoProduto, double valorPagoProduto, double valorVendaProduto, double quantProduto, int codigoUnidadeMedida, int codigoCategoria)
         {
             NomeProduto = nomeProduto;
@@ -40,18 +28,11 @@
             CodigoUnidadeMedida = codigoUnidadeMedida;
             CodigoCategoria = codigoCategoria;
         }
-        //metodo construtor com todos os argumentos
-        public MProduto(int codigoProduto, string nomeProduto, string descricaoProduto, double valorPagoProduto, double valorVendaProduto, double quantProduto, int codigoUnidadeMedida, int codigoCategoria, int codigoSubcategoria)
+
+        public MProduto(string nomeProduto, string descricaoProduto, double valorPagoProduto, double valorVendaProduto, double quantProduto, int codigoUnidadeMedida, int codigoCategoria, int codigoSubcategoria) : this(nomeProduto, descricaoProduto, valorPagoProduto, valorVendaProduto, quantProduto, codigoUnidadeMedida, codigoCategoria)
         {
-            CodigoProduto = codigoProduto;
-            NomeProduto = nomeProduto;
-            DescricaoProduto = descricaoProduto;
-            ValorPagoProduto = valorPagoProduto;
-            ValorVendaProduto = valorVendaProduto;
-            QuantProduto = quantProduto;
-            CodigoUnidadeMedida = codigoUnidadeMedida;
-            CodigoCategoria = codigoCategoria;
             CodigoSubcategoria = codigoSubcategoria;
         }
+
     }
 }
