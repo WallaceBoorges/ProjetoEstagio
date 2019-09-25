@@ -40,3 +40,9 @@ C:\Users\Matheus Gois\Desktop\ProjetoEstagio\Modelo\obj\Debug\Modelo.csprojAssem
 C:\Users\Matheus Gois\Desktop\ProjetoEstagio\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
 C:\Users\Matheus Gois\Desktop\ProjetoEstagio\Modelo\obj\Debug\Modelo.dll
 C:\Users\Matheus Gois\Desktop\ProjetoEstagio\Modelo\obj\Debug\Modelo.pdb
+C:\Users\Bia\Documents\ProjetoEstagio-master\Modelo\bin\Debug\Modelo.dll
+C:\Users\Bia\Documents\ProjetoEstagio-master\Modelo\bin\Debug\Modelo.pdb
+C:\Users\Bia\Documents\ProjetoEstagio-master\Modelo\obj\Debug\Modelo.csprojAssemblyReference.cache
+C:\Users\Bia\Documents\ProjetoEstagio-master\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
+C:\Users\Bia\Documents\ProjetoEstagio-master\Modelo\obj\Debug\Modelo.dll
+C:\Users\Bia\Documents\ProjetoEstagio-master\Modelo\obj\Debug\Modelo.pdb

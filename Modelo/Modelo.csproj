@@ -43,6 +43,8 @@
   <ItemGroup>
     <Compile Include="MCategoria.cs" />
     <Compile Include="MCompra.cs" />
+    <Compile Include="MEndereco.cs" />
+    <Compile Include="MFornecedor.cs" />
     <Compile Include="MItensCompra.cs" />
     <Compile Include="MParcelasCompra.cs" />
     <Compile Include="MProduto.cs" />
