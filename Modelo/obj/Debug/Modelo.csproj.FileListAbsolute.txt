@@ -1,0 +1,42 @@
+C:\Users\Wallace\source\repos\projetoEstagio\Modelo\bin\Debug\Modelo.dll
+C:\Users\Wallace\source\repos\projetoEstagio\Modelo\bin\Debug\Modelo.pdb
+C:\Users\Wallace\source\repos\projetoEstagio\Modelo\obj\Debug\Modelo.csprojAssemblyReference.cache
+C:\Users\Wallace\source\repos\projetoEstagio\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
+C:\Users\Wallace\source\repos\projetoEstagio\Modelo\obj\Debug\Modelo.dll
+C:\Users\Wallace\source\repos\projetoEstagio\Modelo\obj\Debug\Modelo.pdb
+C:\projetoEstagio1\Modelo\bin\Debug\Modelo.dll
+C:\projetoEstagio1\Modelo\bin\Debug\Modelo.pdb
+C:\projetoEstagio1\Modelo\obj\Debug\Modelo.csprojAssemblyReference.cache
+C:\projetoEstagio1\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
+C:\projetoEstagio1\Modelo\obj\Debug\Modelo.dll
+C:\projetoEstagio1\Modelo\obj\Debug\Modelo.pdb
+C:\Users\Wallace\Documents\projetoEstagio2\Modelo\bin\Debug\Modelo.dll
+C:\Users\Wallace\Documents\projetoEstagio2\Modelo\bin\Debug\Modelo.pdb
+C:\Users\Wallace\Documents\projetoEstagio2\Modelo\obj\Debug\Modelo.csprojAssemblyReference.cache
+C:\Users\Wallace\Documents\projetoEstagio2\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
+C:\Users\Wallace\Documents\projetoEstagio2\Modelo\obj\Debug\Modelo.dll
+C:\Users\Wallace\Documents\projetoEstagio2\Modelo\obj\Debug\Modelo.pdb
+C:\Users\Matheus Gois\Desktop\Nova pasta\ProjetoEstagio\Modelo\bin\Debug\Modelo.dll
+C:\Users\Matheus Gois\Desktop\Nova pasta\ProjetoEstagio\Modelo\bin\Debug\Modelo.pdb
+C:\Users\Matheus Gois\Desktop\Nova pasta\ProjetoEstagio\Modelo\obj\Debug\Modelo.csprojAssemblyReference.cache
+C:\Users\Matheus Gois\Desktop\Nova pasta\ProjetoEstagio\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
+C:\Users\Matheus Gois\Desktop\Nova pasta\ProjetoEstagio\Modelo\obj\Debug\Modelo.dll
+C:\Users\Matheus Gois\Desktop\Nova pasta\ProjetoEstagio\Modelo\obj\Debug\Modelo.pdb
+C:\Users\Bia\Documents\ProjetoEstagio\Modelo\bin\Debug\Modelo.dll
+C:\Users\Bia\Documents\ProjetoEstagio\Modelo\bin\Debug\Modelo.pdb
+C:\Users\Bia\Documents\ProjetoEstagio\Modelo\obj\Debug\Modelo.csprojAssemblyReference.cache
+C:\Users\Bia\Documents\ProjetoEstagio\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
+C:\Users\Bia\Documents\ProjetoEstagio\Modelo\obj\Debug\Modelo.dll
+C:\Users\Bia\Documents\ProjetoEstagio\Modelo\obj\Debug\Modelo.pdb
+C:\Users\Matheus Gois\Desktop\Nova pasta (2)\ProjetoEstagio\Modelo\bin\Debug\Modelo.dll
+C:\Users\Matheus Gois\Desktop\Nova pasta (2)\ProjetoEstagio\Modelo\bin\Debug\Modelo.pdb
+C:\Users\Matheus Gois\Desktop\Nova pasta (2)\ProjetoEstagio\Modelo\obj\Debug\Modelo.csprojAssemblyReference.cache
+C:\Users\Matheus Gois\Desktop\Nova pasta (2)\ProjetoEstagio\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
+C:\Users\Matheus Gois\Desktop\Nova pasta (2)\ProjetoEstagio\Modelo\obj\Debug\Modelo.dll
+C:\Users\Matheus Gois\Desktop\Nova pasta (2)\ProjetoEstagio\Modelo\obj\Debug\Modelo.pdb
+C:\Users\Matheus Gois\Desktop\ProjetoEstagio\Modelo\bin\Debug\Modelo.dll
+C:\Users\Matheus Gois\Desktop\ProjetoEstagio\Modelo\bin\Debug\Modelo.pdb
+C:\Users\Matheus Gois\Desktop\ProjetoEstagio\Modelo\obj\Debug\Modelo.csprojAssemblyReference.cache
+C:\Users\Matheus Gois\Desktop\ProjetoEstagio\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
+C:\Users\Matheus Gois\Desktop\ProjetoEstagio\Modelo\obj\Debug\Modelo.dll
+C:\Users\Matheus Gois\Desktop\ProjetoEstagio\Modelo\obj\Debug\Modelo.pdb
