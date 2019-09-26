@@ -180,3 +180,4 @@ C:\Users\Bia\Documents\ProjetoEstagio-master\GUI\obj\Debug\GUI.csproj.CopyComple
 C:\Users\Bia\Documents\ProjetoEstagio-master\GUI\obj\Debug\GUI.exe
 C:\Users\Bia\Documents\ProjetoEstagio-master\GUI\obj\Debug\GUI.pdb
 C:\Users\Bia\Documents\ProjetoEstagio-master\GUI\obj\Debug\GUI.frmCadastroFornecedor.resources
+C:\Users\Matheus Gois\Desktop\ProjetoEstagio\GUI\obj\Debug\GUI.frmCadastroFornecedor.resources

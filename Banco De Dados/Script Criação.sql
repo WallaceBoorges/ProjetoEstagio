@@ -17,10 +17,11 @@ CREATE TABLE itensvenda (
 CREATE TABLE venda (
     venda_cod int IDENTITY(1,1) PRIMARY KEY,
     venda_data datetime,
-    venda_nfiscal int,
+    venda_nfiscal varchar(95),
     venda_total money,
     venda_nparcelas int,
-    venda_status int,
+    venda_taxaParcela float,
+    venda_status varchar(30),
     cliente_cod int,
     tipoPag_cod int,
     fun_cod int
@@ -29,8 +30,8 @@ CREATE TABLE venda (
 CREATE TABLE parcelascompra (
     parcelasCompra_cod int IDENTITY(1,1) PRIMARY KEY,
     parcelasCompra_valor money,
-    parcelasCompra_datapagto date,
     parcelasCompra_vecto date,
+    parcelasCompra_datapagto date,
     compra_cod int
 );
 
@@ -55,20 +56,20 @@ CREATE TABLE produto (
     produto_cod int IDENTITY(1,1) PRIMARY KEY,
     produto_nome varchar(95),
     produto_descricao text,
-    produto_valorpago money,
     produto_valorvenda money,
     produto_qtde float,
+    produto_status varchar(20) NOT NULL CHECK(produto_status IN ( 'EM ESTOQUE', 'FORA DE ESTOQUE')),
     uniMedida_cod int,
     categoria_cod int,
     subCategoria_cod int
 );
 
 CREATE TABLE parcelasvenda (
-    venda_cod int,
     parcelasVenda_cod int IDENTITY(1,1) PRIMARY KEY,
     parcelasVenda_valor money,
+    parcelasVenda_tadavecto date,
     parcelasVenda_datapagto date,
-    parcelasVenda_tadavecto date
+    venda_cod int
 );
 
 CREATE TABLE compra (
@@ -101,7 +102,10 @@ CREATE TABLE undmedida (
 CREATE TABLE itenscompra (
     itensCompra_cod int IDENTITY(1,1) PRIMARY KEY,
     itensCompra_qtde float,
+    itensCompra_qtdeVenda float,
     itensCompra_valor money,
+    itensCompra_codigoBarra varchar(50) UNIQUE,
+    itensCompra_vencimento date,
     compra_cod int,
     produto_cod int
 );
@@ -109,7 +113,7 @@ CREATE TABLE itenscompra (
 CREATE TABLE cliente (
     cliente_cod int IDENTITY(1,1) PRIMARY KEY,
     cliente_nome varchar(95),
-    cliente_tipo int,
+    cliente_tipo varchar(10) NOT NULL CHECK(cliente_tipo IN ( 'FÍSICA', 'JURÍDICA')),
     cliente_cpfcnpj varchar(50) UNIQUE,
     cliente_rg varchar(20),
     cliente_rsocial varchar(95),
@@ -126,8 +130,6 @@ CREATE TABLE funcionario (
     fun_senha varchar(20),
     fun_cpf varchar(14),
     fun_rg varchar(20),
-    fun_orgaoemissor varchar(95),
-    fun_rgemissao date,
     fun_datanascimento date,
     fun_sexo varchar(10),
     fun_estadocivil varchar(20),
