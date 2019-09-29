@@ -10,7 +10,7 @@ namespace Modelo
     {
         public int CodigoFornecedor { get; set; }
         public String NomeFornecedor { get; set; }
-        public int RsocialFornecedor { get; set; }
+        public String RsocialFornecedor { get; set; }
         public int IeFornecedor { get; set; }
         public int CnpjFornecedor { get; set; }
         public int FoneFornecedor { get; set; }
@@ -22,7 +22,7 @@ namespace Modelo
         {
             this.CodigoFornecedor = 0;
             this.NomeFornecedor = "";
-            this.RsocialFornecedor = 0;
+            this.RsocialFornecedor = "";
             this.IeFornecedor = 0;
             this.CnpjFornecedor = 0;
             this.FoneFornecedor = 0;
@@ -32,7 +32,7 @@ namespace Modelo
 
         }
 
-        public MFornecedor(string nomeFornecedor, int rsocialFornecedor, int ieFornecedor, int cnpjFornecedor, int foneFornecedor, int celFornecedor, string emailFornecedor)
+        public MFornecedor(string nomeFornecedor, string rsocialFornecedor, int ieFornecedor, int cnpjFornecedor, int foneFornecedor, int celFornecedor, string emailFornecedor)
         {
             NomeFornecedor = nomeFornecedor;
             RsocialFornecedor = rsocialFornecedor;

@@ -181,3 +181,27 @@ C:\Users\Bia\Documents\ProjetoEstagio-master\GUI\obj\Debug\GUI.exe
 C:\Users\Bia\Documents\ProjetoEstagio-master\GUI\obj\Debug\GUI.pdb
 C:\Users\Bia\Documents\ProjetoEstagio-master\GUI\obj\Debug\GUI.frmCadastroFornecedor.resources
 C:\Users\Matheus Gois\Desktop\ProjetoEstagio\GUI\obj\Debug\GUI.frmCadastroFornecedor.resources
+C:\Users\evert\Source\Repos\WallaceBoorges\ProjetoEstagio\GUI\bin\Debug\GUI.exe.config
+C:\Users\evert\Source\Repos\WallaceBoorges\ProjetoEstagio\GUI\bin\Debug\GUI.exe
+C:\Users\evert\Source\Repos\WallaceBoorges\ProjetoEstagio\GUI\bin\Debug\GUI.pdb
+C:\Users\evert\Source\Repos\WallaceBoorges\ProjetoEstagio\GUI\bin\Debug\BLL.dll
+C:\Users\evert\Source\Repos\WallaceBoorges\ProjetoEstagio\GUI\bin\Debug\DAL.dll
+C:\Users\evert\Source\Repos\WallaceBoorges\ProjetoEstagio\GUI\bin\Debug\Modelo.dll
+C:\Users\evert\Source\Repos\WallaceBoorges\ProjetoEstagio\GUI\bin\Debug\BLL.pdb
+C:\Users\evert\Source\Repos\WallaceBoorges\ProjetoEstagio\GUI\bin\Debug\DAL.pdb
+C:\Users\evert\Source\Repos\WallaceBoorges\ProjetoEstagio\GUI\bin\Debug\Modelo.pdb
+C:\Users\evert\Source\Repos\WallaceBoorges\ProjetoEstagio\GUI\obj\Debug\GUI.csprojAssemblyReference.cache
+C:\Users\evert\Source\Repos\WallaceBoorges\ProjetoEstagio\GUI\obj\Debug\GUI.frmCadastroCategoria.resources
+C:\Users\evert\Source\Repos\WallaceBoorges\ProjetoEstagio\GUI\obj\Debug\GUI.frmCadastroProduto.resources
+C:\Users\evert\Source\Repos\WallaceBoorges\ProjetoEstagio\GUI\obj\Debug\GUI.frmCadastroSubCategoria.resources
+C:\Users\evert\Source\Repos\WallaceBoorges\ProjetoEstagio\GUI\obj\Debug\GUI.frmCadastrarCompra.resources
+C:\Users\evert\Source\Repos\WallaceBoorges\ProjetoEstagio\GUI\obj\Debug\GUI.frmCadastroFornecedor.resources
+C:\Users\evert\Source\Repos\WallaceBoorges\ProjetoEstagio\GUI\obj\Debug\GUI.frmLogin.resources
+C:\Users\evert\Source\Repos\WallaceBoorges\ProjetoEstagio\GUI\obj\Debug\GUI.frmPrincipal.resources
+C:\Users\evert\Source\Repos\WallaceBoorges\ProjetoEstagio\GUI\obj\Debug\GUI.Properties.Resources.resources
+C:\Users\evert\Source\Repos\WallaceBoorges\ProjetoEstagio\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
+C:\Users\evert\Source\Repos\WallaceBoorges\ProjetoEstagio\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+C:\Users\evert\Source\Repos\WallaceBoorges\ProjetoEstagio\GUI\obj\Debug\GUI.csproj.CopyComplete
+C:\Users\evert\Source\Repos\WallaceBoorges\ProjetoEstagio\GUI\obj\Debug\GUI.exe
+C:\Users\evert\Source\Repos\WallaceBoorges\ProjetoEstagio\GUI\obj\Debug\GUI.pdb
+C:\Users\evert\source\repos\WallaceBoorges\ProjetoEstagio\GUI\obj\Debug\GUI.frmCadastroCliente.resources

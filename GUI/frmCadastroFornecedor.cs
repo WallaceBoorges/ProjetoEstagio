@@ -89,7 +89,7 @@ namespace GUI
                 }
 
                 //Verificando se vai ser atualizado ou cadastrado
-                MFornecedor forn = new MFornecedor(txtNome.Text, int.Parse(txtRsocial.Text), int.Parse(txtIe.Text), int.Parse(txtCnpj.Text), int.Parse(txtFone.Text), int.Parse(txtCel.Text), txtEmail.Text);
+                MFornecedor forn = new MFornecedor(txtNome.Text, txtRsocial.Text, int.Parse(txtIe.Text), int.Parse(txtCnpj.Text), int.Parse(txtFone.Text), int.Parse(txtCel.Text), txtEmail.Text);
                 MEndereco end = new MEndereco(int.Parse(txtCep.Text), txtEndereco.Text, txtBairro.Text, int.Parse(txtNumero.Text), txtCidade.Text, txtEstado.Text);
 
                 //Verificando se vai ser atualizado ou cadastrado
@@ -197,11 +197,6 @@ namespace GUI
 
         }
 
-        private void txtRsocial_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            VerificaDigito(sender, e);
-
-        }
 
         private void txtCnpj_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -231,6 +226,91 @@ namespace GUI
         {
             VerificaDigito(sender, e);
 
+        }
+
+        private void txtCodigo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCodigoEndereco_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNome_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvFornecedor_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void txtConsultaFornecedor_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtRsocial_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCnpj_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtIe_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtEndereco_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNumero_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtBairro_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCidade_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtEstado_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCep_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtFone_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCep_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            VerificaDigito(sender, e);
         }
     }
 }
