@@ -1,11 +1,8 @@
 ﻿using Modelo;
 using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace DAL
 {
@@ -28,7 +25,7 @@ namespace DAL
             }
         }
 
-        public static void Incluir(int quant, MParcelasCompra modelo)
+        public static void Incluir(MParcelasCompra modelo)
         {
             try
             {
@@ -37,22 +34,17 @@ namespace DAL
                     conn.Open(); //Abrindo a conexão
                     using (var comm = conn.CreateCommand()) //Criando o comando SQL
                     {
-                        for (int i = 0; i < quant; i++)
-                        {
-                            comm.Parameters.Clear();
 
-                            comm.CommandText = "INSERT INTO parcelascompra (parcelasCompra_valor, parcelasCompra_datapagto, parcelasCompra_vecto, compra_cod) " +
-                                "VALUES (@valor, @data, @venc, @cod)";
+                        comm.CommandText = "INSERT INTO parcelascompra (parcelasCompra_valor, parcelasCompra_vecto, compra_cod) " +
+                            "VALUES (@valor, @venc, @cod)";
 
-                            //Passando o valores por parametro
-                            comm.Parameters.Add(new SqlParameter("@valor", modelo.ParcelaCompraValor));
-                            comm.Parameters.Add(new SqlParameter("@data", modelo.ParcelaCompraDataPagamento.AddMonths(i)));
-                            comm.Parameters.Add(new SqlParameter("@venc", modelo.ParcelaCompraVencimento.AddMonths(i)));
-                            comm.Parameters.Add(new SqlParameter("@cod", modelo.CompraCodigo));
+                        //Passando o valores por parametro
+                        comm.Parameters.Add(new SqlParameter("@valor", modelo.ParcelaCompraValor));
+                        comm.Parameters.Add(new SqlParameter("@venc", modelo.ParcelaCompraVencimento));
+                        comm.Parameters.Add(new SqlParameter("@cod", modelo.CompraCodigo));
 
-                            //Executando o comando
-                            comm.ExecuteNonQuery();
-                        }
+                        //Executando o comando
+                        comm.ExecuteNonQuery();
                     }
                 }
             }

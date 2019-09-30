@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Modelo
 {
@@ -18,17 +14,13 @@ namespace Modelo
         {
         }
 
-        public MParcelasCompra(double parcelaCompraValor, DateTime parcelaCompraDataPagamento, DateTime parcelaCompraVencimento)
+        public MParcelasCompra(double parcelaCompraValor, DateTime parcelaCompraVencimento, int compraCodigo)
         {
             ParcelaCompraValor = parcelaCompraValor;
-            ParcelaCompraDataPagamento = parcelaCompraDataPagamento;
             ParcelaCompraVencimento = parcelaCompraVencimento;
-        }
-
-        public MParcelasCompra(double parcelaCompraValor, DateTime parcelaCompraDataPagamento, DateTime parcelaCompraVencimento, int compraCodigo) : this(parcelaCompraValor, parcelaCompraDataPagamento, parcelaCompraVencimento)
-        {
             CompraCodigo = compraCodigo;
         }
+
 
         public double ValorParcela(double valorTotal, int quantParcela)
         {

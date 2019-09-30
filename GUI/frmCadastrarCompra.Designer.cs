@@ -47,7 +47,6 @@
             this.lblTipoPagamento = new System.Windows.Forms.Label();
             this.cbxTipoPagamento = new System.Windows.Forms.ComboBox();
             this.btnAdicionarProduto = new System.Windows.Forms.Button();
-            this.dgvProduto = new System.Windows.Forms.DataGridView();
             this.btnExcluirProduto = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txtValorParcela = new System.Windows.Forms.TextBox();
@@ -72,8 +71,24 @@
             this.FornecedorEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EnderecoCod = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnAlterarProduto = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProduto)).BeginInit();
+            this.dgvProduto = new System.Windows.Forms.DataGridView();
+            this.itensCompra_cod = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.itensCompra_qtde = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.itensCompra_qtdeVenda = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.itensCompra_valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.itensCompra_codigoBarra = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.itensCompra_vencimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.produto_cod = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.produto_nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.produto_descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.produto_valorvenda = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.produto_qtde = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.produto_status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.uniMedida_cod = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categoria_cod = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.subcategoria_cod = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCompra)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProduto)).BeginInit();
             this.SuspendLayout();
             // 
             // txtNotaFiscal
@@ -271,17 +286,6 @@
             this.btnAdicionarProduto.UseVisualStyleBackColor = true;
             this.btnAdicionarProduto.Click += new System.EventHandler(this.btnAdicionarProduto_Click);
             // 
-            // dgvProduto
-            // 
-            this.dgvProduto.AllowUserToAddRows = false;
-            this.dgvProduto.AllowUserToDeleteRows = false;
-            this.dgvProduto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProduto.Location = new System.Drawing.Point(399, 17);
-            this.dgvProduto.Name = "dgvProduto";
-            this.dgvProduto.ReadOnly = true;
-            this.dgvProduto.Size = new System.Drawing.Size(453, 206);
-            this.dgvProduto.TabIndex = 102;
-            // 
             // btnExcluirProduto
             // 
             this.btnExcluirProduto.Location = new System.Drawing.Point(676, 243);
@@ -290,7 +294,6 @@
             this.btnExcluirProduto.TabIndex = 103;
             this.btnExcluirProduto.Text = "Excluir";
             this.btnExcluirProduto.UseVisualStyleBackColor = true;
-            this.btnExcluirProduto.Click += new System.EventHandler(this.btnExcluirProduto_Click);
             // 
             // label2
             // 
@@ -498,11 +501,138 @@
             this.btnAlterarProduto.Text = "Alterar";
             this.btnAlterarProduto.UseVisualStyleBackColor = true;
             // 
+            // dgvProduto
+            // 
+            this.dgvProduto.AllowUserToAddRows = false;
+            this.dgvProduto.AllowUserToDeleteRows = false;
+            this.dgvProduto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProduto.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.itensCompra_cod,
+            this.itensCompra_qtde,
+            this.itensCompra_qtdeVenda,
+            this.itensCompra_valor,
+            this.itensCompra_codigoBarra,
+            this.itensCompra_vencimento,
+            this.produto_cod,
+            this.produto_nome,
+            this.produto_descricao,
+            this.produto_valorvenda,
+            this.produto_qtde,
+            this.produto_status,
+            this.uniMedida_cod,
+            this.categoria_cod,
+            this.subcategoria_cod});
+            this.dgvProduto.Location = new System.Drawing.Point(399, 17);
+            this.dgvProduto.Name = "dgvProduto";
+            this.dgvProduto.ReadOnly = true;
+            this.dgvProduto.Size = new System.Drawing.Size(453, 206);
+            this.dgvProduto.TabIndex = 112;
+            // 
+            // itensCompra_cod
+            // 
+            this.itensCompra_cod.HeaderText = "Código Item";
+            this.itensCompra_cod.Name = "itensCompra_cod";
+            this.itensCompra_cod.ReadOnly = true;
+            this.itensCompra_cod.Visible = false;
+            // 
+            // itensCompra_qtde
+            // 
+            this.itensCompra_qtde.HeaderText = "Quantidade Item";
+            this.itensCompra_qtde.Name = "itensCompra_qtde";
+            this.itensCompra_qtde.ReadOnly = true;
+            this.itensCompra_qtde.Visible = false;
+            // 
+            // itensCompra_qtdeVenda
+            // 
+            this.itensCompra_qtdeVenda.HeaderText = "Quantidade Venda";
+            this.itensCompra_qtdeVenda.Name = "itensCompra_qtdeVenda";
+            this.itensCompra_qtdeVenda.ReadOnly = true;
+            this.itensCompra_qtdeVenda.Visible = false;
+            // 
+            // itensCompra_valor
+            // 
+            this.itensCompra_valor.HeaderText = "Valor Pago";
+            this.itensCompra_valor.Name = "itensCompra_valor";
+            this.itensCompra_valor.ReadOnly = true;
+            // 
+            // itensCompra_codigoBarra
+            // 
+            this.itensCompra_codigoBarra.HeaderText = "Código de Barra";
+            this.itensCompra_codigoBarra.Name = "itensCompra_codigoBarra";
+            this.itensCompra_codigoBarra.ReadOnly = true;
+            this.itensCompra_codigoBarra.Visible = false;
+            // 
+            // itensCompra_vencimento
+            // 
+            this.itensCompra_vencimento.HeaderText = "Vencimento";
+            this.itensCompra_vencimento.Name = "itensCompra_vencimento";
+            this.itensCompra_vencimento.ReadOnly = true;
+            this.itensCompra_vencimento.Visible = false;
+            // 
+            // produto_cod
+            // 
+            this.produto_cod.HeaderText = "Código  Produto";
+            this.produto_cod.Name = "produto_cod";
+            this.produto_cod.ReadOnly = true;
+            this.produto_cod.Visible = false;
+            // 
+            // produto_nome
+            // 
+            this.produto_nome.HeaderText = "Nome";
+            this.produto_nome.Name = "produto_nome";
+            this.produto_nome.ReadOnly = true;
+            // 
+            // produto_descricao
+            // 
+            this.produto_descricao.HeaderText = "Descrição";
+            this.produto_descricao.Name = "produto_descricao";
+            this.produto_descricao.ReadOnly = true;
+            // 
+            // produto_valorvenda
+            // 
+            this.produto_valorvenda.HeaderText = "Valor Venda";
+            this.produto_valorvenda.Name = "produto_valorvenda";
+            this.produto_valorvenda.ReadOnly = true;
+            // 
+            // produto_qtde
+            // 
+            this.produto_qtde.HeaderText = "Quantidade";
+            this.produto_qtde.Name = "produto_qtde";
+            this.produto_qtde.ReadOnly = true;
+            // 
+            // produto_status
+            // 
+            this.produto_status.HeaderText = "Status";
+            this.produto_status.Name = "produto_status";
+            this.produto_status.ReadOnly = true;
+            // 
+            // uniMedida_cod
+            // 
+            this.uniMedida_cod.HeaderText = "uniMedida_cod";
+            this.uniMedida_cod.Name = "uniMedida_cod";
+            this.uniMedida_cod.ReadOnly = true;
+            this.uniMedida_cod.Visible = false;
+            // 
+            // categoria_cod
+            // 
+            this.categoria_cod.HeaderText = "categoria_cod";
+            this.categoria_cod.Name = "categoria_cod";
+            this.categoria_cod.ReadOnly = true;
+            this.categoria_cod.Visible = false;
+            // 
+            // subcategoria_cod
+            // 
+            this.subcategoria_cod.HeaderText = "subcategoria_cod";
+            this.subcategoria_cod.Name = "subcategoria_cod";
+            this.subcategoria_cod.ReadOnly = true;
+            this.subcategoria_cod.Visible = false;
+            // 
             // frmCadastrarCompra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(864, 499);
+            this.Controls.Add(this.dgvProduto);
             this.Controls.Add(this.btnAlterarProduto);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnAlterar);
@@ -510,7 +640,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtValorParcela);
             this.Controls.Add(this.btnExcluirProduto);
-            this.Controls.Add(this.dgvProduto);
             this.Controls.Add(this.btnAdicionarProduto);
             this.Controls.Add(this.lblTipoPagamento);
             this.Controls.Add(this.cbxTipoPagamento);
@@ -534,8 +663,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCompra";
             this.Load += new System.EventHandler(this.frmCompra_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProduto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCompra)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProduto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -561,7 +690,6 @@
         private System.Windows.Forms.Label lblTipoPagamento;
         private System.Windows.Forms.ComboBox cbxTipoPagamento;
         private System.Windows.Forms.Button btnAdicionarProduto;
-        private System.Windows.Forms.DataGridView dgvProduto;
         private System.Windows.Forms.Button btnExcluirProduto;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtValorParcela;
@@ -586,5 +714,21 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn FornecedorEmail;
         private System.Windows.Forms.DataGridViewTextBoxColumn EnderecoCod;
         private System.Windows.Forms.Button btnAlterarProduto;
+        private System.Windows.Forms.DataGridView dgvProduto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn itensCompra_cod;
+        private System.Windows.Forms.DataGridViewTextBoxColumn itensCompra_qtde;
+        private System.Windows.Forms.DataGridViewTextBoxColumn itensCompra_qtdeVenda;
+        private System.Windows.Forms.DataGridViewTextBoxColumn itensCompra_valor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn itensCompra_codigoBarra;
+        private System.Windows.Forms.DataGridViewTextBoxColumn itensCompra_vencimento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn produto_cod;
+        private System.Windows.Forms.DataGridViewTextBoxColumn produto_nome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn produto_descricao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn produto_valorvenda;
+        private System.Windows.Forms.DataGridViewTextBoxColumn produto_qtde;
+        private System.Windows.Forms.DataGridViewTextBoxColumn produto_status;
+        private System.Windows.Forms.DataGridViewTextBoxColumn uniMedida_cod;
+        private System.Windows.Forms.DataGridViewTextBoxColumn categoria_cod;
+        private System.Windows.Forms.DataGridViewTextBoxColumn subcategoria_cod;
     }
 }

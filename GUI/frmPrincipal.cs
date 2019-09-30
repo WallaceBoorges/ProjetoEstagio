@@ -35,6 +35,7 @@ namespace GUI
         private void produtoToolStripMenuItem2_Click(object sender, EventArgs e)
         {
             frmCadastroProduto f = new frmCadastroProduto();
+            f.Alterarbotoes(0);
             f.ShowDialog();
             f.Dispose();
         }

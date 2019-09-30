@@ -2,6 +2,7 @@
 using DAL;
 using Modelo;
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace GUI
@@ -13,7 +14,7 @@ namespace GUI
             InitializeComponent();
         }
 
-        public MProduto Produto { get; set; }
+        public MItensCompra Iten { get; set; }
 
         public void LimparTela()
         {
@@ -24,6 +25,7 @@ namespace GUI
             cbxCodCat.SelectedIndex = -1;
             cbxCodSubcat.SelectedIndex = -1;
             txtQuantidade.Clear();
+            cbxStatus.SelectedIndex = -1;
             cbxCodUnidadeMedida.SelectedIndex = -1;
         }
 
@@ -43,54 +45,21 @@ namespace GUI
         }
 
         //Metodo para salvar os dados do produto
-        public static MProduto ListarProduto(string id)
+        public static MItensCompra ListarProduto(string id)
         {
             //Criando o obj do tipo MeuMsgBox e configurando a sua exibição
             var prod = new frmCadastroProduto();
-            //Redefininado o tamanho do formulario
-            prod.Size = new System.Drawing.Size(679, 385);
             //Pegando o id
             prod.txtCodigo.Text = id;
-            //Ativando a edição do campo Quantidade produto
-            prod.txtQuantidade.Enabled = true;
+            //Exibindo os botões
+            prod.Alterarbotoes(1);
 
-             //Chamando o formulario
-             prod.ShowDialog();
-            return prod.Produto;
+            //Chamando o formulario
+            prod.ShowDialog();
+            return prod.Iten;
         }
 
-        //Metodo para alterar a exibição dos botões
-        public void Alterarbotoes(int op)
-        {
-            btnAlterar.Enabled = false;
-            btnBuscar.Enabled = false;
-            btnExcluir.Enabled = false;
-            btnSalvar.Enabled = false;
-            btnCancelar.Visible = false;
-
-            if (op == 1) //Padrão
-            {
-                btnSalvar.Text = "Cadastrar";
-                btnBuscar.Enabled = true;
-                btnSalvar.Enabled = true;
-                btnAlterar.Enabled = true;
-                btnExcluir.Enabled = true;
-                LimparTela();
-                //Carregando os dados
-                dgvProduto.DataSource = DALProduto.CarregarGrid();
-                dgvProduto.Columns["valorpago"].DefaultCellStyle.Format = "C2";
-                dgvProduto.Columns["ValorVenda"].DefaultCellStyle.Format = "C2";
-            }
-
-            if (op == 2) //Atualizar
-            {
-                btnSalvar.Text = "Atualizar";
-                btnSalvar.Enabled = true;
-                btnCancelar.Visible = true;
-            }
-        }
-
-        private void frmCadastroProduto_Load(object sender, EventArgs e)
+        public void CarregarComboBox()
         {
             //Iniciando os dados do combobox Unidade Medida
             cbxCodUnidadeMedida.DataSource = DALUnidadeMedida.CarregarGrid();
@@ -112,10 +81,172 @@ namespace GUI
                 cbxCodSubcat.ValueMember = "subCategoria_cod";
                 cbxCodSubcat.DisplayMember = "subCategoria_nome";
                 cbxCodSubcat.SelectedIndex = -1;
-            }         
-                       
-            //Padrão
-            Alterarbotoes(1);
+            }
+            else
+            {
+                //Iniciando os dados do combobox Subcategoria com todas as subcategoriras pertecentes a aquela categoria selecionada
+                cbxCodSubcat.DataSource = DALSubCategoria.CarregarGrid();
+                cbxCodSubcat.ValueMember = "subCategoria_cod";
+                cbxCodSubcat.DisplayMember = "subCategoria_nome";
+                cbxCodSubcat.SelectedIndex = -1;
+            }
+        }
+
+        //Metodo para alterar a exibição dos botões
+        public void Alterarbotoes(int op)
+        {
+            lblCodigo.Visible = false;
+            txtCodigo.Visible = false;
+            lblNome.Visible = false;
+            txtNome.Visible = false;
+            lblDescricao.Visible = false;
+            txtDescricao.Visible = false;
+            lblValorPago.Visible = false;
+            txtValorPago.Visible = false;
+            lblValorVenda.Visible = false;
+            txtValorVenda.Visible = false;
+            lblQuantidade.Visible = false;
+            txtQuantidade.Visible = false;
+            lblStatus.Visible = false;
+            cbxStatus.Visible = false;
+            lblUnidadeMedida.Visible = false;
+            cbxCodUnidadeMedida.Visible = false;
+            lblCodCat.Visible = false;
+            cbxCodCat.Visible = false;
+            lblSubCat.Visible = false;
+            cbxCodSubcat.Visible = false;
+            lblProduto.Visible = false;
+            txtConsultaProduto.Visible = false;
+
+            dgvProduto.Visible = false;
+
+            btnAlterar.Visible = false;
+            btnBuscar.Visible = false;
+            btnSalvar.Visible = false;
+            btnCancelar.Visible = false;
+            btnLimpar.Visible = false;
+
+
+            if (op == 0) //Quando acessado pela tela principal
+            {
+                //Mudando o tamanho do formulario
+                this.Size = new System.Drawing.Size(679, 300);
+
+                lblProduto.Visible = true;
+                txtConsultaProduto.Visible = true;
+                btnBuscar.Visible = true;
+                dgvProduto.Visible = true;
+                btnAlterar.Visible = true;
+
+                lblProduto.Location = new Point(lblProduto.Location.X, lblProduto.Location.Y - 355); //Mudando a locaçização da LBL 
+                txtConsultaProduto.Location = new Point(txtConsultaProduto.Location.X, txtConsultaProduto.Location.Y - 348); //Mudando a locaçização do txt
+                btnBuscar.Location = new Point(btnBuscar.Location.X, btnBuscar.Location.Y - 348); //Mudando a locaçização do botão 
+                dgvProduto.Location = new Point(dgvProduto.Location.X, dgvProduto.Location.Y - 350); //Mudando a locaçização do datagrid 
+                btnAlterar.Location = new Point(btnAlterar.Location.X, btnAlterar.Location.Y - 350); //Mudando a locaçização do botão 
+
+                //Carregando os dados
+                dgvProduto.DataSource = DALProduto.CarregarGrid();
+                dgvProduto.Columns["ValorVenda"].DefaultCellStyle.Format = "C2";
+            }
+
+            if (op == 1) //Acessado pela tela compra
+            {
+                //Redefininado o tamanho do formulario
+                this.Size = new System.Drawing.Size(679, 641);
+
+                btnSalvar.Text = "Adicionar";
+                btnSalvar.Visible = true;
+                btnCancelar.Visible = true;
+                btnLimpar.Visible = true;
+
+                CarregarComboBox();
+
+                lblCodCat.Visible = true;
+                txtCodigo.Visible = true;
+                lblNome.Visible = true;
+                txtNome.Visible = true;
+                lblDescricao.Visible = true;
+                txtDescricao.Visible = true;
+                lblValorPago.Visible = true;
+                txtValorPago.Visible = true;
+                txtValorPago.Enabled = true;
+                lblValorVenda.Visible = true;
+                txtValorVenda.Visible = true;
+                lblQuantidade.Visible = true;
+                txtQuantidade.Visible = true;
+                txtQuantidade.Enabled = true;
+                lblStatus.Visible = true;
+                cbxStatus.Visible = true;
+                lblUnidadeMedida.Visible = true;
+                cbxCodUnidadeMedida.Visible = true;
+                lblCodCat.Visible = true;
+                cbxCodCat.Visible = true;
+                lblSubCat.Visible = true;
+                cbxCodSubcat.Visible = true;
+
+                lblCodBarra.Visible = true;
+                txtCodBarra.Visible = true;
+                lblDataValidade.Visible = true;
+                dtpDataValidade.Visible = true;
+
+                lblProduto.Visible = true;
+                txtConsultaProduto.Visible = true;
+                btnBuscar.Visible = true;
+                dgvProduto.Visible = true;
+
+                btnAlterar.Text = "ADD";
+                btnAlterar.Visible = true;
+
+                btnSalvar.Location = new Point(btnSalvar.Location.X, btnSalvar.Location.Y + 33); //Mudando a locaçização do botão 
+                btnLimpar.Location = new Point(btnLimpar.Location.X, btnLimpar.Location.Y + 33); //Mudando a locaçização do botão 
+                btnCancelar.Location = new Point(btnCancelar.Location.X, btnCancelar.Location.Y + 33); //Mudando a locaçização do botão 
+
+
+                //Carregando os dados
+                dgvProduto.DataSource = DALProduto.CarregarGrid();
+                dgvProduto.Columns["ValorVenda"].DefaultCellStyle.Format = "C2";
+            }
+
+            if (op == 2) //Atualizar
+            {
+                //Redefininado o tamanho do formulario
+                this.Size = new System.Drawing.Size(679, 382);
+
+                btnSalvar.Text = "Atualizar";
+                btnSalvar.Visible = true;
+                btnCancelar.Visible = true;
+                btnLimpar.Visible = true;
+
+                CarregarComboBox();
+
+                lblCodigo.Visible = true;
+                txtCodigo.Visible = true;
+                lblNome.Visible = true;
+                txtNome.Visible = true;
+                lblDescricao.Visible = true;
+                txtDescricao.Visible = true;
+                lblValorPago.Visible = true;
+                txtValorPago.Visible = true;
+                lblValorVenda.Visible = true;
+                txtValorVenda.Visible = true;
+                lblQuantidade.Visible = true;
+                txtQuantidade.Visible = true;
+                lblStatus.Visible = true;
+                cbxStatus.Visible = true;
+                lblUnidadeMedida.Visible = true;
+                cbxCodUnidadeMedida.Visible = true;
+                lblCodCat.Visible = true;
+                cbxCodCat.Visible = true;
+                lblSubCat.Visible = true;
+                cbxCodSubcat.Visible = true;
+
+                //Resetando a localização 
+                lblProduto.Location = new Point(lblProduto.Location.X, lblProduto.Location.Y + 355); //Mudando a locaçização da LBL 
+                txtConsultaProduto.Location = new Point(txtConsultaProduto.Location.X, txtConsultaProduto.Location.Y + 348); //Mudando a locaçização do txt
+                btnBuscar.Location = new Point(btnBuscar.Location.X, btnBuscar.Location.Y + 348); //Mudando a locaçização do botão 
+                dgvProduto.Location = new Point(dgvProduto.Location.X, dgvProduto.Location.Y + 350); //Mudando a locaçização do datagrid 
+                btnAlterar.Location = new Point(btnAlterar.Location.X, btnAlterar.Location.Y + 350); //Mudando a locaçização do botão  
+            }
         }
 
         //Evento click Alterar
@@ -124,25 +255,35 @@ namespace GUI
             //Analisando se existe dados no dataGrid
             if (dgvProduto.RowCount != 0)
             {
+                if (btnAlterar.Text == "Alterar")
+                {
+                    //Alterar Botões
+                    Alterarbotoes(2);
+                }
+
                 //Pegando dados do DataGrid                
                 txtCodigo.Text = dgvProduto.CurrentRow.Cells["codigo"].Value.ToString();
                 txtNome.Text = dgvProduto.CurrentRow.Cells["nome"].Value.ToString();
                 txtDescricao.Text = dgvProduto.CurrentRow.Cells["descricao"].Value.ToString();
 
-                //Pegando o valor pago e formatando 
-                double valorPago = double.Parse(dgvProduto.CurrentRow.Cells["valorpago"].Value.ToString());
-                txtValorPago.Text = valorPago.ToString("F2");
                 //Pegando o valor venda e formatando
                 double valorVenda = double.Parse(dgvProduto.CurrentRow.Cells["valorVenda"].Value.ToString());
                 txtValorVenda.Text = valorVenda.ToString("F2");
+
+                cbxStatus.Text = dgvProduto.CurrentRow.Cells["status"].Value.ToString();
 
                 cbxCodUnidadeMedida.Text = dgvProduto.CurrentRow.Cells["uniNome"].Value.ToString();
                 cbxCodCat.Text = dgvProduto.CurrentRow.Cells["CatNome"].Value.ToString();
                 cbxCodSubcat.Text = dgvProduto.CurrentRow.Cells["SubNome"].Value.ToString();
                 txtQuantidade.Text = dgvProduto.CurrentRow.Cells["quant"].Value.ToString();
 
-                //Alterar Botões
-                Alterarbotoes(2);
+                //Pegando valores do item compra
+                var table = DALItensCompra.PegarDados(int.Parse(txtCodigo.Text));
+
+                //Pegando o valor compra e formatando
+                double valorCompra = double.Parse(table.Rows[0]["itensCompra_valor"].ToString());
+                txtValorPago.Text = valorCompra.ToString("F2");
+
             }
         }
 
@@ -162,48 +303,37 @@ namespace GUI
             try
             {
                 //Verificando se o usuário informou todos os campos obrigatorios
-                if (txtNome.Text == "" || txtDescricao.Text == "" || cbxCodUnidadeMedida.Text == "" || cbxCodCat.Text == "" || txtValorPago.Text == "")
+                if (txtNome.Text == "" || txtDescricao.Text == "" || cbxStatus.Text == "" || cbxCodUnidadeMedida.Text == "" || cbxCodCat.Text == "" || txtValorPago.Text == "")
                 {
                     throw new Exception("Preencha todos os Campos!");
                 }
 
                 //Instenciando o objeto
-                MProduto prod = new MProduto(txtNome.Text, txtDescricao.Text, double.Parse(txtValorPago.Text), double.Parse(txtValorVenda.Text), double.Parse(txtQuantidade.Text), int.Parse(cbxCodUnidadeMedida.SelectedValue.ToString()), int.Parse(cbxCodCat.SelectedValue.ToString()));
+                MProduto produto = new MProduto(txtNome.Text, txtDescricao.Text, double.Parse(txtValorVenda.Text), double.Parse(txtQuantidade.Text), cbxStatus.Text, int.Parse(cbxCodUnidadeMedida.SelectedValue.ToString()), int.Parse(cbxCodCat.SelectedValue.ToString()));
 
                 //Verificando se tem uma subcategria
                 if (cbxCodSubcat.Text != "")
                 {
-                    prod.CodigoSubcategoria = int.Parse(cbxCodSubcat.SelectedValue.ToString());
+                    produto.CodigoSubcategoria = int.Parse(cbxCodSubcat.SelectedValue.ToString());
                 }
 
                 //Verificando se vai ser atualizado ou cadastrado
                 if (btnSalvar.Text == "Atualizar")
                 {
-                    prod.CodigoProduto = int.Parse(txtCodigo.Text); //Passando o id
-                    BLLProduto.Alterar(prod); //Chamando o metodo alterar
+                    produto.CodigoProduto = int.Parse(txtCodigo.Text); //Passando o id
+                    BLLProduto.Alterar(produto); //Chamando o metodo alterar
                     MessageBox.Show("Alteração realizada com sucesso!");
                 }
-                else if(txtQuantidade.Enabled == true) //Analisando se será adcinando um produto a uma compra
+                else if (txtQuantidade.Enabled == true) //Analisando se será adcinando um produto a uma compra
                 {
-                    Produto = new MProduto(txtNome.Text, txtDescricao.Text, double.Parse(txtValorPago.Text), double.Parse(txtValorVenda.Text), double.Parse(txtQuantidade.Text), int.Parse(cbxCodUnidadeMedida.SelectedValue.ToString()), int.Parse(cbxCodCat.SelectedValue.ToString()));
+                    produto.CodigoProduto = int.Parse(txtCodigo.Text); //Pegando o id
 
-                    //Verificando se tem uma subcategria
-                    if (cbxCodSubcat.Text != "")
-                    {
-                        Produto.CodigoSubcategoria = int.Parse(cbxCodSubcat.SelectedValue.ToString());
-                    }
-
-                    Produto.CodigoProduto = int.Parse(txtCodigo.Text); //Pegando o id
+                    Iten = new MItensCompra(double.Parse(txtQuantidade.Text), double.Parse(txtValorPago.Text), txtCodBarra.Text, dtpDataValidade.Value.Date, produto);
 
                     Close(); //Fechando o formulario
                 }
-                else
-                {
-                    BLLProduto.Incluir(prod); //Chamando o metodo cadastrar
-                    MessageBox.Show("Cadastro realizado com sucesso!");
-                }
                 //Padrão
-                Alterarbotoes(1);
+                Alterarbotoes(0);
             }
             catch (Exception erro)
             {
@@ -222,28 +352,7 @@ namespace GUI
                 MessageBox.Show(erro.Message);
             }
         }
-        //Evento click excluir
-        private void btnExcluir_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                //Aqui ele executa um diálogo perguntando se o usuário deseja ou não excluir o registro.
-                if (MessageBox.Show("Deseja excluir o registro?", "Atenção", MessageBoxButtons.YesNo) == DialogResult.Yes)
-                {
-                    /*Caso "sim", é aberto a conexão com o banco e executado o método de excluir. */
-                    //Método de excluir sendo chamado.
-                    BLLProduto.Excluir(int.Parse(dgvProduto.CurrentRow.Cells["codigo"].Value.ToString()));
-                    LimparTela();
-                    Alterarbotoes(1);
-                }
-            }
-            catch
-            {
-                //Caso apresente algum erro. Será retornado esta mensagem.
-                MessageBox.Show("Impossível excluir o registro. \n O registro está sendo utilizado em outro local");
-                Alterarbotoes(1);
-            }
-        }
+
 
         //Evento click limpar
         private void btnLimpar_Click(object sender, EventArgs e)
@@ -253,8 +362,15 @@ namespace GUI
         //Evento click Cancelar
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            Alterarbotoes(1);
-            txtCodigo.Clear();
+            if (txtQuantidade.Enabled == true) //Analisando se será adcinando um produto a uma compra
+            {
+                Close(); //Fechando o formulario caso o mesmo tenha sido aberto pela tela compra
+            }
+            else
+            {
+                Alterarbotoes(0); //Reexibindo o dataGrid com os produtos
+                txtCodigo.Clear();
+            }
         }
 
 
@@ -270,6 +386,6 @@ namespace GUI
         private void txtQuantidade_KeyPress(object sender, KeyPressEventArgs e)
         {
             VerificaDigito(sender, e);
-        }        
+        }
     }
 }

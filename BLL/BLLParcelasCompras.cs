@@ -6,9 +6,9 @@ namespace BLL
     public class BLLParcelasCompras
     {
         /* Aqui foi criada uma pequena restrição para o usuário*/
-        public static void Incluir(int quant, MParcelasCompra modelo)
+        public static void Incluir(MParcelasCompra modelo)
         {
-            DALParcelasCompra.Incluir(quant, modelo);
+            DALParcelasCompra.Incluir(modelo);
         }
     }
 }

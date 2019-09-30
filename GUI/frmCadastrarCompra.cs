@@ -2,12 +2,13 @@
 using DAL;
 using Modelo;
 using System;
-using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace GUI
 {
+    //TODO criar um metodo para verificar se a compra foi finalizada, para realizar a incrementação do produtos dentro do estoque
+
     public partial class frmCadastrarCompra : Form
     {
         public frmCadastrarCompra()
@@ -15,7 +16,7 @@ namespace GUI
             InitializeComponent();
         }
 
-        List<MProduto> produtos = new List<MProduto>(); //Lista para armazenar os produtos da compra
+        MCompra Compra = new MCompra();
 
         //Evento Load
         private void frmCompra_Load(object sender, EventArgs e)
@@ -54,7 +55,7 @@ namespace GUI
             //Analisando se o usuário deseja apagar os produtos
             if (DialogResult.Yes == MessageBox.Show("Deseja apagar os produtos?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2))
             {
-                produtos.Clear(); //Limapando os produtos
+                Compra.Itens.Clear(); //Limapando os produtos
                 CarregarGrid(); //Carregando o Grid
                 MessageBox.Show("Produtos apagados com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information); //Informando ao usuário que os produtos foram apagados
 
@@ -63,29 +64,37 @@ namespace GUI
         //Carregando as informações do DataGrid
         public void CarregarGrid()
         {
-            dgvProduto.DataSource = ""; //Limpando o dataGrid
+            //Limpando as linhas do dataGrid
+            dgvProduto.Rows.Clear();
 
-            dgvProduto.DataSource = produtos; //Passando a lista
+            //Pecorrendo a lista de itens
+            foreach (var dados in Compra.Itens)
+            {
+                // cria uma linha
+                DataGridViewRow item = new DataGridViewRow();
+                item.CreateCells(dgvProduto);
 
-            //Mudando os titulos
-            dgvProduto.Columns[0].HeaderText = "Código";
-            dgvProduto.Columns[0].Visible = false;
-            dgvProduto.Columns[1].HeaderText = "Nome";
-            dgvProduto.Columns[2].HeaderText = "Descrição";
-            dgvProduto.Columns[3].HeaderText = "Valor Pago";
-            dgvProduto.Columns[3].DefaultCellStyle.Format = "C2";
-            dgvProduto.Columns[4].DefaultCellStyle.Format = "C2";
-            dgvProduto.Columns[4].HeaderText = "Valor Venda";
-            dgvProduto.Columns[5].HeaderText = "Quantidade";
-            dgvProduto.Columns[6].HeaderText = "Código Unidade Medida";
-            dgvProduto.Columns[6].Visible = false;
-            dgvProduto.Columns[7].HeaderText = "Código Categoria";
-            dgvProduto.Columns[7].Visible = false;
-            dgvProduto.Columns[8].HeaderText = "Código SubCategoria";
-            dgvProduto.Columns[8].Visible = false;
+                //Passando os valores para cada coluna
+                item.Cells[0].Value = dados.ItemCompraCodigo;
+                item.Cells[1].Value = dados.ItemCompraQuant;
+                item.Cells[2].Value = dados.ItemCompraQuantVenda;
+                item.Cells[3].Value = dados.ItemCompraValor;
+                item.Cells[4].Value = dados.ItemCompraCodBarra;
+                item.Cells[5].Value = dados.ItemCompraDataVencimento;
+                item.Cells[6].Value = dados.Produto.CodigoProduto;
+                item.Cells[7].Value = dados.Produto.NomeProduto;
+                item.Cells[8].Value = dados.Produto.DescricaoProduto;
+                item.Cells[9].Value = dados.Produto.ValorVendaProduto;
+                item.Cells[10].Value = dados.Produto.QuantProduto;
+                item.Cells[11].Value = dados.Produto.StatusProduto;
+                item.Cells[12].Value = dados.Produto.CodigoUnidadeMedida;
+                item.Cells[13].Value = dados.Produto.CodigoCategoria;
+                item.Cells[14].Value = dados.Produto.CodigoSubcategoria;
 
-            //Recarregando
-            dgvProduto.Refresh();
+                // adiciona na grid
+                dgvProduto.Rows.Add(item);
+            }
+
 
             //Chamando o metodo calculo
             Calcular();
@@ -96,9 +105,9 @@ namespace GUI
             double valorTotal = 0.0;
 
             //Calculando o valor total
-            foreach (var item in produtos)
+            foreach (var item in Compra.Itens)
             {
-                valorTotal += item.ValorPagoProduto * item.QuantProduto;
+                valorTotal += item.ItemCompraValor * item.ItemCompraQuant;
             }
 
             txtValor.Text = valorTotal.ToString("F2"); //Passando o valor total
@@ -119,29 +128,17 @@ namespace GUI
         {
             try
             {
-                int id = 0; //Armazenando o id
-
-                //Analisando se já existe registro no data grid, caso exista será carregado o id 
-                if (dgvProduto.Rows.Count != 0)
-                {
-                    id = int.Parse(dgvProduto.Rows[dgvProduto.RowCount - 1].Cells[0].Value.ToString()) + 1;
-                }
-                else //Caso não será passado o id 1
-                {
-                    id = 1;
-                }
-
                 //Pegando o produto
-                produtos.Add(frmCadastroProduto.ListarProduto(id.ToString()));
+                Compra.Itens.Add(frmCadastroProduto.ListarProduto("0"));
 
                 //Analisando se o usuário não fechou a tela e consequentemente retornou um produto vazio
-                if (produtos[produtos.Count - 1] != null)
+                if (Compra.Itens[Compra.Itens.Count - 1] != null)
                 {
                     CarregarGrid();
                 }
                 else //Caso tenha retornado vazio, o ultimo indice será removido 
                 {
-                    produtos.RemoveAt(produtos.Count - 1);
+                    Compra.Itens.RemoveAt(Compra.Itens.Count - 1);
                 }
             }
             catch (Exception erro)
@@ -168,27 +165,82 @@ namespace GUI
             {
                 try
                 {
-                    //Salvando a compra
-                    MCompra compra = new MCompra(dtpDataCompra.Value.Date, txtNotaFiscal.Text, double.Parse(txtValor.Text), int.Parse(cbxQuantParcela.Text), cbxStatus.Text, (int)cbxFornecedor.SelectedValue, (int)cbxTipoPagamento.SelectedValue);
-                    BLLCompra.Incluir(compra);
-
+                    //Passando os dados da compra
+                    Compra.CompraData = dtpDataCompra.Value.Date;
+                    Compra.CompraNotaFiscal = txtNotaFiscal.Text;
+                    Compra.CompraValor = double.Parse(txtValor.Text);
+                    Compra.CompraParcelas = int.Parse(cbxQuantParcela.Text);
+                    Compra.CompraStatus = cbxStatus.Text;
+                    Compra.FornecedorCod = (int)cbxFornecedor.SelectedValue;
+                    Compra.TipoPagCod = (int)cbxTipoPagamento.SelectedValue;
+                    //Salnvando a compra
+                    BLLCompra.Incluir(Compra);
+                    //Pegando o id da compra salva
+                    Compra.CompraCod = int.Parse(DALCompra.PegarId());
                     //Criando um variavel para salvar a data da nova prestação
                     DateTime ProximaPrestação = dtpDataCompra.Value.Date;
+                    //Criando e salvando as parcelas
+                    for (int i = 0; i < Compra.CompraParcelas; i++)
+                    {
+                        Compra.Parcelas.Add(new MParcelasCompra(double.Parse(txtValorParcela.Text), ProximaPrestação.AddMonths(i), Compra.CompraCod)); //Instanciando a parcela
 
-                    //Salvando as Parcelas
-                    MParcelasCompra parcela = new MParcelasCompra(double.Parse(txtValorParcela.Text), ProximaPrestação, ProximaPrestação, int.Parse(DALCompra.PegarId()));
-                    BLLParcelasCompras.Incluir(int.Parse(cbxQuantParcela.Text), parcela);
+                        //Salvando as Parcelas
+                        BLLParcelasCompras.Incluir(Compra.Parcelas[i]);
+                    }
 
                     //Salvando os Produtos e consequentemente o item
-                    foreach (var item in produtos)
+                    foreach (var item in Compra.Itens)
                     {
-                        //Chamando o metodo Incluir um produto
-                        BLLProduto.Incluir(item);
+                        //Verificar se o produto não já existe, caso sim só será associado ao item compra
+                        if (item.Produto.CodigoProduto == 0)
+                        {
+                            //Analisando  se a compra foi finalizada, pois caso seja o valor do produto será incrementado
+                            if (cbxStatus.Text != "FINALIZADA")
+                            {
+                                item.Produto.QuantProduto = 0;
+                            }
 
+                            //Chamando o metodo Incluir um produto
+                            BLLProduto.Incluir(item.Produto);
+                        }
+                        else //Significa que o produto já existe
+                        {
+                            var tabela = DALProduto.PegarDados(item.Produto.CodigoProduto); //Pegando os dados do produto já existente
+                            //Passando os dados para as variáveis
+                            int cod = int.Parse(tabela.Rows[0]["produto_cod"].ToString());
+                            string nome = tabela.Rows[0]["produto_nome"].ToString();
+                            string desc = tabela.Rows[0]["produto_descricao"].ToString();
+                            double valor = double.Parse(tabela.Rows[0]["produto_valorvenda"].ToString());
+                            double quant = double.Parse(tabela.Rows[0]["produto_qtde"].ToString());
+                            string status = tabela.Rows[0]["produto_status"].ToString();
+                            int codUni = int.Parse(tabela.Rows[0]["uniMedida_cod"].ToString());
+                            int codCat = int.Parse(tabela.Rows[0]["categoria_cod"].ToString());
+                            int codSub = 0;
+                            //Analisado se tem subcategoria 
+                            if (tabela.Rows[0]["subCategoria_cod"].ToString() != "")
+                            {
+                                codSub = int.Parse(tabela.Rows[0]["subCategoria_cod"].ToString());
+                            }
+
+                            //Analisando  se a compra foi finalizada, pois caso seja o valor do produto será incrementado
+                            if (cbxStatus.Text == "FINALIZADA")
+                            {
+                                quant = quant + item.ItemCompraQuant;
+                            }
+                            //Instanciando o obj produto
+                            MProduto prodExiste = new MProduto(nome, desc, valor, quant, status, codUni, codCat, codSub);
+                            prodExiste.CodigoProduto = cod; //Pegando o id
+                            //Atualizando as informações
+                            BLLProduto.Alterar(prodExiste);
+                        }
+
+                        //Passando o id da compra
+                        item.CompraCodigo = Compra.CompraCod;
                         //Salvando o produto na lista item
-                        MItensCompra itensCompra = new MItensCompra(item.QuantProduto, item.ValorPagoProduto, int.Parse(DALCompra.PegarId()));
-                        BLLItensCompra.Incluir(itensCompra);
+                        BLLItensCompra.Incluir(item);
                     }
+                    MessageBox.Show("Compra Salva Com Sucesso!");
+                    dgvCompra.DataSource = DALCompra.CarregarGrid();
                 }
                 catch (SqlException erro)
                 {
@@ -204,28 +256,7 @@ namespace GUI
                 }
             }
         }
-        //Evento click para excluir o produto da lista
-        private void btnExcluirProduto_Click(object sender, EventArgs e)
-        {
-            //Analisando se tem item para ser excluido
-            if (dgvProduto.RowCount != 0)
-            {
-                try
-                {
-                    produtos.RemoveAt(int.Parse(dgvProduto.CurrentRow.Cells[0].Value.ToString()) - 1); //Removendo da lista
-                    CarregarGrid(); //Recarregando o DataGrid
-                }
-                catch (Exception erro)
-                {
-                    MessageBox.Show(erro.Message, "OK");
-                }
 
-            }
-            else
-            {
-                MessageBox.Show("Não tem produto para ser excluido", "OK");
-            }
-        }
         //Evendo click para quando o combo box for alterado
         private void cbxQuantParcela_SelectedIndexChanged(object sender, EventArgs e)
         {
