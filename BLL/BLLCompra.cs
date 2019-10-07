@@ -15,5 +15,11 @@ namespace BLL
         {
             DALCompra.Incluir(modelo);
         }
+        public static void Alterar(MCompra modelo)
+        {
+            DALCompra.Alterar(modelo);
+        }
+
+
     }
 }

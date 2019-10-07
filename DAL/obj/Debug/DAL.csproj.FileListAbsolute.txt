@@ -97,3 +97,12 @@ C:\Users\Matheus Gois\Desktop\Alterações Everton\ProjetoEstagio\DAL\obj\Debug\
 C:\Users\Matheus Gois\Desktop\Alterações Everton\ProjetoEstagio\DAL\obj\Debug\DAL.csproj.CopyComplete
 C:\Users\Matheus Gois\Desktop\Alterações Everton\ProjetoEstagio\DAL\obj\Debug\DAL.dll
 C:\Users\Matheus Gois\Desktop\Alterações Everton\ProjetoEstagio\DAL\obj\Debug\DAL.pdb
+C:\ProjetoEstagio\DAL\bin\Debug\DAL.dll
+C:\ProjetoEstagio\DAL\bin\Debug\DAL.pdb
+C:\ProjetoEstagio\DAL\bin\Debug\Modelo.dll
+C:\ProjetoEstagio\DAL\bin\Debug\Modelo.pdb
+C:\ProjetoEstagio\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\ProjetoEstagio\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\ProjetoEstagio\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\ProjetoEstagio\DAL\obj\Debug\DAL.dll
+C:\ProjetoEstagio\DAL\obj\Debug\DAL.pdb

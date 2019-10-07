@@ -27,5 +27,16 @@ namespace Modelo
             ItemCompraDataVencimento = itemCompraDataVencimento;
             Produto = produto;
         }
+
+
+        public MItensCompra(int itemCompraCodigo, double itemCompraQuant, double itemCompraValor, string itemCompraCodBarra, DateTime itemCompraDataVencimento, MProduto produto)
+        {
+            ItemCompraCodigo = itemCompraCodigo;
+            ItemCompraQuant = itemCompraQuant;
+            ItemCompraValor = itemCompraValor;
+            ItemCompraCodBarra = itemCompraCodBarra;
+            ItemCompraDataVencimento = itemCompraDataVencimento;
+            Produto = produto;
+        }
     }
 }

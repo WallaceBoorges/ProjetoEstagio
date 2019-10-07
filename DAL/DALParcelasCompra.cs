@@ -53,5 +53,30 @@ namespace DAL
                 throw new Exception(erro.Message);
             }
         }
+        public static void Excluir(MParcelasCompra modelo)
+        {
+            try
+            {
+                using (var conn = ConexaoBD.AbrirConexao()) //Passando a string de conexão
+                {
+                    conn.Open(); //Abrindo a conexão
+                    using (var comm = conn.CreateCommand()) //Criando o comando SQL
+                    {
+
+                        comm.CommandText = "delete from parcelascompra where compra_cod = @codCompra";
+
+                        //Passando o valores por parametro
+                        comm.Parameters.Add(new SqlParameter("@codCompra", modelo.CompraCodigo));
+
+                        //Executando o comando
+                        comm.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception erro)
+            {
+                throw new Exception(erro.Message);
+            }
+        }
     }
 }

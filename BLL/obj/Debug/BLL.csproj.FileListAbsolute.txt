@@ -119,3 +119,14 @@ C:\Users\Matheus Gois\Desktop\Alterações Everton\ProjetoEstagio\BLL\obj\Debug\
 C:\Users\Matheus Gois\Desktop\Alterações Everton\ProjetoEstagio\BLL\obj\Debug\BLL.csproj.CopyComplete
 C:\Users\Matheus Gois\Desktop\Alterações Everton\ProjetoEstagio\BLL\obj\Debug\BLL.dll
 C:\Users\Matheus Gois\Desktop\Alterações Everton\ProjetoEstagio\BLL\obj\Debug\BLL.pdb
+C:\ProjetoEstagio\BLL\bin\Debug\BLL.dll
+C:\ProjetoEstagio\BLL\bin\Debug\BLL.pdb
+C:\ProjetoEstagio\BLL\bin\Debug\DAL.dll
+C:\ProjetoEstagio\BLL\bin\Debug\Modelo.dll
+C:\ProjetoEstagio\BLL\bin\Debug\DAL.pdb
+C:\ProjetoEstagio\BLL\bin\Debug\Modelo.pdb
+C:\ProjetoEstagio\BLL\obj\Debug\BLL.csprojAssemblyReference.cache
+C:\ProjetoEstagio\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\ProjetoEstagio\BLL\obj\Debug\BLL.csproj.CopyComplete
+C:\ProjetoEstagio\BLL\obj\Debug\BLL.dll
+C:\ProjetoEstagio\BLL\obj\Debug\BLL.pdb

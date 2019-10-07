@@ -58,6 +58,50 @@ namespace GUI
             prod.ShowDialog();
             return prod.Iten;
         }
+        public static MItensCompra ListarProduto(MItensCompra itens)
+        {
+            //Criando o obj do tipo MeuMsgBox e configurando a sua exibição
+            var prod = new frmCadastroProduto();
+            prod.txtCodigo.Text = itens.ItemCompraCodigo.ToString();
+            prod.txtNome.Text = itens.Produto.NomeProduto;
+            prod.txtQuantidade.Text = itens.Produto.QuantProduto.ToString();
+            prod.txtDescricao.Text = itens.Produto.DescricaoProduto.ToString();
+            prod.txtValorVenda.Text = itens.Produto.ValorVendaProduto.ToString();
+            prod.txtValorPago.Text = itens.ItemCompraValor.ToString();
+            prod.txtQuantidade.Text = itens.Produto.QuantProduto.ToString();
+            prod.cbxStatus.Text = itens.Produto.StatusProduto.ToString();
+            prod.txtCodBarra.Text = itens.ItemCompraCodBarra.ToString();
+            prod.dtpDataValidade.Value = itens.ItemCompraDataVencimento;
+
+            //Exibindo os botões
+            prod.Alterarbotoes(1);
+
+            //Redefininado o tamanho do formulario
+            prod.Size = new System.Drawing.Size(679, 420);
+
+            //Alterando texto do botão
+            prod.btnSalvar.Text = "Alterar";
+
+            //Ocutando componentes
+            prod.dgvProduto.Visible = false;
+            prod.btnAlterar.Visible = false;
+            prod.btnBuscar.Visible = false;
+            prod.txtConsultaProduto.Visible = false;
+            prod.lblProduto.Visible = false;
+
+            //Passando os valores do combo box
+            prod.cbxCodCat.SelectedValue = itens.Produto.CodigoCategoria;
+            prod.cbxCodSubcat.SelectedValue = itens.Produto.CodigoSubcategoria;
+            prod.cbxCodUnidadeMedida.SelectedValue = itens.Produto.CodigoUnidadeMedida;
+
+
+
+            //Chamando o formulario
+            prod.ShowDialog();
+            prod.Iten.ItemCompraCodigo = int.Parse(prod.txtCodigo.Text);
+            return prod.Iten;
+        }
+
 
         public void CarregarComboBox()
         {

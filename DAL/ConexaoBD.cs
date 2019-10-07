@@ -16,10 +16,13 @@ namespace DAL
             //return new SqlConnection("Data Source=LAPTOP-3E6S24H8\\SQLEXPRESS;Initial Catalog=ProjetoEstagio;Integrated Security=True");
 
             //STRING DE MATHEUS
-            return new SqlConnection("Data Source=NAVE;Initial Catalog=ProjetoEstagio;Integrated Security=True");
+            //return new SqlConnection("Data Source=NAVE;Initial Catalog=ProjetoEstagio;Integrated Security=True");
 
             //STRING DE EVERTON
             //return new SqlConnection("Data Source=DESKTOP-36O4NH1\\SQLEXPRESS;Initial Catalog=ProjetoEstagio;Integrated Security=True");
+
+            //STRING DE PALOMA
+            return new SqlConnection("Data Source=LAPTOP-K7T1BIJL;Initial Catalog=ProjetoEstagio;Integrated Security=True");
         }
     }
 

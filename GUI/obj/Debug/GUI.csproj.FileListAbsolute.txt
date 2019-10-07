@@ -229,3 +229,27 @@ C:\Users\Matheus Gois\Desktop\Alterações Everton\ProjetoEstagio\GUI\obj\Debug\
 C:\Users\Matheus Gois\Desktop\Alterações Everton\ProjetoEstagio\GUI\obj\Debug\GUI.csproj.CopyComplete
 C:\Users\Matheus Gois\Desktop\Alterações Everton\ProjetoEstagio\GUI\obj\Debug\GUI.exe
 C:\Users\Matheus Gois\Desktop\Alterações Everton\ProjetoEstagio\GUI\obj\Debug\GUI.pdb
+C:\ProjetoEstagio\GUI\bin\Debug\GUI.exe.config
+C:\ProjetoEstagio\GUI\bin\Debug\GUI.exe
+C:\ProjetoEstagio\GUI\bin\Debug\GUI.pdb
+C:\ProjetoEstagio\GUI\bin\Debug\BLL.dll
+C:\ProjetoEstagio\GUI\bin\Debug\DAL.dll
+C:\ProjetoEstagio\GUI\bin\Debug\Modelo.dll
+C:\ProjetoEstagio\GUI\bin\Debug\BLL.pdb
+C:\ProjetoEstagio\GUI\bin\Debug\DAL.pdb
+C:\ProjetoEstagio\GUI\bin\Debug\Modelo.pdb
+C:\ProjetoEstagio\GUI\obj\Debug\GUI.csprojAssemblyReference.cache
+C:\ProjetoEstagio\GUI\obj\Debug\GUI.frmCadastroCategoria.resources
+C:\ProjetoEstagio\GUI\obj\Debug\GUI.frmCadastroCliente.resources
+C:\ProjetoEstagio\GUI\obj\Debug\GUI.frmCadastroProduto.resources
+C:\ProjetoEstagio\GUI\obj\Debug\GUI.frmCadastroSubCategoria.resources
+C:\ProjetoEstagio\GUI\obj\Debug\GUI.frmCadastrarCompra.resources
+C:\ProjetoEstagio\GUI\obj\Debug\GUI.frmCadastroFornecedor.resources
+C:\ProjetoEstagio\GUI\obj\Debug\GUI.frmLogin.resources
+C:\ProjetoEstagio\GUI\obj\Debug\GUI.frmPrincipal.resources
+C:\ProjetoEstagio\GUI\obj\Debug\GUI.Properties.Resources.resources
+C:\ProjetoEstagio\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
+C:\ProjetoEstagio\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+C:\ProjetoEstagio\GUI\obj\Debug\GUI.csproj.CopyComplete
+C:\ProjetoEstagio\GUI\obj\Debug\GUI.exe
+C:\ProjetoEstagio\GUI\obj\Debug\GUI.pdb

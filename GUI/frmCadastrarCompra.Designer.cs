@@ -330,6 +330,7 @@
             this.btnAlterar.TabIndex = 109;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // dgvCompra
             // 
@@ -500,6 +501,7 @@
             this.btnAlterarProduto.TabIndex = 111;
             this.btnAlterarProduto.Text = "Alterar";
             this.btnAlterarProduto.UseVisualStyleBackColor = true;
+            this.btnAlterarProduto.Click += new System.EventHandler(this.btnAlterarProduto_Click);
             // 
             // dgvProduto
             // 

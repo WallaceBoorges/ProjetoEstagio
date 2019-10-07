@@ -38,5 +38,17 @@ namespace Modelo
             Itens = new List<MItensCompra>();
             Parcelas = new List<MParcelasCompra>();
         }
+
+        public MCompra(int compraCod, DateTime compraData, string compraNotaFiscal, double compraValor, int compraParcelas, string compraStatus, int fornecedorCod, int tipoPagCod)
+        {
+            CompraCod = compraCod;
+            CompraData = compraData;
+            CompraNotaFiscal = compraNotaFiscal;
+            CompraValor = compraValor;
+            CompraParcelas = compraParcelas;
+            CompraStatus = compraStatus;
+            FornecedorCod = fornecedorCod;
+            TipoPagCod = tipoPagCod;
+        }
     }
 }

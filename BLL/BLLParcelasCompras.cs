@@ -10,5 +10,10 @@ namespace BLL
         {
             DALParcelasCompra.Incluir(modelo);
         }
+
+        public static void Excluir(MParcelasCompra modelo)
+        {
+            DALParcelasCompra.Excluir(modelo);
+        }
     }
 }

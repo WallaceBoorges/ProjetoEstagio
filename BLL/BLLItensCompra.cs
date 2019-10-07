@@ -11,5 +11,12 @@ namespace BLL
             //Chamando o metodo Incluir
             DALItensCompra.Incluir(modelo);
         }
+
+
+        public static void Alterar(MItensCompra modelo)
+        {
+            //chamando método Alterar
+            DALItensCompra.Alterar(modelo);
+        }
     }
 }

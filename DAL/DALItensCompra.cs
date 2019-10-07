@@ -7,6 +7,7 @@ namespace DAL
 {
     public class DALItensCompra
     {
+
         //Incluindo varios produtos
         public static void Incluir(MItensCompra modelo)
         {
@@ -36,6 +37,38 @@ namespace DAL
                         comm.Parameters.Add(new SqlParameter("@comcod", modelo.CompraCodigo));
                         comm.Parameters.Add(new SqlParameter("@prodcod", idProduto));
                         //Executando o comando
+                        comm.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception erro)
+            {
+                throw new Exception(erro.Message);
+            }
+        }
+        public static void Alterar(MItensCompra modelo)
+        {
+            try
+            {
+                using (var conn = ConexaoBD.AbrirConexao()) //Passando string de conexão
+                {
+                    conn.Open(); //Abrindo conexao
+                    using (var comm = conn.CreateCommand()) //CRiando comando SQL
+                    {
+
+                        comm.CommandText = "update itenscompra set itensCompra_qtde = @qtde, itensCompra_valor = @itensCompraValor, " +
+                            "itensCompra_codigoBarra = @codBarra, itensCompra_vencimento = @vencimento " +
+                            " where itensCompra_cod = @itensCompra_cod";
+
+
+                        //Passando valores 
+                        comm.Parameters.Add(new SqlParameter("@qtde", modelo.ItemCompraQuant));
+                        comm.Parameters.Add(new SqlParameter("@itensCompraValor", modelo.ItemCompraValor));
+                        comm.Parameters.Add(new SqlParameter("@codBarra", modelo.ItemCompraCodBarra));
+                        comm.Parameters.Add(new SqlParameter("@vencimento", modelo.ItemCompraDataVencimento));
+                        comm.Parameters.Add(new SqlParameter("@itensCompra_cod", modelo.ItemCompraCodigo));
+                        //Executando comando
+
                         comm.ExecuteNonQuery();
                     }
                 }

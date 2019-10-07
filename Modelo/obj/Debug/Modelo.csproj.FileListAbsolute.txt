@@ -58,3 +58,9 @@ C:\Users\Matheus Gois\Desktop\Alterações Everton\ProjetoEstagio\Modelo\obj\Deb
 C:\Users\Matheus Gois\Desktop\Alterações Everton\ProjetoEstagio\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
 C:\Users\Matheus Gois\Desktop\Alterações Everton\ProjetoEstagio\Modelo\obj\Debug\Modelo.dll
 C:\Users\Matheus Gois\Desktop\Alterações Everton\ProjetoEstagio\Modelo\obj\Debug\Modelo.pdb
+C:\ProjetoEstagio\Modelo\bin\Debug\Modelo.dll
+C:\ProjetoEstagio\Modelo\bin\Debug\Modelo.pdb
+C:\ProjetoEstagio\Modelo\obj\Debug\Modelo.csprojAssemblyReference.cache
+C:\ProjetoEstagio\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
+C:\ProjetoEstagio\Modelo\obj\Debug\Modelo.dll
+C:\ProjetoEstagio\Modelo\obj\Debug\Modelo.pdb
