@@ -87,6 +87,7 @@
             this.uniMedida_cod = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.categoria_cod = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.subcategoria_cod = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnVisParcelas = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCompra)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduto)).BeginInit();
             this.SuspendLayout();
@@ -294,6 +295,7 @@
             this.btnExcluirProduto.TabIndex = 103;
             this.btnExcluirProduto.Text = "Excluir";
             this.btnExcluirProduto.UseVisualStyleBackColor = true;
+            this.btnExcluirProduto.Click += new System.EventHandler(this.btnExcluirProduto_Click);
             // 
             // label2
             // 
@@ -321,6 +323,7 @@
             this.btnExcluir.TabIndex = 110;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnAlterar
             // 
@@ -360,6 +363,7 @@
             this.dgvCompra.ReadOnly = true;
             this.dgvCompra.Size = new System.Drawing.Size(734, 189);
             this.dgvCompra.TabIndex = 108;
+            this.dgvCompra.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvCompra_CellClick);
             // 
             // CompraCod
             // 
@@ -629,11 +633,22 @@
             this.subcategoria_cod.ReadOnly = true;
             this.subcategoria_cod.Visible = false;
             // 
+            // btnVisParcelas
+            // 
+            this.btnVisParcelas.Location = new System.Drawing.Point(766, 385);
+            this.btnVisParcelas.Name = "btnVisParcelas";
+            this.btnVisParcelas.Size = new System.Drawing.Size(75, 43);
+            this.btnVisParcelas.TabIndex = 113;
+            this.btnVisParcelas.Text = "Visualizar Parcelas";
+            this.btnVisParcelas.UseVisualStyleBackColor = true;
+            this.btnVisParcelas.Visible = false;
+            // 
             // frmCadastrarCompra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(864, 499);
+            this.Controls.Add(this.btnVisParcelas);
             this.Controls.Add(this.dgvProduto);
             this.Controls.Add(this.btnAlterarProduto);
             this.Controls.Add(this.btnExcluir);
@@ -732,5 +747,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn uniMedida_cod;
         private System.Windows.Forms.DataGridViewTextBoxColumn categoria_cod;
         private System.Windows.Forms.DataGridViewTextBoxColumn subcategoria_cod;
+        private System.Windows.Forms.Button btnVisParcelas;
     }
 }

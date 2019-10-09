@@ -18,5 +18,10 @@ namespace BLL
             //chamando método Alterar
             DALItensCompra.Alterar(modelo);
         }
+
+        public static void Excluir(int codigo)
+        {
+            DALItensCompra.Excluir(codigo);
+        }
     }
 }

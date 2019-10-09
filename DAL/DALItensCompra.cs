@@ -105,5 +105,28 @@ namespace DAL
                 throw new Exception(erro.Message);
             }
         }
+
+        public static void Excluir(int codigo)
+        {
+            try
+            {
+                using (var conn = ConexaoBD.AbrirConexao()) //Passando a string de conexão
+                {
+                    conn.Open(); //Abrindo a conexão
+                    using (var comm = conn.CreateCommand()) //Criando o comando SQL
+                    {
+                        comm.CommandText = "DELETE FROM itenscompra WHERE itensCompra_cod = @id";
+                        //Passando o valores por parametro
+                        comm.Parameters.Add(new SqlParameter("@id", codigo));
+                        //Executando o comando
+                        comm.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception erro)
+            {
+                throw new Exception(erro.Message);
+            }
+        }
     }
 }

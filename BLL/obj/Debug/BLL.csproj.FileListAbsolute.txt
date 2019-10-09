@@ -130,3 +130,14 @@ C:\ProjetoEstagio\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
 C:\ProjetoEstagio\BLL\obj\Debug\BLL.csproj.CopyComplete
 C:\ProjetoEstagio\BLL\obj\Debug\BLL.dll
 C:\ProjetoEstagio\BLL\obj\Debug\BLL.pdb
+C:\Users\Isaque\Source\Repos\WallaceBoorges\ProjetoEstagio\BLL\bin\Debug\BLL.dll
+C:\Users\Isaque\Source\Repos\WallaceBoorges\ProjetoEstagio\BLL\bin\Debug\BLL.pdb
+C:\Users\Isaque\Source\Repos\WallaceBoorges\ProjetoEstagio\BLL\bin\Debug\DAL.dll
+C:\Users\Isaque\Source\Repos\WallaceBoorges\ProjetoEstagio\BLL\bin\Debug\Modelo.dll
+C:\Users\Isaque\Source\Repos\WallaceBoorges\ProjetoEstagio\BLL\bin\Debug\DAL.pdb
+C:\Users\Isaque\Source\Repos\WallaceBoorges\ProjetoEstagio\BLL\bin\Debug\Modelo.pdb
+C:\Users\Isaque\Source\Repos\WallaceBoorges\ProjetoEstagio\BLL\obj\Debug\BLL.csprojAssemblyReference.cache
+C:\Users\Isaque\Source\Repos\WallaceBoorges\ProjetoEstagio\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\Isaque\Source\Repos\WallaceBoorges\ProjetoEstagio\BLL\obj\Debug\BLL.csproj.CopyComplete
+C:\Users\Isaque\Source\Repos\WallaceBoorges\ProjetoEstagio\BLL\obj\Debug\BLL.dll
+C:\Users\Isaque\Source\Repos\WallaceBoorges\ProjetoEstagio\BLL\obj\Debug\BLL.pdb

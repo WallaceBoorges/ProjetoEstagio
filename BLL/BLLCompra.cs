@@ -19,7 +19,10 @@ namespace BLL
         {
             DALCompra.Alterar(modelo);
         }
-
+        public static void Excluir(int codigo)
+        {
+            DALCompra.Excluir(codigo);
+        }
 
     }
 }

@@ -440,10 +440,52 @@ namespace GUI
             CarregarGrid();
         }
 
+        //botão excluir compra
         private void btnExcluir_Click(object sender, EventArgs e)
         {
+            try
+            {
+                //Aqui ele executa um diálogo perguntando se o usuário deseja ou não excluir o registro.
+                if (MessageBox.Show("Deseja excluir o registro?", "Atenção", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    /*Caso "sim", é aberto a conexão com o banco e executado o método de excluir. */
+                    //Método de excluir sendo chamado.
+                    BLLCompra.Excluir(int.Parse(dgvCompra.CurrentRow.Cells[0].Value.ToString()));
 
+                    dgvCompra.DataSource = DALCompra.CarregarGrid();
+                }
+            }
+            catch
+            {
+                //Caso apresente algum erro. Será retornado esta mensagem.
+                MessageBox.Show("Impossível excluir o registro. \n O registro está sendo utilizado em outro local");
+            }
         }
-        
+
+        //botão excluir item na lista de compra
+        private void btnExcluirProduto_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //Aqui ele executa um diálogo perguntando se o usuário deseja ou não excluir o registro.
+                if (MessageBox.Show("Deseja excluir o registro?", "Atenção", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    /*Caso "sim", é aberto a conexão com o banco e executado o método de excluir. */
+                    //Método de excluir sendo chamado.
+                    Compra.Itens.RemoveAt(dgvProduto.CurrentCell.RowIndex);
+                    CarregarGrid();
+                }
+            }
+            catch
+            {
+                //Caso apresente algum erro. Será retornado esta mensagem.
+                MessageBox.Show("Impossível excluir o registro. \n O registro está sendo utilizado em outro local");
+            }
+        }
+
+        private void DgvCompra_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            btnVisParcelas.Visible = true;
+        }
     }
 }

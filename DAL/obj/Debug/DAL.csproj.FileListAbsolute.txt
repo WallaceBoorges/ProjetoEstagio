@@ -106,3 +106,12 @@ C:\ProjetoEstagio\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 C:\ProjetoEstagio\DAL\obj\Debug\DAL.csproj.CopyComplete
 C:\ProjetoEstagio\DAL\obj\Debug\DAL.dll
 C:\ProjetoEstagio\DAL\obj\Debug\DAL.pdb
+C:\Users\Isaque\Source\Repos\WallaceBoorges\ProjetoEstagio\DAL\bin\Debug\DAL.dll
+C:\Users\Isaque\Source\Repos\WallaceBoorges\ProjetoEstagio\DAL\bin\Debug\DAL.pdb
+C:\Users\Isaque\Source\Repos\WallaceBoorges\ProjetoEstagio\DAL\bin\Debug\Modelo.dll
+C:\Users\Isaque\Source\Repos\WallaceBoorges\ProjetoEstagio\DAL\bin\Debug\Modelo.pdb
+C:\Users\Isaque\Source\Repos\WallaceBoorges\ProjetoEstagio\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Users\Isaque\Source\Repos\WallaceBoorges\ProjetoEstagio\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Isaque\Source\Repos\WallaceBoorges\ProjetoEstagio\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\Isaque\Source\Repos\WallaceBoorges\ProjetoEstagio\DAL\obj\Debug\DAL.dll
+C:\Users\Isaque\Source\Repos\WallaceBoorges\ProjetoEstagio\DAL\obj\Debug\DAL.pdb
