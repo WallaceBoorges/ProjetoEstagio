@@ -363,7 +363,6 @@
             this.dgvCompra.ReadOnly = true;
             this.dgvCompra.Size = new System.Drawing.Size(734, 189);
             this.dgvCompra.TabIndex = 108;
-            this.dgvCompra.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvCompra_CellClick);
             // 
             // CompraCod
             // 
@@ -641,7 +640,7 @@
             this.btnVisParcelas.TabIndex = 113;
             this.btnVisParcelas.Text = "Visualizar Parcelas";
             this.btnVisParcelas.UseVisualStyleBackColor = true;
-            this.btnVisParcelas.Visible = false;
+            this.btnVisParcelas.Click += new System.EventHandler(this.BtnVisParcelas_Click);
             // 
             // frmCadastrarCompra
             // 

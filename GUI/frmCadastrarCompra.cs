@@ -483,9 +483,10 @@ namespace GUI
             }
         }
 
-        private void DgvCompra_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void BtnVisParcelas_Click(object sender, EventArgs e)
         {
-            btnVisParcelas.Visible = true;
+            frmParcelasCompra parcelas = new frmParcelasCompra(int.Parse(dgvCompra.CurrentRow.Cells["CompraCod"].Value.ToString()));
+            parcelas.Show();
         }
     }
 }

@@ -9,14 +9,15 @@ namespace DAL
     public class DALParcelasCompra
     {
         /* Método para carregar os dados da tabela no DataGridView*/
-        public static DataTable CarregarGrid()
+        public static DataTable CarregarGrid(int codigo)
         {
             using (var conn = ConexaoBD.AbrirConexao()) //Passando a string de conexão
             {
                 conn.Open(); //Abrindo a conexão
                 using (var comm = conn.CreateCommand()) //Criando o comando SQL
                 {
-                    comm.CommandText = "Select* from categoria order by categoria_cod desc";
+                    //comm.CommandText = "Select* from categoria order by categoria_cod desc";
+                    comm.CommandText = "Select* from parcelascompra where compra_cod = " + codigo + " order by parcelasCompra_vecto asc";
                     var reader = comm.ExecuteReader(); //Passando o comando 
                     var table = new DataTable(); //Passando a tabela
                     table.Load(reader); //Carregando a tabela 

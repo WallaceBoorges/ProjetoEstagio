@@ -277,3 +277,4 @@ C:\Users\Isaque\Source\Repos\WallaceBoorges\ProjetoEstagio\GUI\obj\Debug\GUI.csp
 C:\Users\Isaque\Source\Repos\WallaceBoorges\ProjetoEstagio\GUI\obj\Debug\GUI.csproj.CopyComplete
 C:\Users\Isaque\Source\Repos\WallaceBoorges\ProjetoEstagio\GUI\obj\Debug\GUI.exe
 C:\Users\Isaque\Source\Repos\WallaceBoorges\ProjetoEstagio\GUI\obj\Debug\GUI.pdb
+C:\Users\Isaque\Source\Repos\WallaceBoorges\ProjetoEstagio\GUI\obj\Debug\GUI.frmParcelasCompra.resources
