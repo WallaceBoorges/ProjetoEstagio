@@ -61,5 +61,12 @@ namespace GUI
             f.Dispose();
 
         }
+
+        private void conexãoBancoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmConexaoBD f = new frmConexaoBD();
+            f.ShowDialog();
+            f.Dispose();
+        }
     }
 }

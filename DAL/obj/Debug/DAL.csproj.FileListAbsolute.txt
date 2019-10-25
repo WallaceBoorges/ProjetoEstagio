@@ -115,3 +115,23 @@ C:\Users\Isaque\Source\Repos\WallaceBoorges\ProjetoEstagio\DAL\obj\Debug\DAL.csp
 C:\Users\Isaque\Source\Repos\WallaceBoorges\ProjetoEstagio\DAL\obj\Debug\DAL.csproj.CopyComplete
 C:\Users\Isaque\Source\Repos\WallaceBoorges\ProjetoEstagio\DAL\obj\Debug\DAL.dll
 C:\Users\Isaque\Source\Repos\WallaceBoorges\ProjetoEstagio\DAL\obj\Debug\DAL.pdb
+C:\Users\Matheus Gois\Desktop\ProjetoEstagio\DAL\bin\Debug\Microsoft.SqlServer.ConnectionInfo.dll
+C:\Users\Matheus Gois\Desktop\ProjetoEstagio\DAL\bin\Debug\Microsoft.SqlServer.Management.Sdk.Sfc.dll
+C:\Users\Matheus Gois\Desktop\ProjetoEstagio\DAL\bin\Debug\Microsoft.SqlServer.Smo.dll
+C:\Users\Matheus Gois\Desktop\ProjetoEstagio\DAL\bin\Debug\Microsoft.SqlServer.SmoExtended.dll
+C:\Users\Matheus Gois\Desktop\ProjetoEstagio\DAL\bin\Debug\Microsoft.SqlServer.SqlClrProvider.dll
+C:\Users\Matheus Gois\Desktop\ProjetoEstagio\DAL\bin\Debug\Microsoft.SqlServer.SqlEnum.dll
+C:\Users\Matheus Gois\Desktop\ProjetoEstagio\DAL\bin\Debug\Microsoft.SqlServer.Dmf.Common.dll
+C:\Users\Matheus Gois\Desktop\ProjetoEstagio\DAL\bin\Debug\Microsoft.SqlServer.Diagnostics.STrace.dll
+C:\Users\Matheus Gois\Desktop\ProjetoEstagio\DAL\bin\Debug\Microsoft.SqlServer.ServiceBrokerEnum.dll
+C:\Users\Matheus Gois\Desktop\ProjetoEstagio\DAL\bin\Debug\Microsoft.SqlServer.RegSvrEnum.dll
+C:\Users\Matheus Gois\Desktop\ProjetoEstagio\DAL\bin\Debug\Microsoft.SqlServer.SqlTDiagM.dll
+C:\Users\Matheus Gois\Desktop\ProjetoEstagio\DAL\bin\Debug\pt\Microsoft.SqlServer.ConnectionInfo.resources.dll
+C:\Users\Matheus Gois\Desktop\ProjetoEstagio\DAL\bin\Debug\pt\Microsoft.SqlServer.Management.Sdk.Sfc.resources.dll
+C:\Users\Matheus Gois\Desktop\ProjetoEstagio\DAL\bin\Debug\pt\Microsoft.SqlServer.Smo.resources.dll
+C:\Users\Matheus Gois\Desktop\ProjetoEstagio\DAL\bin\Debug\pt\Microsoft.SqlServer.SmoExtended.resources.dll
+C:\Users\Matheus Gois\Desktop\ProjetoEstagio\DAL\bin\Debug\pt\Microsoft.SqlServer.SqlEnum.resources.dll
+C:\Users\Matheus Gois\Desktop\ProjetoEstagio\DAL\bin\Debug\pt\Microsoft.SqlServer.Dmf.Common.resources.dll
+C:\Users\Matheus Gois\Desktop\ProjetoEstagio\DAL\bin\Debug\pt\Microsoft.SqlServer.ServiceBrokerEnum.resources.dll
+C:\Users\Matheus Gois\Desktop\ProjetoEstagio\DAL\bin\Debug\pt\Microsoft.SqlServer.RegSvrEnum.resources.dll
+C:\Users\Matheus Gois\Desktop\ProjetoEstagio\DAL\bin\Debug\ProjetoEstagio.bak

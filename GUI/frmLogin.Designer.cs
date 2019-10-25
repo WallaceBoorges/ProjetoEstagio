@@ -113,11 +113,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnAcessar;
-        private System.Windows.Forms.TextBox txtSenha;
-        private System.Windows.Forms.Label lblSenha;
-        private System.Windows.Forms.TextBox txtUsuario;
-        private System.Windows.Forms.Label lblUsuario;
-        private System.Windows.Forms.Button btnFechar;
+        public System.Windows.Forms.Button btnAcessar;
+        public System.Windows.Forms.TextBox txtSenha;
+        public System.Windows.Forms.Label lblSenha;
+        public System.Windows.Forms.TextBox txtUsuario;
+        public System.Windows.Forms.Label lblUsuario;
+        public System.Windows.Forms.Button btnFechar;
     }
 }

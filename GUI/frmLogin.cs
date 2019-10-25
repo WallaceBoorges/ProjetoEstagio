@@ -26,6 +26,7 @@ namespace GUI
             return login.Resultado;
         }
 
+
         //Evento click do botão acessar
         private void btnAcessar_Click(object sender, EventArgs e)
         {

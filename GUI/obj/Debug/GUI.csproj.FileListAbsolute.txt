@@ -278,3 +278,21 @@ C:\Users\Isaque\Source\Repos\WallaceBoorges\ProjetoEstagio\GUI\obj\Debug\GUI.csp
 C:\Users\Isaque\Source\Repos\WallaceBoorges\ProjetoEstagio\GUI\obj\Debug\GUI.exe
 C:\Users\Isaque\Source\Repos\WallaceBoorges\ProjetoEstagio\GUI\obj\Debug\GUI.pdb
 C:\Users\Isaque\Source\Repos\WallaceBoorges\ProjetoEstagio\GUI\obj\Debug\GUI.frmParcelasCompra.resources
+C:\Users\Matheus Gois\Desktop\ProjetoEstagio\GUI\obj\Debug\GUI.frmCadastroCliente.resources
+C:\Users\Matheus Gois\Desktop\ProjetoEstagio\GUI\obj\Debug\GUI.frmParcelasCompra.resources
+C:\Users\Matheus Gois\Desktop\ProjetoEstagio\GUI\obj\Debug\GUI.frmConexaoBD.resources
+C:\Users\Matheus Gois\Desktop\ProjetoEstagio\GUI\bin\Debug\Microsoft.SqlServer.ConnectionInfo.dll
+C:\Users\Matheus Gois\Desktop\ProjetoEstagio\GUI\bin\Debug\Microsoft.SqlServer.Smo.dll
+C:\Users\Matheus Gois\Desktop\ProjetoEstagio\GUI\bin\Debug\Microsoft.SqlServer.SqlClrProvider.dll
+C:\Users\Matheus Gois\Desktop\ProjetoEstagio\GUI\bin\Debug\Microsoft.SqlServer.Management.Sdk.Sfc.dll
+C:\Users\Matheus Gois\Desktop\ProjetoEstagio\GUI\bin\Debug\Microsoft.SqlServer.SqlEnum.dll
+C:\Users\Matheus Gois\Desktop\ProjetoEstagio\GUI\bin\Debug\Microsoft.SqlServer.Dmf.Common.dll
+C:\Users\Matheus Gois\Desktop\ProjetoEstagio\GUI\bin\Debug\Microsoft.SqlServer.Diagnostics.STrace.dll
+C:\Users\Matheus Gois\Desktop\ProjetoEstagio\GUI\bin\Debug\Microsoft.SqlServer.ServiceBrokerEnum.dll
+C:\Users\Matheus Gois\Desktop\ProjetoEstagio\GUI\bin\Debug\pt\Microsoft.SqlServer.ConnectionInfo.resources.dll
+C:\Users\Matheus Gois\Desktop\ProjetoEstagio\GUI\bin\Debug\pt\Microsoft.SqlServer.Smo.resources.dll
+C:\Users\Matheus Gois\Desktop\ProjetoEstagio\GUI\bin\Debug\pt\Microsoft.SqlServer.Management.Sdk.Sfc.resources.dll
+C:\Users\Matheus Gois\Desktop\ProjetoEstagio\GUI\bin\Debug\pt\Microsoft.SqlServer.SqlEnum.resources.dll
+C:\Users\Matheus Gois\Desktop\ProjetoEstagio\GUI\bin\Debug\pt\Microsoft.SqlServer.Dmf.Common.resources.dll
+C:\Users\Matheus Gois\Desktop\ProjetoEstagio\GUI\bin\Debug\pt\Microsoft.SqlServer.ServiceBrokerEnum.resources.dll
+C:\Users\Matheus Gois\Desktop\ProjetoEstagio\GUI\bin\Debug\ProjetoEstagio.bak

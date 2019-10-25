@@ -324,6 +324,16 @@ namespace GUI
                 //Pegando valores do item compra
                 var table = DALItensCompra.PegarDados(int.Parse(txtCodigo.Text));
 
+                if (table.Rows.Count != 0)
+                {
+                    double valorCompra = double.Parse(table.Rows[0]["itensCompra_valor"].ToString());
+                    txtValorPago.Text = valorCompra.ToString("F2");
+                }
+                else
+                {
+                    txtValorPago.Text = "R$ 00,00";
+                }
+
                 //Pegando o valor compra e formatando
                 //ESTE TRCHO ESTÁ COMENTADO PARA EVITAR UM BUG - SO DEVE SER DESCOMENTADO APOS CORREÇÃO
                 //double valorCompra = double.Parse(table.Rows[0]["itensCompra_valor"].ToString());

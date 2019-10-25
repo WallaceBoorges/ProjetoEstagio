@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DAL;
 
 namespace GUI
 {
@@ -17,16 +20,51 @@ namespace GUI
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            string cod = frmLogin.Login();
+            int x = 1; //Variavdel para permanecer no while
 
-            if (cod != "0")
+            while (x == 1)
             {
-                frmPrincipal f = new frmPrincipal();
+                try
+                {
+                    ConexaoBD conexao = new ConexaoBD(); //Instanciando um objeto para pegar as configuração de conexão
 
-                f.txtCod.Text = cod;
+                    conexao.RestaurarDBPadraoCasoNaoExista(); //Restaurando (caso não exista) e testando a conexão com banco
 
-                Application.Run(f);
-            }                     
+                    string cod = frmLogin.Login(); //Chamando a tela login
+
+                    if (cod != "0") //Analisando de o usuário existe
+                    {
+                        frmPrincipal f = new frmPrincipal(); //Instanciando um objeto do formulario principal
+
+                        f.txtCod.Text = cod; //Passando o codigo do usuário para o formulario
+
+                        Application.Run(f); //Executando o formulario
+
+                        x = 2; //Mudando o valor de X para quando o usuário fechar o formulario principal
+                    }
+
+                }
+                catch (IOException ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    frmConexaoBD f = new frmConexaoBD();
+                    f.ShowDialog();
+                    f.Dispose();
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    frmConexaoBD f = new frmConexaoBD();
+                    f.ShowDialog();
+                    f.Dispose();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    x = 2; //Mudando o valor de X para quando ocorrer um erro de restauração
+                }
+            }
+            
         }
     }
 }

@@ -37,10 +37,11 @@
             this.categoriaToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.subCategoriaToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuFuncionario = new System.Windows.Forms.ToolStripMenuItem();
-            this.MenuFinanceiro = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuFornecedor = new System.Windows.Forms.ToolStripMenuItem();
             this.fornecedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastrarComprasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.configuraçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.conexãoBancoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.txtCod = new System.Windows.Forms.TextBox();
             this.lblCod = new System.Windows.Forms.Label();
             this.menu.SuspendLayout();
@@ -55,8 +56,8 @@
             this.MenuCliente,
             this.MenuEstoque,
             this.MenuFuncionario,
-            this.MenuFinanceiro,
-            this.MenuFornecedor});
+            this.MenuFornecedor,
+            this.configuraçãoToolStripMenuItem});
             this.menu.Location = new System.Drawing.Point(0, 0);
             this.menu.Name = "menu";
             this.menu.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
@@ -81,7 +82,7 @@
             // clientesToolStripMenuItem
             // 
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.clientesToolStripMenuItem.Text = "Clientes";
             this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
@@ -122,12 +123,6 @@
             this.MenuFuncionario.Size = new System.Drawing.Size(82, 20);
             this.MenuFuncionario.Text = "Funcionario";
             // 
-            // MenuFinanceiro
-            // 
-            this.MenuFinanceiro.Name = "MenuFinanceiro";
-            this.MenuFinanceiro.Size = new System.Drawing.Size(74, 20);
-            this.MenuFinanceiro.Text = "Financeiro";
-            // 
             // MenuFornecedor
             // 
             this.MenuFornecedor.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -150,6 +145,21 @@
             this.cadastrarComprasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.cadastrarComprasToolStripMenuItem.Text = "Cadastrar Compras";
             this.cadastrarComprasToolStripMenuItem.Click += new System.EventHandler(this.comprasToolStripMenuItem_Click);
+            // 
+            // configuraçãoToolStripMenuItem
+            // 
+            this.configuraçãoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.conexãoBancoToolStripMenuItem});
+            this.configuraçãoToolStripMenuItem.Name = "configuraçãoToolStripMenuItem";
+            this.configuraçãoToolStripMenuItem.Size = new System.Drawing.Size(91, 20);
+            this.configuraçãoToolStripMenuItem.Text = "Configuração";
+            // 
+            // conexãoBancoToolStripMenuItem
+            // 
+            this.conexãoBancoToolStripMenuItem.Name = "conexãoBancoToolStripMenuItem";
+            this.conexãoBancoToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.conexãoBancoToolStripMenuItem.Text = "Conexão Banco";
+            this.conexãoBancoToolStripMenuItem.Click += new System.EventHandler(this.conexãoBancoToolStripMenuItem_Click);
             // 
             // txtCod
             // 
@@ -197,12 +207,13 @@
         private System.Windows.Forms.ToolStripMenuItem categoriaToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem subCategoriaToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem MenuFuncionario;
-        private System.Windows.Forms.ToolStripMenuItem MenuFinanceiro;
         private System.Windows.Forms.ToolStripMenuItem MenuFornecedor;
         public System.Windows.Forms.TextBox txtCod;
         private System.Windows.Forms.Label lblCod;
         private System.Windows.Forms.ToolStripMenuItem fornecedoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cadastrarComprasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem configuraçãoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem conexãoBancoToolStripMenuItem;
     }
 }
