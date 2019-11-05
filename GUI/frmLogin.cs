@@ -79,6 +79,7 @@ namespace GUI
 
         private void btnFechar_Click(object sender, EventArgs e)
         {
+            Resultado = "Fechar";
             Close();
         }
     }

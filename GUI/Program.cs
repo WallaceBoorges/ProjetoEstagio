@@ -32,7 +32,7 @@ namespace GUI
 
                     string cod = frmLogin.Login(); //Chamando a tela login
 
-                    if (cod != "0") //Analisando de o usuário existe
+                    if ((cod != "0") & (cod != "Fechar")) //Analisando se o usuário existe e se não foi solicitado o fechamento do login
                     {
                         frmPrincipal f = new frmPrincipal(); //Instanciando um objeto do formulario principal
 
@@ -41,6 +41,10 @@ namespace GUI
                         Application.Run(f); //Executando o formulario
 
                         x = 2; //Mudando o valor de X para quando o usuário fechar o formulario principal
+                    }
+                    else if (cod == "Fechar")
+                    {
+                        x = 2;
                     }
 
                 }
