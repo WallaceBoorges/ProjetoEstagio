@@ -51,6 +51,8 @@ namespace DAL
             }
             catch (Exception erro)
             {
+                //Apagando a compra caso ocorra algum erro
+                DALCompra.Excluir(int.Parse(DALCompra.PegarId()));
                 throw new Exception(erro.Message);
             }
         }

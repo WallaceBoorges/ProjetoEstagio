@@ -18,12 +18,17 @@ namespace DAL
                     conn.Open(); //Abrindo a conexão
                     using (var comm = conn.CreateCommand()) //Criando o comando SQL
                     {
-                        //Pegando o id do ultimo produto cadastrado
-                        comm.CommandText = "Select TOP 1 produto_cod from produto order by produto_cod desc";
-                        var reader = comm.ExecuteReader(); //Passando o comando 
-                        var table = new DataTable(); //Passando a tabela
-                        table.Load(reader); //Carregando a tabela
-                        string idProduto = table.Rows[table.Rows.Count - 1]["produto_cod"].ToString(); //Pegando o id da avaliação
+                        //Analisando se não foi informado um id do produto
+                        if (modelo.Produto.CodigoProduto == 0)
+                        {
+                            //Pegando o id do ultimo produto cadastrado
+                            comm.CommandText = "Select TOP 1 produto_cod from produto order by produto_cod desc";
+                            var reader = comm.ExecuteReader(); //Passando o comando 
+                            var table = new DataTable(); //Passando a tabela
+                            table.Load(reader); //Carregando a tabela
+                            modelo.Produto.CodigoProduto = int.Parse(table.Rows[table.Rows.Count - 1]["produto_cod"].ToString()); //Pegando o id do produto
+                        }
+                        
 
                         comm.CommandText = "INSERT INTO itenscompra (itensCompra_qtde, itensCompra_valor, itensCompra_qtdeVenda, itensCompra_codigoBarra, itensCompra_vencimento, compra_cod, produto_cod) " +
                             "VALUES (@quant, @valor, @venda, @barra, @vence, @comcod, @prodcod)";
@@ -35,7 +40,7 @@ namespace DAL
                         comm.Parameters.Add(new SqlParameter("@barra", modelo.ItemCompraCodBarra));
                         comm.Parameters.Add(new SqlParameter("@vence", modelo.ItemCompraDataVencimento));
                         comm.Parameters.Add(new SqlParameter("@comcod", modelo.CompraCodigo));
-                        comm.Parameters.Add(new SqlParameter("@prodcod", idProduto));
+                        comm.Parameters.Add(new SqlParameter("@prodcod", modelo.Produto.CodigoProduto));
                         //Executando o comando
                         comm.ExecuteNonQuery();
                     }
@@ -43,6 +48,8 @@ namespace DAL
             }
             catch (Exception erro)
             {
+                //Apagando a compra caso ocorra algum erro
+                DALCompra.Excluir(int.Parse(DALCompra.PegarId()));
                 throw new Exception(erro.Message);
             }
         }

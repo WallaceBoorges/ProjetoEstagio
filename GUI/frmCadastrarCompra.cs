@@ -185,7 +185,7 @@ namespace GUI
                         //Criando e salvando as parcelas
                         for (int i = 0; i < Compra.CompraParcelas; i++)
                         {
-                            Compra.Parcelas.Add(new MParcelasCompra(double.Parse(txtValorParcela.Text), ProximaPrestação.AddMonths(i), Compra.CompraCod)); //Instanciando a parcela
+                            Compra.Parcelas.Add(new MParcelasCompra(double.Parse(txtValorParcela.Text), ProximaPrestação.AddMonths(i+1), Compra.CompraCod)); //Instanciando a parcela
 
                             //Salvando as Parcelas
                             BLLParcelasCompras.Incluir(Compra.Parcelas[i]);
@@ -201,6 +201,9 @@ namespace GUI
                                 if (cbxStatus.Text != "FINALIZADA")
                                 {
                                     item.Produto.QuantProduto = 0;
+
+                                    //Colando ele fora de Estoque, pois a compra não foi finalizada
+                                    item.Produto.StatusProduto = "FORA DE ESTOQUE";
                                 }
 
                                 //Chamando o metodo Incluir um produto
@@ -209,15 +212,15 @@ namespace GUI
                             else //Significa que o produto já existe
                             {
                                 var tabela = DALProduto.PegarDados(item.Produto.CodigoProduto); //Pegando os dados do produto já existente
-                                                                                                //Passando os dados para as variáveis
+                                //Passando os dados para as variáveis
                                 int cod = int.Parse(tabela.Rows[0]["produto_cod"].ToString());
                                 string nome = tabela.Rows[0]["produto_nome"].ToString();
-                                string desc = tabela.Rows[0]["produto_descricao"].ToString();
-                                double valor = double.Parse(tabela.Rows[0]["produto_valorvenda"].ToString());
+                                string desc = item.Produto.DescricaoProduto;
+                                double valor = item.Produto.ValorVendaProduto;
                                 double quant = double.Parse(tabela.Rows[0]["produto_qtde"].ToString());
-                                string status = tabela.Rows[0]["produto_status"].ToString();
-                                int codUni = int.Parse(tabela.Rows[0]["uniMedida_cod"].ToString());
-                                int codCat = int.Parse(tabela.Rows[0]["categoria_cod"].ToString());
+                                string status = item.Produto.StatusProduto;
+                                int codUni = item.Produto.CodigoUnidadeMedida; 
+                                int codCat = item.Produto.CodigoCategoria; 
                                 int codSub = 0;
                                 //Analisado se tem subcategoria 
                                 if (tabela.Rows[0]["subCategoria_cod"].ToString() != "")
@@ -230,10 +233,18 @@ namespace GUI
                                 {
                                     quant = quant + item.ItemCompraQuant;
                                 }
+                                else if (quant == 1) //Analizando se ainda tem produto em estoque, caso não ele terá seu status mudado
+                                {
+                                    //Colando ele fora de Estoque, pois a compra não foi finalizada
+                                    item.Produto.StatusProduto = "FORA DE ESTOQUE";
+                                }
+
                                 //Instanciando o obj produto
                                 MProduto prodExiste = new MProduto(nome, desc, valor, quant, status, codUni, codCat, codSub);
                                 prodExiste.CodigoProduto = cod; //Pegando o id
-                                                                //Atualizando as informações
+                                //Passando o id do produto
+                                item.Produto.CodigoProduto = cod;
+                                //Atualizando as informações
                                 BLLProduto.Alterar(prodExiste);
                             }
 
@@ -420,24 +431,32 @@ namespace GUI
 
         private void btnAlterar_Click(object sender, EventArgs e)
         {
-            btnSalvar.Text = "Alterar";
-            btnExcluir.Enabled = false;
-            btnExcluirProduto.Enabled = false;
-            btnAdicionarProduto.Enabled = false;
-            Compra.Itens.Clear();
-            Compra.Itens = DALCompra.CarregaListaProdutos(int.Parse(dgvCompra.CurrentRow.Cells["compraCod"].Value.ToString()));
+            //Analisando se existe compras
+            if (dgvCompra.Rows.Count != 0)
+            {
+                btnSalvar.Text = "Alterar";
+                btnExcluir.Enabled = false;
+                btnExcluirProduto.Enabled = true;
+                btnAdicionarProduto.Enabled = true;
+                Compra.Itens.Clear();
+                Compra.Itens = DALCompra.CarregaListaProdutos(int.Parse(dgvCompra.CurrentRow.Cells["compraCod"].Value.ToString()));
 
-            txtCodigo.Text = dgvCompra.CurrentRow.Cells["CompraCod"].Value.ToString();
-            txtNotaFiscal.Text = dgvCompra.CurrentRow.Cells["CompraNotaFiscal"].Value.ToString();
-            dtpDataCompra.Value = DateTime.Parse(dgvCompra.CurrentRow.Cells["CompraData"].Value.ToString());
-            txtValor.Text = dgvCompra.CurrentRow.Cells["CompraTotal"].Value.ToString();
-            cbxQuantParcela.Text = dgvCompra.CurrentRow.Cells["CompraNumeroParcela"].Value.ToString();
-            cbxStatus.Text = dgvCompra.CurrentRow.Cells["CompraStatus"].Value.ToString();
-            cbxFornecedor.SelectedValue = int.Parse(dgvCompra.CurrentRow.Cells["FornecedorCod"].Value.ToString());
-            cbxTipoPagamento.Text = dgvCompra.CurrentRow.Cells["TipoPagNome"].Value.ToString();
+                txtCodigo.Text = dgvCompra.CurrentRow.Cells["CompraCod"].Value.ToString();
+                txtNotaFiscal.Text = dgvCompra.CurrentRow.Cells["CompraNotaFiscal"].Value.ToString();
+                dtpDataCompra.Value = DateTime.Parse(dgvCompra.CurrentRow.Cells["CompraData"].Value.ToString());
+                txtValor.Text = dgvCompra.CurrentRow.Cells["CompraTotal"].Value.ToString();
+                cbxQuantParcela.Text = dgvCompra.CurrentRow.Cells["CompraNumeroParcela"].Value.ToString();
+                cbxStatus.Text = dgvCompra.CurrentRow.Cells["CompraStatus"].Value.ToString();
+                cbxFornecedor.SelectedValue = int.Parse(dgvCompra.CurrentRow.Cells["FornecedorCod"].Value.ToString());
+                cbxTipoPagamento.Text = dgvCompra.CurrentRow.Cells["TipoPagNome"].Value.ToString();
 
 
-            CarregarGrid();
+                CarregarGrid();
+            }
+            else
+            {
+                MessageBox.Show("Não tem nenhum compra cadastrada!");
+            }
         }
 
         //botão excluir compra

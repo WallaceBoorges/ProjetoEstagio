@@ -302,7 +302,11 @@ namespace GUI
                 if (btnAlterar.Text == "Alterar")
                 {
                     //Alterar Botões
-                    Alterarbotoes(2);
+                    Alterarbotoes(2);                    
+                }
+                else
+                {
+                    txtNome.Enabled = false;
                 }
 
                 //Pegando dados do DataGrid                
@@ -333,6 +337,7 @@ namespace GUI
                 {
                     txtValorPago.Text = "R$ 00,00";
                 }
+                
 
                 //Pegando o valor compra e formatando
                 //ESTE TRCHO ESTÁ COMENTADO PARA EVITAR UM BUG - SO DEVE SER DESCOMENTADO APOS CORREÇÃO
@@ -361,6 +366,12 @@ namespace GUI
                 if (txtNome.Text == "" || txtDescricao.Text == "" || cbxStatus.Text == "" || cbxCodUnidadeMedida.Text == "" || cbxCodCat.Text == "" || txtValorPago.Text == "")
                 {
                     throw new Exception("Preencha todos os Campos!");
+                }
+
+                //Verificando Data de Validade
+                if (DateTime.Today > dtpDataValidade.Value.Date)
+                {
+                    throw new Exception("A data de validade é menor que a atual!");
                 }
 
                 //Instenciando o objeto
