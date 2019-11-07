@@ -73,6 +73,36 @@ namespace DAL
             }
 
         }
+
+        public static void Alterar(int idproduto)
+        {
+            try
+            {
+                using (var conn = ConexaoBD.AbrirConexao()) //Passando string de conexão
+                {
+                    conn.Open(); //Abrindo conexao
+                    using (var comm = conn.CreateCommand()) //CRiando comando SQL
+                    {
+                        
+                        comm.CommandText = "update produto set produto_qtde = @qtde, produto_status = @status where produto_cod = @codigo";
+
+                        int quant = 0;   
+                        //Passando valores
+                        comm.Parameters.Add(new SqlParameter("@qtde", quant));
+                        comm.Parameters.Add(new SqlParameter("@status", "FORA DE ESTOQUE"));
+                        comm.Parameters.Add(new SqlParameter("@codigo", idproduto));
+                        //Executando comando
+
+                        comm.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception erro)
+            {
+                throw new Exception(erro.Message);
+            }
+
+        }
         public static void Incluir(MProduto modelo)
         {
             try

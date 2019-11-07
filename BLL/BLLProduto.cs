@@ -29,6 +29,11 @@ namespace BLL
 
         }
 
+        public static void Alterar(int idProduto)
+        {
+            DALProduto.Alterar(idProduto);
+        }
+
         /*Nos métodos abaixo ainda faltam acrescentar as restrições de usuário. Dentro dos métodos só foram apenas abertas as conexões
          com o banco de dados.*/
         public static void Excluir(int codigo)

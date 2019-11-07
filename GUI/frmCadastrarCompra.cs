@@ -4,6 +4,7 @@ using Modelo;
 using System;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using System.Collections.Generic;
 
 namespace GUI
 {
@@ -17,6 +18,10 @@ namespace GUI
         }
 
         MCompra Compra = new MCompra();
+        MCompra CompraAnterior = new MCompra();
+        List<int> ListaProdutosExcluidos = new List<int>();
+        List<int> ListaItensExcluidos = new List<int>();
+        //List<int> ListaADD = new List<int>();
 
         //Evento Load
         private void frmCompra_Load(object sender, EventArgs e)
@@ -185,7 +190,7 @@ namespace GUI
                         //Criando e salvando as parcelas
                         for (int i = 0; i < Compra.CompraParcelas; i++)
                         {
-                            Compra.Parcelas.Add(new MParcelasCompra(double.Parse(txtValorParcela.Text), ProximaPrestação.AddMonths(i+1), Compra.CompraCod)); //Instanciando a parcela
+                            Compra.Parcelas.Add(new MParcelasCompra(double.Parse(txtValorParcela.Text), ProximaPrestação.AddMonths(i + 1), Compra.CompraCod)); //Instanciando a parcela
 
                             //Salvando as Parcelas
                             BLLParcelasCompras.Incluir(Compra.Parcelas[i]);
@@ -219,8 +224,8 @@ namespace GUI
                                 double valor = item.Produto.ValorVendaProduto;
                                 double quant = double.Parse(tabela.Rows[0]["produto_qtde"].ToString());
                                 string status = item.Produto.StatusProduto;
-                                int codUni = item.Produto.CodigoUnidadeMedida; 
-                                int codCat = item.Produto.CodigoCategoria; 
+                                int codUni = item.Produto.CodigoUnidadeMedida;
+                                int codCat = item.Produto.CodigoCategoria;
                                 int codSub = 0;
                                 //Analisado se tem subcategoria 
                                 if (tabela.Rows[0]["subCategoria_cod"].ToString() != "")
@@ -255,6 +260,18 @@ namespace GUI
                         }
                         MessageBox.Show("Compra Salva Com Sucesso!");
                         dgvCompra.DataSource = DALCompra.CarregarGrid();
+                        //Limpando os campos 
+                        txtNotaFiscal.Clear();
+                        txtValor.Clear();
+                        txtValorParcela.Clear();
+                        txtValor.Clear();
+                        cbxQuantParcela.SelectedIndex = -1;
+                        cbxStatus.SelectedIndex = -1;
+                        cbxFornecedor.SelectedIndex = -1;
+                        cbxTipoPagamento.SelectedIndex = -1;
+                        dtpDataCompra.Value = DateTime.Today;
+                        Compra.Itens.Clear(); //Limpando os produtos
+                        CarregarGrid();
                     }
                     catch (SqlException erro)
                     {
@@ -269,12 +286,17 @@ namespace GUI
                         DALCompra.Excluir(int.Parse(DALCompra.PegarId()));
                     }
                 }
+
             }
             else
             {
                 if (txtNotaFiscal.Text == "" || cbxQuantParcela.Text == "" || cbxStatus.Text == "" || cbxFornecedor.Text == "" || cbxTipoPagamento.Text == "") //Analisando se foi preenchido todos os dados
                 {
                     MessageBox.Show("Preencha todos os dados!");
+                }
+                else if (DateTime.Today > dtpDataCompra.Value.Date) //Analisando se a data informada é maior ou igual a hora atual
+                {
+                    MessageBox.Show("A Data da compra não pode ser menor que a data atual!");
                 }
                 else if (dgvProduto.RowCount == 0) //Analisando se foi informado algum produto
                 {
@@ -284,6 +306,7 @@ namespace GUI
                 {
                     try
                     {
+                        //if Compra.Itens.
                         //Passando os dados da compra
                         Compra.CompraCod = int.Parse(txtCodigo.Text);
                         Compra.CompraData = dtpDataCompra.Value.Date;
@@ -305,12 +328,26 @@ namespace GUI
                         DateTime ProximaPrestação = dtpDataCompra.Value.Date;
                         //Criando e salvando as parcelas
 
-                        for (int i = 0; i < Compra.CompraParcelas; i++)
+
+
+                        for (int i = 0; i < int.Parse(cbxQuantParcela.Text); i++)
                         {
                             Compra.Parcelas.Add(new MParcelasCompra(double.Parse(txtValorParcela.Text), ProximaPrestação.AddMonths(i), Compra.CompraCod)); //Instanciando a parcela
 
                             //Salvando as Parcelas
                             BLLParcelasCompras.Incluir(Compra.Parcelas[i]);
+                        }
+
+                        //excluindo os itens da lista de excluidos
+                        foreach (var lista in ListaItensExcluidos)
+                        {
+                            //int teste = int.Parse(dgvProduto.CurrentRow.Cells[6].Value.ToString());
+                            //BLLProduto.Alterar(int.Parse(dgvProduto.CurrentRow.Cells[6].Value.ToString()));
+                            BLLItensCompra.Excluir(lista);
+                        }
+                        foreach (var lista in ListaProdutosExcluidos)
+                        {
+                            BLLProduto.Alterar(lista);
                         }
 
                         //Salvando os Produtos e consequentemente o item
@@ -321,6 +358,15 @@ namespace GUI
                             if (cbxStatus.Text != "FINALIZADA")
                             {
                                 item.Produto.QuantProduto = 0;
+
+                            }
+                            else
+                            {
+                                item.Produto.QuantProduto = item.ItemCompraQuant;
+                            }
+                            if (item.Produto.QuantProduto == 0)
+                            {
+                                item.Produto.StatusProduto = "FORA DE ESTOQUE";
                             }
 
                             //Chamando o metodo Alterar um produto
@@ -333,6 +379,61 @@ namespace GUI
 
                             //Salvando o produto na lista item
                             BLLItensCompra.Alterar(item);
+                            //Salva o produto caso durante a alteração tenha sido criado o novo produto
+                            if (item.Produto.CodigoProduto == 0)
+                            {
+                                //Analisando  se a compra foi finalizada, pois caso seja o valor do produto será incrementado
+                                if (cbxStatus.Text != "FINALIZADA")
+                                {
+                                    item.Produto.QuantProduto = 0;
+
+
+                                    //Colando ele fora de Estoque, pois a compra não foi finalizada
+                                    item.Produto.StatusProduto = "FORA DE ESTOQUE";
+                                }
+
+                                //Chamando o metodo Incluir um produto
+                                BLLProduto.Incluir(item.Produto);
+                                //Passando o id da compra
+                                item.CompraCodigo = Compra.CompraCod;
+                                //Salvando o produto na lista item
+                                BLLItensCompra.Incluir(item);
+                            }
+                            else
+                            {
+                                bool verificaexistencia = true;
+                                foreach (var itensanterior in CompraAnterior.Itens)
+                                {
+                                    if (itensanterior.ItemCompraCodigo == item.ItemCompraCodigo)
+                                    {
+                                        verificaexistencia = true;
+                                        break;
+                                    }
+                                    else
+                                    {
+                                        verificaexistencia = false;
+                                        
+                                    }
+                                }
+                                if (verificaexistencia == false)
+                                {
+                                    if (cbxStatus.Text != "FINALIZADA")
+                                    {
+                                        item.Produto.QuantProduto = 0;
+
+
+                                        //Colando ele fora de Estoque, pois a compra não foi finalizada
+                                        item.Produto.StatusProduto = "FORA DE ESTOQUE";
+                                    }
+
+                                    //Chamando o metodo Incluir um produto
+                                    BLLProduto.Incluir(item.Produto);
+                                    //Passando o id da compra
+                                    item.CompraCodigo = Compra.CompraCod;
+                                    //Salvando o produto na lista item
+                                    BLLItensCompra.Incluir(item);
+                                }
+                            }
                         }
                         MessageBox.Show("Compra Salva Com Sucesso!");
                         dgvCompra.DataSource = DALCompra.CarregarGrid();
@@ -353,6 +454,9 @@ namespace GUI
                         btnExcluir.Enabled = true;
                         btnExcluirProduto.Enabled = true;
                         btnAdicionarProduto.Enabled = true;
+                        //limpando lista
+                        ListaProdutosExcluidos.Clear();
+                        ListaItensExcluidos.Clear();
                     }
                     catch (SqlException erro)
                     {
@@ -439,7 +543,9 @@ namespace GUI
                 btnExcluirProduto.Enabled = true;
                 btnAdicionarProduto.Enabled = true;
                 Compra.Itens.Clear();
+                CompraAnterior.Itens.Clear();
                 Compra.Itens = DALCompra.CarregaListaProdutos(int.Parse(dgvCompra.CurrentRow.Cells["compraCod"].Value.ToString()));
+                CompraAnterior.Itens = DALCompra.CarregaListaProdutos(int.Parse(dgvCompra.CurrentRow.Cells["compraCod"].Value.ToString()));
 
                 txtCodigo.Text = dgvCompra.CurrentRow.Cells["CompraCod"].Value.ToString();
                 txtNotaFiscal.Text = dgvCompra.CurrentRow.Cells["CompraNotaFiscal"].Value.ToString();
@@ -489,10 +595,25 @@ namespace GUI
                 //Aqui ele executa um diálogo perguntando se o usuário deseja ou não excluir o registro.
                 if (MessageBox.Show("Deseja excluir o registro?", "Atenção", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
-                    /*Caso "sim", é aberto a conexão com o banco e executado o método de excluir. */
-                    //Método de excluir sendo chamado.
-                    Compra.Itens.RemoveAt(dgvProduto.CurrentCell.RowIndex);
-                    CarregarGrid();
+                    if (btnSalvar.Text == "Salvar")
+                    {
+                        /*Caso "sim", é aberto a conexão com o banco e executado o método de excluir. */
+                        //Método de excluir sendo chamado.
+                        Compra.Itens.RemoveAt(dgvProduto.CurrentCell.RowIndex);
+                        CarregarGrid();
+                    }
+                    else
+                    {
+                        
+                        ListaProdutosExcluidos.Add(int.Parse(dgvProduto.CurrentRow.Cells[6].Value.ToString()));
+                        ListaItensExcluidos.Add(int.Parse(dgvProduto.CurrentRow.Cells[0].Value.ToString()));
+                        //int teste = int.Parse(dgvProduto.CurrentRow.Cells[6].Value.ToString());
+                        //BLLProduto.Alterar(int.Parse(dgvProduto.CurrentRow.Cells[6].Value.ToString()));
+                        //BLLItensCompra.Excluir(int.Parse(dgvProduto.CurrentRow.Cells[0].Value.ToString()));
+                        
+                        Compra.Itens.RemoveAt(dgvProduto.CurrentCell.RowIndex);
+                        CarregarGrid();
+                    }
                 }
             }
             catch

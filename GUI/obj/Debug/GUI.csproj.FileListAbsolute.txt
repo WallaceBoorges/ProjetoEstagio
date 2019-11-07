@@ -296,3 +296,8 @@ C:\Users\Matheus Gois\Desktop\ProjetoEstagio\GUI\bin\Debug\pt\Microsoft.SqlServe
 C:\Users\Matheus Gois\Desktop\ProjetoEstagio\GUI\bin\Debug\pt\Microsoft.SqlServer.Dmf.Common.resources.dll
 C:\Users\Matheus Gois\Desktop\ProjetoEstagio\GUI\bin\Debug\pt\Microsoft.SqlServer.ServiceBrokerEnum.resources.dll
 C:\Users\Matheus Gois\Desktop\ProjetoEstagio\GUI\bin\Debug\ProjetoEstagio.bak
+C:\ProjetoEstagio\GUI\bin\Debug\ProjetoEstagio.bak
+C:\ProjetoEstagio\GUI\obj\Debug\GUI.frmConexaoBD.resources
+C:\ProjetoEstagio\GUI\obj\Debug\GUI.frmParcelasCompra.resources
+C:\ProjetoEstagio\GUI\bin\Debug\Microsoft.SqlServer.ConnectionInfo.dll
+C:\ProjetoEstagio\GUI\bin\Debug\Microsoft.SqlServer.Smo.dll
