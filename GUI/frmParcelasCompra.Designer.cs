@@ -30,14 +30,15 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dgvParcelasCompra = new System.Windows.Forms.DataGridView();
-            this.parcelasCompra_cod = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.parcelasCompra_valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.parcelasCompra_vecto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.parcelasCompra_datapagto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.parcelascompraBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.projetoEstagioDataSet = new GUI.ProjetoEstagioDataSet();
             this.parcelascompraTableAdapter = new GUI.ProjetoEstagioDataSetTableAdapters.parcelascompraTableAdapter();
             this.lb_titulo = new System.Windows.Forms.Label();
+            this.parcelasCompra_cod = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.parcelasCompra_valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.parcelasCompra_vecto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.parcelasCompra_datapagto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.compra_cod = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvParcelasCompra)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.parcelascompraBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.projetoEstagioDataSet)).BeginInit();
@@ -52,35 +53,12 @@
             this.parcelasCompra_cod,
             this.parcelasCompra_valor,
             this.parcelasCompra_vecto,
-            this.parcelasCompra_datapagto});
+            this.parcelasCompra_datapagto,
+            this.compra_cod});
             this.dgvParcelasCompra.Location = new System.Drawing.Point(42, 59);
             this.dgvParcelasCompra.Name = "dgvParcelasCompra";
             this.dgvParcelasCompra.Size = new System.Drawing.Size(546, 361);
             this.dgvParcelasCompra.TabIndex = 0;
-            // 
-            // parcelasCompra_cod
-            // 
-            this.parcelasCompra_cod.DataPropertyName = "parcelasCompra_cod";
-            this.parcelasCompra_cod.HeaderText = "Codigo da parcela";
-            this.parcelasCompra_cod.Name = "parcelasCompra_cod";
-            // 
-            // parcelasCompra_valor
-            // 
-            this.parcelasCompra_valor.DataPropertyName = "parcelasCompra_valor";
-            this.parcelasCompra_valor.HeaderText = "Valor";
-            this.parcelasCompra_valor.Name = "parcelasCompra_valor";
-            // 
-            // parcelasCompra_vecto
-            // 
-            this.parcelasCompra_vecto.DataPropertyName = "parcelasCompra_vecto";
-            this.parcelasCompra_vecto.HeaderText = "Vencimento";
-            this.parcelasCompra_vecto.Name = "parcelasCompra_vecto";
-            // 
-            // parcelasCompra_datapagto
-            // 
-            this.parcelasCompra_datapagto.DataPropertyName = "parcelasCompra_datapagto";
-            this.parcelasCompra_datapagto.HeaderText = "Data do pagamento";
-            this.parcelasCompra_datapagto.Name = "parcelasCompra_datapagto";
             // 
             // parcelascompraBindingSource
             // 
@@ -106,6 +84,38 @@
             this.lb_titulo.TabIndex = 1;
             this.lb_titulo.Text = "Visualização das parcelas";
             // 
+            // parcelasCompra_cod
+            // 
+            this.parcelasCompra_cod.DataPropertyName = "parcelasCompra_cod";
+            this.parcelasCompra_cod.HeaderText = "Codigo da parcela";
+            this.parcelasCompra_cod.Name = "parcelasCompra_cod";
+            this.parcelasCompra_cod.Visible = false;
+            // 
+            // parcelasCompra_valor
+            // 
+            this.parcelasCompra_valor.DataPropertyName = "parcelasCompra_valor";
+            this.parcelasCompra_valor.HeaderText = "Valor";
+            this.parcelasCompra_valor.Name = "parcelasCompra_valor";
+            // 
+            // parcelasCompra_vecto
+            // 
+            this.parcelasCompra_vecto.DataPropertyName = "parcelasCompra_vecto";
+            this.parcelasCompra_vecto.HeaderText = "Vencimento";
+            this.parcelasCompra_vecto.Name = "parcelasCompra_vecto";
+            // 
+            // parcelasCompra_datapagto
+            // 
+            this.parcelasCompra_datapagto.DataPropertyName = "parcelasCompra_datapagto";
+            this.parcelasCompra_datapagto.HeaderText = "Data do pagamento";
+            this.parcelasCompra_datapagto.Name = "parcelasCompra_datapagto";
+            // 
+            // compra_cod
+            // 
+            this.compra_cod.DataPropertyName = "compra_cod";
+            this.compra_cod.HeaderText = "compra_cod";
+            this.compra_cod.Name = "compra_cod";
+            this.compra_cod.Visible = false;
+            // 
             // frmParcelasCompra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -130,10 +140,11 @@
         private ProjetoEstagioDataSet projetoEstagioDataSet;
         private System.Windows.Forms.BindingSource parcelascompraBindingSource;
         private ProjetoEstagioDataSetTableAdapters.parcelascompraTableAdapter parcelascompraTableAdapter;
+        private System.Windows.Forms.Label lb_titulo;
         private System.Windows.Forms.DataGridViewTextBoxColumn parcelasCompra_cod;
         private System.Windows.Forms.DataGridViewTextBoxColumn parcelasCompra_valor;
         private System.Windows.Forms.DataGridViewTextBoxColumn parcelasCompra_vecto;
         private System.Windows.Forms.DataGridViewTextBoxColumn parcelasCompra_datapagto;
-        private System.Windows.Forms.Label lb_titulo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn compra_cod;
     }
 }

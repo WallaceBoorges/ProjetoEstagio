@@ -457,6 +457,7 @@ namespace GUI
                         //limpando lista
                         ListaProdutosExcluidos.Clear();
                         ListaItensExcluidos.Clear();
+                        Compra.Parcelas.Clear();
                     }
                     catch (SqlException erro)
                     {

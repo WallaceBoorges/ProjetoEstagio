@@ -159,3 +159,29 @@ C:\Users\Matheus Gois\Desktop\ProjetoEstagio\BLL\bin\Debug\ProjetoEstagio.bak
 C:\ProjetoEstagio\BLL\bin\Debug\ProjetoEstagio.bak
 C:\ProjetoEstagio\BLL\bin\Debug\Microsoft.SqlServer.ConnectionInfo.dll
 C:\ProjetoEstagio\BLL\bin\Debug\Microsoft.SqlServer.Smo.dll
+C:\Users\Matheus Gois\Desktop\Paloma\ProjetoEstagio\BLL\bin\Debug\ProjetoEstagio.bak
+C:\Users\Matheus Gois\Desktop\Paloma\ProjetoEstagio\BLL\bin\Debug\BLL.dll
+C:\Users\Matheus Gois\Desktop\Paloma\ProjetoEstagio\BLL\bin\Debug\BLL.pdb
+C:\Users\Matheus Gois\Desktop\Paloma\ProjetoEstagio\BLL\bin\Debug\DAL.dll
+C:\Users\Matheus Gois\Desktop\Paloma\ProjetoEstagio\BLL\bin\Debug\Modelo.dll
+C:\Users\Matheus Gois\Desktop\Paloma\ProjetoEstagio\BLL\bin\Debug\Microsoft.SqlServer.ConnectionInfo.dll
+C:\Users\Matheus Gois\Desktop\Paloma\ProjetoEstagio\BLL\bin\Debug\Microsoft.SqlServer.Smo.dll
+C:\Users\Matheus Gois\Desktop\Paloma\ProjetoEstagio\BLL\bin\Debug\Microsoft.SqlServer.SqlClrProvider.dll
+C:\Users\Matheus Gois\Desktop\Paloma\ProjetoEstagio\BLL\bin\Debug\Microsoft.SqlServer.Management.Sdk.Sfc.dll
+C:\Users\Matheus Gois\Desktop\Paloma\ProjetoEstagio\BLL\bin\Debug\Microsoft.SqlServer.SqlEnum.dll
+C:\Users\Matheus Gois\Desktop\Paloma\ProjetoEstagio\BLL\bin\Debug\Microsoft.SqlServer.Dmf.Common.dll
+C:\Users\Matheus Gois\Desktop\Paloma\ProjetoEstagio\BLL\bin\Debug\Microsoft.SqlServer.Diagnostics.STrace.dll
+C:\Users\Matheus Gois\Desktop\Paloma\ProjetoEstagio\BLL\bin\Debug\Microsoft.SqlServer.ServiceBrokerEnum.dll
+C:\Users\Matheus Gois\Desktop\Paloma\ProjetoEstagio\BLL\bin\Debug\DAL.pdb
+C:\Users\Matheus Gois\Desktop\Paloma\ProjetoEstagio\BLL\bin\Debug\Modelo.pdb
+C:\Users\Matheus Gois\Desktop\Paloma\ProjetoEstagio\BLL\bin\Debug\pt\Microsoft.SqlServer.ConnectionInfo.resources.dll
+C:\Users\Matheus Gois\Desktop\Paloma\ProjetoEstagio\BLL\bin\Debug\pt\Microsoft.SqlServer.Smo.resources.dll
+C:\Users\Matheus Gois\Desktop\Paloma\ProjetoEstagio\BLL\bin\Debug\pt\Microsoft.SqlServer.Management.Sdk.Sfc.resources.dll
+C:\Users\Matheus Gois\Desktop\Paloma\ProjetoEstagio\BLL\bin\Debug\pt\Microsoft.SqlServer.SqlEnum.resources.dll
+C:\Users\Matheus Gois\Desktop\Paloma\ProjetoEstagio\BLL\bin\Debug\pt\Microsoft.SqlServer.Dmf.Common.resources.dll
+C:\Users\Matheus Gois\Desktop\Paloma\ProjetoEstagio\BLL\bin\Debug\pt\Microsoft.SqlServer.ServiceBrokerEnum.resources.dll
+C:\Users\Matheus Gois\Desktop\Paloma\ProjetoEstagio\BLL\obj\Debug\BLL.csprojAssemblyReference.cache
+C:\Users\Matheus Gois\Desktop\Paloma\ProjetoEstagio\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\Matheus Gois\Desktop\Paloma\ProjetoEstagio\BLL\obj\Debug\BLL.csproj.CopyComplete
+C:\Users\Matheus Gois\Desktop\Paloma\ProjetoEstagio\BLL\obj\Debug\BLL.dll
+C:\Users\Matheus Gois\Desktop\Paloma\ProjetoEstagio\BLL\obj\Debug\BLL.pdb

@@ -22,9 +22,9 @@ namespace GUI
             compraCodigo = codigo;
         }
 
-        
 
-            private void FrmParcelasCompra_Load(object sender, EventArgs e)
+
+        private void FrmParcelasCompra_Load(object sender, EventArgs e)
         {
             dgvParcelasCompra.DataSource = DALParcelasCompra.CarregarGrid(compraCodigo);
 

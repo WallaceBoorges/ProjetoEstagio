@@ -335,7 +335,7 @@ namespace GUI
                 }
                 else
                 {
-                    txtValorPago.Text = "R$ 00,00";
+                    txtValorPago.Text = "00,00";
                 }
                 
 
@@ -345,7 +345,7 @@ namespace GUI
                 //txtValorPago.Text = valorCompra.ToString("F2");
 
             }
-        }
+         }
 
         //Evento para quando uma categoria é selecionada
         private void cbxCodCat_SelectionChangeCommitted(object sender, EventArgs e)
