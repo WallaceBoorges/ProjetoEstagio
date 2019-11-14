@@ -165,3 +165,4 @@ C:\Users\Matheus Gois\Desktop\Paloma\ProjetoEstagio\DAL\obj\Debug\DAL.csproj.Cor
 C:\Users\Matheus Gois\Desktop\Paloma\ProjetoEstagio\DAL\obj\Debug\DAL.csproj.CopyComplete
 C:\Users\Matheus Gois\Desktop\Paloma\ProjetoEstagio\DAL\obj\Debug\DAL.dll
 C:\Users\Matheus Gois\Desktop\Paloma\ProjetoEstagio\DAL\obj\Debug\DAL.pdb
+C:\Users\Isaque\Source\Repos\WallaceBoorges\ProjetoEstagio\DAL\bin\Debug\ProjetoEstagio.bak

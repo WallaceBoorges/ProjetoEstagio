@@ -185,3 +185,6 @@ C:\Users\Matheus Gois\Desktop\Paloma\ProjetoEstagio\BLL\obj\Debug\BLL.csproj.Cor
 C:\Users\Matheus Gois\Desktop\Paloma\ProjetoEstagio\BLL\obj\Debug\BLL.csproj.CopyComplete
 C:\Users\Matheus Gois\Desktop\Paloma\ProjetoEstagio\BLL\obj\Debug\BLL.dll
 C:\Users\Matheus Gois\Desktop\Paloma\ProjetoEstagio\BLL\obj\Debug\BLL.pdb
+C:\Users\Isaque\Source\Repos\WallaceBoorges\ProjetoEstagio\BLL\bin\Debug\ProjetoEstagio.bak
+C:\Users\Isaque\Source\Repos\WallaceBoorges\ProjetoEstagio\BLL\bin\Debug\Microsoft.SqlServer.ConnectionInfo.dll
+C:\Users\Isaque\Source\Repos\WallaceBoorges\ProjetoEstagio\BLL\bin\Debug\Microsoft.SqlServer.Smo.dll

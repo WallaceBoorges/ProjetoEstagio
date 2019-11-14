@@ -81,5 +81,33 @@ namespace DAL
                 throw new Exception(erro.Message);
             }
         }
+
+        public static void ConfPag(String data, int cod)
+        {
+            try
+            {
+                using (var conn = ConexaoBD.AbrirConexao()) //Passando a string de conexão
+                {
+                    conn.Open(); //Abrindo a conexão
+                    using (var comm = conn.CreateCommand()) //Criando o comando SQL
+                    {
+
+                        comm.CommandText = "UPDATE parcelascompra SET parcelasCompra_datapagto = @dataPgto WHERE parcelasCompra_cod = @codParcela";
+
+                        //Passando o valores por parametro
+                        comm.Parameters.Add(new SqlParameter("@dataPgto", data));
+                        comm.Parameters.Add(new SqlParameter("@codParcela", cod));
+
+                        //Executando o comando
+                        comm.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
     }
 }

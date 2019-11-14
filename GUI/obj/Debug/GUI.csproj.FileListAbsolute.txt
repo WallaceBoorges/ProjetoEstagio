@@ -342,3 +342,7 @@ C:\Users\Matheus Gois\Desktop\Paloma\ProjetoEstagio\GUI\obj\Debug\GUI.csproj.Cor
 C:\Users\Matheus Gois\Desktop\Paloma\ProjetoEstagio\GUI\obj\Debug\GUI.csproj.CopyComplete
 C:\Users\Matheus Gois\Desktop\Paloma\ProjetoEstagio\GUI\obj\Debug\GUI.exe
 C:\Users\Matheus Gois\Desktop\Paloma\ProjetoEstagio\GUI\obj\Debug\GUI.pdb
+C:\Users\Isaque\Source\Repos\WallaceBoorges\ProjetoEstagio\GUI\bin\Debug\ProjetoEstagio.bak
+C:\Users\Isaque\Source\Repos\WallaceBoorges\ProjetoEstagio\GUI\bin\Debug\Microsoft.SqlServer.ConnectionInfo.dll
+C:\Users\Isaque\Source\Repos\WallaceBoorges\ProjetoEstagio\GUI\bin\Debug\Microsoft.SqlServer.Smo.dll
+C:\Users\Isaque\Source\Repos\WallaceBoorges\ProjetoEstagio\GUI\obj\Debug\GUI.frmConexaoBD.resources

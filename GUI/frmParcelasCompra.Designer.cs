@@ -34,6 +34,9 @@
             this.projetoEstagioDataSet = new GUI.ProjetoEstagioDataSet();
             this.parcelascompraTableAdapter = new GUI.ProjetoEstagioDataSetTableAdapters.parcelascompraTableAdapter();
             this.lb_titulo = new System.Windows.Forms.Label();
+            this.btn_confPag = new System.Windows.Forms.Button();
+            this.dt_selector = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
             this.parcelasCompra_cod = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.parcelasCompra_valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.parcelasCompra_vecto = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,10 +58,14 @@
             this.parcelasCompra_vecto,
             this.parcelasCompra_datapagto,
             this.compra_cod});
-            this.dgvParcelasCompra.Location = new System.Drawing.Point(42, 59);
+            this.dgvParcelasCompra.Location = new System.Drawing.Point(36, 56);
             this.dgvParcelasCompra.Name = "dgvParcelasCompra";
-            this.dgvParcelasCompra.Size = new System.Drawing.Size(546, 361);
+            this.dgvParcelasCompra.Size = new System.Drawing.Size(363, 282);
             this.dgvParcelasCompra.TabIndex = 0;
+            this.dgvParcelasCompra.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvParcelasCompra_CellClick);
+            this.dgvParcelasCompra.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvParcelasCompra_CellClick);
+            this.dgvParcelasCompra.SelectionChanged += new System.EventHandler(this.DgvParcelasCompra_SelectionChanged);
+            this.dgvParcelasCompra.Click += new System.EventHandler(this.DgvParcelasCompra_SelectionChanged);
             // 
             // parcelascompraBindingSource
             // 
@@ -78,11 +85,39 @@
             // 
             this.lb_titulo.AutoSize = true;
             this.lb_titulo.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_titulo.Location = new System.Drawing.Point(170, 19);
+            this.lb_titulo.Location = new System.Drawing.Point(79, 9);
             this.lb_titulo.Name = "lb_titulo";
             this.lb_titulo.Size = new System.Drawing.Size(270, 24);
             this.lb_titulo.TabIndex = 1;
             this.lb_titulo.Text = "Visualização das parcelas";
+            // 
+            // btn_confPag
+            // 
+            this.btn_confPag.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_confPag.Location = new System.Drawing.Point(221, 356);
+            this.btn_confPag.Name = "btn_confPag";
+            this.btn_confPag.Size = new System.Drawing.Size(128, 50);
+            this.btn_confPag.TabIndex = 2;
+            this.btn_confPag.UseVisualStyleBackColor = true;
+            this.btn_confPag.Click += new System.EventHandler(this.Btn_confPag_Click);
+            // 
+            // dt_selector
+            // 
+            this.dt_selector.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dt_selector.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dt_selector.Location = new System.Drawing.Point(83, 373);
+            this.dt_selector.Name = "dt_selector";
+            this.dt_selector.Size = new System.Drawing.Size(123, 26);
+            this.dt_selector.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(80, 356);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(101, 13);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Data do pagamento";
             // 
             // parcelasCompra_cod
             // 
@@ -120,7 +155,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(635, 450);
+            this.ClientSize = new System.Drawing.Size(433, 430);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.dt_selector);
+            this.Controls.Add(this.btn_confPag);
             this.Controls.Add(this.lb_titulo);
             this.Controls.Add(this.dgvParcelasCompra);
             this.Name = "frmParcelasCompra";
@@ -141,6 +179,9 @@
         private System.Windows.Forms.BindingSource parcelascompraBindingSource;
         private ProjetoEstagioDataSetTableAdapters.parcelascompraTableAdapter parcelascompraTableAdapter;
         private System.Windows.Forms.Label lb_titulo;
+        private System.Windows.Forms.Button btn_confPag;
+        private System.Windows.Forms.DateTimePicker dt_selector;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn parcelasCompra_cod;
         private System.Windows.Forms.DataGridViewTextBoxColumn parcelasCompra_valor;
         private System.Windows.Forms.DataGridViewTextBoxColumn parcelasCompra_vecto;
