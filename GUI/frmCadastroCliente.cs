@@ -23,7 +23,7 @@ namespace GUI
         {
             txtNome.Clear();
             txtCodigo.Clear();
-            txtTipo.Clear();
+            cbxTipo.SelectedIndex = -1;
             txtRg.Clear();
             txtRsocial.Clear();
             txtCpf.Clear();
@@ -81,7 +81,7 @@ namespace GUI
             try
             {
                 //Verificando se o usuário informou todos os campos obrigatorios
-                if (txtNome.Text == "" || txtTipo.Text == "" || txtRg.Text == "" || txtCpf.Text == "" || txtRsocial.Text == "" || txtFone.Text == ""
+                if (txtNome.Text == "" || cbxTipo.Text == "" || txtRg.Text == "" || txtCpf.Text == "" || txtRsocial.Text == "" || txtFone.Text == ""
                    || txtCel.Text == "" || txtEmail.Text == "" || txtCep.Text == "" || txtEndereco.Text == "" ||
                    txtBairro.Text == "" || txtNumero.Text == "" || txtCidade.Text == "" || txtEstado.Text == "")
                 {
@@ -89,7 +89,7 @@ namespace GUI
                 }
 
                 //Verificando se vai ser atualizado ou cadastrado
-                MCliente forn = new MCliente(txtNome.Text, txtTipo.Text, txtRg.Text, txtCpf.Text, txtRsocial.Text, int.Parse(txtFone.Text), int.Parse(txtCel.Text), txtEmail.Text);
+                MCliente forn = new MCliente(txtNome.Text, cbxTipo.Text, txtRg.Text, txtCpf.Text, txtRsocial.Text, int.Parse(txtFone.Text), int.Parse(txtCel.Text), txtEmail.Text);
                 MEndereco end = new MEndereco(int.Parse(txtCep.Text), txtEndereco.Text, txtBairro.Text, int.Parse(txtNumero.Text), txtCidade.Text, txtEstado.Text);
 
                 //Verificando se vai ser atualizado ou cadastrado
@@ -191,7 +191,7 @@ namespace GUI
                 //Pegando os dados diretamente do DataGrid
                 txtCodigo.Text = dgvCliente.CurrentRow.Cells["cliente_cod"].Value.ToString();
                 txtNome.Text = dgvCliente.CurrentRow.Cells["nome"].Value.ToString();
-                txtTipo.Text = dgvCliente.CurrentRow.Cells["tipo"].Value.ToString();
+                cbxTipo.Text = dgvCliente.CurrentRow.Cells["tipo"].Value.ToString();
                 txtRg.Text = dgvCliente.CurrentRow.Cells["rg"].Value.ToString();
                 txtCpf.Text = dgvCliente.CurrentRow.Cells["cpf"].Value.ToString();
                 txtRsocial.Text = dgvCliente.CurrentRow.Cells["rsocial"].Value.ToString();

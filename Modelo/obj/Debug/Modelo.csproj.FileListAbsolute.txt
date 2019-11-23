@@ -76,3 +76,9 @@ C:\Users\Matheus Gois\Desktop\Paloma\ProjetoEstagio\Modelo\obj\Debug\Modelo.cspr
 C:\Users\Matheus Gois\Desktop\Paloma\ProjetoEstagio\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
 C:\Users\Matheus Gois\Desktop\Paloma\ProjetoEstagio\Modelo\obj\Debug\Modelo.dll
 C:\Users\Matheus Gois\Desktop\Paloma\ProjetoEstagio\Modelo\obj\Debug\Modelo.pdb
+C:\Users\Matheus Gois\Desktop\Isaque\ProjetoEstagio\Modelo\bin\Debug\Modelo.dll
+C:\Users\Matheus Gois\Desktop\Isaque\ProjetoEstagio\Modelo\bin\Debug\Modelo.pdb
+C:\Users\Matheus Gois\Desktop\Isaque\ProjetoEstagio\Modelo\obj\Debug\Modelo.csprojAssemblyReference.cache
+C:\Users\Matheus Gois\Desktop\Isaque\ProjetoEstagio\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
+C:\Users\Matheus Gois\Desktop\Isaque\ProjetoEstagio\Modelo\obj\Debug\Modelo.dll
+C:\Users\Matheus Gois\Desktop\Isaque\ProjetoEstagio\Modelo\obj\Debug\Modelo.pdb

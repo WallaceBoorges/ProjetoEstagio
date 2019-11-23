@@ -45,6 +45,7 @@
     <Compile Include="BLLCliente.cs" />
     <Compile Include="BLLCompra.cs" />
     <Compile Include="BLLFornecedor.cs" />
+    <Compile Include="BLLFuncionario.cs" />
     <Compile Include="BLLItensCompra.cs" />
     <Compile Include="BLLParcelasCompras.cs" />
     <Compile Include="BLLProduto.cs" />

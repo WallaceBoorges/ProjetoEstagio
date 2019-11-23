@@ -36,7 +36,7 @@
     </Reference>
     <Reference Include="Microsoft.SqlServer.Management.Sdk.Sfc, Version=14.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <Private>False</Private>
-      <HintPath>..\..\Program Files (x86)\Microsoft SQL Server\140\DTS\Tasks\Microsoft.SqlServer.Management.Sdk.Sfc.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Microsoft SQL Server\140\DTS\Tasks\Microsoft.SqlServer.Management.Sdk.Sfc.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.SqlServer.Smo, Version=14.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\..\Program Files (x86)\Microsoft SQL Server\140\DTS\Tasks\Microsoft.SqlServer.Smo.dll</HintPath>

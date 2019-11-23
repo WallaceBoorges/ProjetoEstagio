@@ -122,6 +122,7 @@
             this.MenuFuncionario.Name = "MenuFuncionario";
             this.MenuFuncionario.Size = new System.Drawing.Size(82, 20);
             this.MenuFuncionario.Text = "Funcionario";
+            this.MenuFuncionario.Click += new System.EventHandler(this.MenuFuncionario_Click);
             // 
             // MenuFornecedor
             // 
@@ -135,14 +136,14 @@
             // fornecedoresToolStripMenuItem
             // 
             this.fornecedoresToolStripMenuItem.Name = "fornecedoresToolStripMenuItem";
-            this.fornecedoresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.fornecedoresToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.fornecedoresToolStripMenuItem.Text = "Fornecedores";
             this.fornecedoresToolStripMenuItem.Click += new System.EventHandler(this.fornecedoresToolStripMenuItem_Click);
             // 
             // cadastrarComprasToolStripMenuItem
             // 
             this.cadastrarComprasToolStripMenuItem.Name = "cadastrarComprasToolStripMenuItem";
-            this.cadastrarComprasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cadastrarComprasToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.cadastrarComprasToolStripMenuItem.Text = "Cadastrar Compras";
             this.cadastrarComprasToolStripMenuItem.Click += new System.EventHandler(this.comprasToolStripMenuItem_Click);
             // 

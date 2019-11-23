@@ -60,7 +60,6 @@
             this.lblRsocial = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
-            this.txtTipo = new System.Windows.Forms.TextBox();
             this.lblTipo = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtConsultaCliente = new System.Windows.Forms.TextBox();
@@ -84,6 +83,7 @@
             this.numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cbxTipo = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).BeginInit();
             this.SuspendLayout();
             // 
@@ -382,13 +382,6 @@
             this.txtNome.TabIndex = 170;
             this.txtNome.TextChanged += new System.EventHandler(this.txtNome_TextChanged);
             // 
-            // txtTipo
-            // 
-            this.txtTipo.Location = new System.Drawing.Point(160, 28);
-            this.txtTipo.Name = "txtTipo";
-            this.txtTipo.Size = new System.Drawing.Size(100, 20);
-            this.txtTipo.TabIndex = 202;
-            // 
             // lblTipo
             // 
             this.lblTipo.AutoSize = true;
@@ -587,11 +580,23 @@
             this.estado.Name = "estado";
             this.estado.ReadOnly = true;
             // 
+            // cbxTipo
+            // 
+            this.cbxTipo.FormattingEnabled = true;
+            this.cbxTipo.Items.AddRange(new object[] {
+            "FÍSICA",
+            "JURÍDICA"});
+            this.cbxTipo.Location = new System.Drawing.Point(163, 25);
+            this.cbxTipo.Name = "cbxTipo";
+            this.cbxTipo.Size = new System.Drawing.Size(121, 21);
+            this.cbxTipo.TabIndex = 210;
+            // 
             // frmCadastroCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 563);
+            this.Controls.Add(this.cbxTipo);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtConsultaCliente);
             this.Controls.Add(this.btnExcluir);
@@ -599,7 +604,6 @@
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.dgvCliente);
             this.Controls.Add(this.lblTipo);
-            this.Controls.Add(this.txtTipo);
             this.Controls.Add(this.txtCodigoEndereco);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtNumero);
@@ -675,7 +679,6 @@
         private System.Windows.Forms.Label lblRsocial;
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.TextBox txtNome;
-        private System.Windows.Forms.TextBox txtTipo;
         private System.Windows.Forms.Label lblTipo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtConsultaCliente;
@@ -699,5 +702,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn numero;
         private System.Windows.Forms.DataGridViewTextBoxColumn cidade;
         private System.Windows.Forms.DataGridViewTextBoxColumn estado;
+        private System.Windows.Forms.ComboBox cbxTipo;
     }
 }

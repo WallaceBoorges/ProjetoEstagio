@@ -124,6 +124,8 @@ namespace DAL
 
             //STRING DE EVERTON
             //return new SqlConnection("Data Source=DESKTOP-36O4NH1\\SQLEXPRESS;Initial Catalog=ProjetoEstagio;Integrated Security=True");
+            //return new SqlConnection("Data Source=\\SQLEXPRESS;Initial Catalog=ProjetoEstagio;Integrated Security=True");
+            //return new SqlConnection("Data Source=SQLEXPRESS;Initial Catalog=ProjetoEstagio;Integrated Security=True");
 
             //STRING DE PALOMA
             //return new SqlConnection("Data Source=LAPTOP-K7T1BIJL;Initial Catalog=ProjetoEstagio;Integrated Security=True");

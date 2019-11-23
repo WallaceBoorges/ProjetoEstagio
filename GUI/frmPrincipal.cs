@@ -68,5 +68,12 @@ namespace GUI
             f.ShowDialog();
             f.Dispose();
         }
+
+        private void MenuFuncionario_Click(object sender, EventArgs e)
+        {
+            frmFuncionario f = new frmFuncionario();
+            f.ShowDialog();
+            f.Dispose();
+        }
     }
 }
