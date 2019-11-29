@@ -59,5 +59,24 @@ namespace BLL
                 }
             }
         }
+        public static DataTable LocalizarProdutoParaCompra(String valor)
+        {
+            if (valor == "")
+            {
+                return DALProduto.CarregarProdutosDisponiveisParaCompra();
+            }
+            else
+            {
+                //Analisando se foi localizado algum registro
+                if (DALProduto.LocalizarProdutoParaCompra(valor).Rows.Count > 0)
+                {
+                    return DALProduto.LocalizarProdutoParaCompra(valor);
+                }
+                else
+                {
+                    throw new Exception("Não foi encontrado nenhum registro!");
+                }
+            }
+        }
     }
 }

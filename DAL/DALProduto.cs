@@ -239,5 +239,52 @@ namespace DAL
                 throw new Exception(erro.Message);
             }
         }
+
+        //Tela Principaç
+
+        /* Método para carregar os dados da tabela no DataGridView*/
+        public static DataTable CarregarProdutosDisponiveisParaCompra()
+        {
+            using (var conn = ConexaoBD.AbrirConexao()) //Passando a string de conexão
+            {
+                conn.Open(); //Abrindo a conexão
+                using (var comm = conn.CreateCommand()) //Criando o comando SQL
+                {
+                    comm.CommandText = "SELECT prod.*, uni.uniMedida_nome, cat.categoria_nome, sub.subCategoria_nome FROM  produto as prod " +
+                        "LEFT JOIN undmedida as uni on prod.uniMedida_cod = uni.uniMedida_cod " +
+                        "LEFT JOIN categoria as cat on prod.categoria_cod = cat.categoria_cod " +
+                        "LEFT JOIN subcategoria as sub on prod.subCategoria_cod = sub.subCategoria_cod " +
+                        "WHERE prod.produto_status = 'Em Estoque' and prod.produto_qtde > 0";
+                    var reader = comm.ExecuteReader(); //Passando o comando 
+                    var table = new DataTable(); //Passando a tabela
+                    table.Load(reader); //Carregando a tabela 
+                    return table; //Retornando a consulta ao Banco de Dados
+                }
+            }
+        }
+
+        /* Método para buscar dados na base de dados e trazer para dentro do DataGridView*/
+        public static DataTable LocalizarProdutoParaCompra(String valor)
+        {
+            using (var conn = ConexaoBD.AbrirConexao()) //Passando a string de conexão
+            {
+                conn.Open(); //Abrindo a conexão
+                using (var comm = conn.CreateCommand()) //Criando o comando SQL
+                {
+                    comm.CommandText = "SELECT prod.*, uni.uniMedida_nome, cat.categoria_nome, sub.subCategoria_nome FROM  produto as prod " +
+                        "LEFT JOIN undmedida as uni on prod.uniMedida_cod = uni.uniMedida_cod " +
+                        "LEFT JOIN categoria as cat on prod.categoria_cod = cat.categoria_cod " +
+                        "LEFT JOIN subcategoria as sub on prod.subCategoria_cod = sub.subCategoria_cod " +
+                        "WHERE produto_nome LIKE @nome and prod.produto_status = 'Em Estoque' and prod.produto_qtde > 0";
+
+                    //Passando valores por parametro
+                    comm.Parameters.Add(new SqlParameter("@nome", valor + "%"));
+                    var reader = comm.ExecuteReader(); //Passando o comando 
+                    var table = new DataTable(); //Passando a tabela
+                    table.Load(reader); //Carregando a tabela 
+                    return table; //Retornando a consulta ao Banco de Dados
+                }
+            }
+        }
     }
 }

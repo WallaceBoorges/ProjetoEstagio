@@ -48,9 +48,12 @@
     <Compile Include="MFornecedor.cs" />
     <Compile Include="MFuncionario.cs" />
     <Compile Include="MItensCompra.cs" />
+    <Compile Include="MItensVenda.cs" />
     <Compile Include="MParcelasCompra.cs" />
+    <Compile Include="MParcelasVenda.cs" />
     <Compile Include="MProduto.cs" />
     <Compile Include="MSubCategoria.cs" />
+    <Compile Include="MVenda.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

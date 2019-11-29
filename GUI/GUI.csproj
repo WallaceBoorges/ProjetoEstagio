@@ -88,6 +88,12 @@
     <Compile Include="frmConexaoBD.Designer.cs">
       <DependentUpon>frmConexaoBD.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmFinalizarCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFinalizarCompra.Designer.cs">
+      <DependentUpon>frmFinalizarCompra.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +117,12 @@
     </Compile>
     <Compile Include="frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuantidadeProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuantidadeProduto.Designer.cs">
+      <DependentUpon>frmQuantidadeProduto.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="ProjetoEstagioDataSet.Designer.cs">
@@ -140,6 +152,9 @@
     <EmbeddedResource Include="frmConexaoBD.resx">
       <DependentUpon>frmConexaoBD.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmFinalizarCompra.resx">
+      <DependentUpon>frmFinalizarCompra.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmFuncionario.resx">
       <DependentUpon>frmFuncionario.cs</DependentUpon>
     </EmbeddedResource>
@@ -151,6 +166,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuantidadeProduto.resx">
+      <DependentUpon>frmQuantidadeProduto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

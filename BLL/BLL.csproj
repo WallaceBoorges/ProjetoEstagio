@@ -47,9 +47,12 @@
     <Compile Include="BLLFornecedor.cs" />
     <Compile Include="BLLFuncionario.cs" />
     <Compile Include="BLLItensCompra.cs" />
+    <Compile Include="BLLItensVenda.cs" />
     <Compile Include="BLLParcelasCompras.cs" />
+    <Compile Include="BLLParcelasVenda.cs" />
     <Compile Include="BLLProduto.cs" />
     <Compile Include="BLLSubCategoria.cs" />
+    <Compile Include="BLLVenda.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
