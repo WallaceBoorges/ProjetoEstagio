@@ -285,5 +285,11 @@ namespace GUI
                 MessageBox.Show("Não tem nenhum produto sendo comprado!");
             }
         }
+
+        private void VisualizarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmVendas vendas = new frmVendas();
+            vendas.Show();
+        }
     }
 }

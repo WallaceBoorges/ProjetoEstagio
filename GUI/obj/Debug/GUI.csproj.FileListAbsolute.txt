@@ -558,3 +558,7 @@ C:\Users\Matheus Gois\Desktop\Projeto Pronto\ProjetoEstagio\GUI\obj\Debug\GUI.ex
 C:\Users\Matheus Gois\Desktop\Projeto Pronto\ProjetoEstagio\GUI\obj\Debug\GUI.pdb
 C:\Users\Matheus Gois\Desktop\Projeto Pronto\ProjetoEstagio\GUI\obj\Debug\GUI.frmFinalizarCompra.resources
 C:\Users\Matheus Gois\Desktop\Projeto Pronto\ProjetoEstagio\GUI\obj\Debug\GUI.frmQuantidadeProduto.resources
+C:\Users\Isaque\Source\Repos\WallaceBoorges\ProjetoEstagio\GUI\obj\Debug\GUI.frmFinalizarCompra.resources
+C:\Users\Isaque\Source\Repos\WallaceBoorges\ProjetoEstagio\GUI\obj\Debug\GUI.frmFuncionario.resources
+C:\Users\Isaque\Source\Repos\WallaceBoorges\ProjetoEstagio\GUI\obj\Debug\GUI.frmQuantidadeProduto.resources
+C:\Users\Isaque\Source\Repos\WallaceBoorges\ProjetoEstagio\GUI\obj\Debug\GUI.frmVendas.resources

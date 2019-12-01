@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menu = new System.Windows.Forms.MenuStrip();
             this.MenuVenda = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuCliente = new System.Windows.Forms.ToolStripMenuItem();
@@ -74,6 +74,7 @@
             this.produto_valorvenda = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.produto_qtde = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.visualizarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdutoVenda)).BeginInit();
@@ -99,6 +100,8 @@
             // 
             // MenuVenda
             // 
+            this.MenuVenda.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.visualizarToolStripMenuItem});
             this.MenuVenda.Name = "MenuVenda";
             this.MenuVenda.Size = new System.Drawing.Size(51, 20);
             this.MenuVenda.Text = "Venda";
@@ -449,14 +452,14 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvProdutoVenda.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProdutoVenda.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProdutoVenda.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvProdutoVenda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProdutoVenda.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.produto_cod,
@@ -500,6 +503,13 @@
             this.total.HeaderText = "TOTAL";
             this.total.Name = "total";
             this.total.ReadOnly = true;
+            // 
+            // visualizarToolStripMenuItem
+            // 
+            this.visualizarToolStripMenuItem.Name = "visualizarToolStripMenuItem";
+            this.visualizarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.visualizarToolStripMenuItem.Text = "Visualizar";
+            this.visualizarToolStripMenuItem.Click += new System.EventHandler(this.VisualizarToolStripMenuItem_Click);
             // 
             // frmPrincipal
             // 
@@ -581,5 +591,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn produto_valorvenda;
         private System.Windows.Forms.DataGridViewTextBoxColumn produto_qtde;
         private System.Windows.Forms.DataGridViewTextBoxColumn total;
+        private System.Windows.Forms.ToolStripMenuItem visualizarToolStripMenuItem;
     }
 }
