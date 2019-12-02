@@ -104,5 +104,11 @@ namespace GUI
         {
             
         }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            frmVendaDetalhada vd = new frmVendaDetalhada(int.Parse(dgvVendas.CurrentRow.Cells["venda_cod"].Value.ToString()));
+            vd.Show();
+        }
     }
 }

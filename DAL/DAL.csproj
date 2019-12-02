@@ -69,6 +69,7 @@
     <Compile Include="DALTipoPagamento.cs" />
     <Compile Include="DALUnidadeMedida.cs" />
     <Compile Include="DALVenda.cs" />
+    <Compile Include="DALVendaDetalhada.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

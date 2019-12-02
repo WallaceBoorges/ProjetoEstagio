@@ -562,3 +562,4 @@ C:\Users\Isaque\Source\Repos\WallaceBoorges\ProjetoEstagio\GUI\obj\Debug\GUI.frm
 C:\Users\Isaque\Source\Repos\WallaceBoorges\ProjetoEstagio\GUI\obj\Debug\GUI.frmFuncionario.resources
 C:\Users\Isaque\Source\Repos\WallaceBoorges\ProjetoEstagio\GUI\obj\Debug\GUI.frmQuantidadeProduto.resources
 C:\Users\Isaque\Source\Repos\WallaceBoorges\ProjetoEstagio\GUI\obj\Debug\GUI.frmVendas.resources
+C:\Users\Isaque\Source\Repos\WallaceBoorges\ProjetoEstagio\GUI\obj\Debug\GUI.frmVendaDetalhada.resources
