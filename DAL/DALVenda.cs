@@ -28,54 +28,6 @@ namespace DAL
             }
         }
 
-        public static DataTable CustomLoad(int i, String nome, String data)
-        {
-            using (var conn = ConexaoBD.AbrirConexao()) //Passando a string de conexão
-            {
-                conn.Open(); //Abrindo a conexão
-                using (var comm = conn.CreateCommand()) //Criando o comando SQL
-                {
-                    if (i == 1) //pesquisa por data
-                    {
-                        comm.CommandText = "SELECT * FROM venda WHERE venda_data = "+ data;
-                    }
-                    else if (i == 2 || i == 3) //pesquisa por funcionário ou cliente
-                    {
-                        String tabela;
-                        String codigo;
-                        if (i == 2)
-                        {
-                            tabela = "cliente";
-                            codigo = "";//pesquisar na tabela cliente e salvar o codigo correspondente
-                        } else
-                        {
-                            tabela = "fun";
-                            codigo = "";//pesquisar na tabela funcinario e salvar o codigo correspondente
-                        }
-                        comm.CommandText = "SELECT * FROM venda WHERE " + tabela + "_cod = " + codigo;
-                    }
-                    else if (i == 4) //pesquisa por data e cliente
-                    {
-                        String codigo = "";//pesquisar codigo do cliente
-                        comm.CommandText = "SELECT * FROM venda WHERE venda_data = " + data + " AND cliente_cod = " + codigo;
-                    }
-                    else if (i == 5) //pesquisa por data e funcionário
-                    {
-                        String codigo = "";//pesquisar codigo do funcionário
-                        comm.CommandText = "SELECT * FROM vendda WHERE venda_data = " + data + " AND fun_cod = " + codigo;
-                    }
-                    else //Sem filtro de pesquisa
-                    {
-                        comm.CommandText = "SELECT * FROM venda";
-                    }
-                    var reader = comm.ExecuteReader(); //Passando o comando 
-                    var table = new DataTable(); //Passando a tabela
-                    table.Load(reader); //Carregando a tabela 
-                    return table; //Retornando a consulta ao Banco de Dados
-                }
-            }
-        }
-
         public static void Incluir(MVenda modelo)
         {
             try

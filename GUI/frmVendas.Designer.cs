@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.dgvVendas = new System.Windows.Forms.DataGridView();
-            this.txt_busca = new System.Windows.Forms.TextBox();
-            this.btn_buscar = new System.Windows.Forms.Button();
             this.venda_cod = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.venda_data = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.venda_nfiscal = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,13 +39,16 @@
             this.cliente_cod = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipoPag_cod = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fun_cod = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txt_busca = new System.Windows.Forms.TextBox();
+            this.btn_buscar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cb_data = new System.Windows.Forms.CheckBox();
-            this.dtp_Venda = new System.Windows.Forms.DateTimePicker();
-            this.cb_cliente = new System.Windows.Forms.CheckBox();
-            this.cb_funcionario = new System.Windows.Forms.CheckBox();
             this.cb_tudo = new System.Windows.Forms.CheckBox();
+            this.cb_funcionario = new System.Windows.Forms.CheckBox();
+            this.cb_cliente = new System.Windows.Forms.CheckBox();
+            this.dtp_Venda = new System.Windows.Forms.DateTimePicker();
+            this.cb_data = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVendas)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -70,24 +71,6 @@
             this.dgvVendas.Name = "dgvVendas";
             this.dgvVendas.Size = new System.Drawing.Size(661, 281);
             this.dgvVendas.TabIndex = 0;
-            // 
-            // txt_busca
-            // 
-            this.txt_busca.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_busca.Location = new System.Drawing.Point(216, 74);
-            this.txt_busca.Name = "txt_busca";
-            this.txt_busca.Size = new System.Drawing.Size(171, 27);
-            this.txt_busca.TabIndex = 1;
-            // 
-            // btn_buscar
-            // 
-            this.btn_buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_buscar.Location = new System.Drawing.Point(402, 71);
-            this.btn_buscar.Name = "btn_buscar";
-            this.btn_buscar.Size = new System.Drawing.Size(76, 30);
-            this.btn_buscar.TabIndex = 2;
-            this.btn_buscar.Text = "Buscar";
-            this.btn_buscar.UseVisualStyleBackColor = true;
             // 
             // venda_cod
             // 
@@ -153,8 +136,28 @@
             this.fun_cod.Name = "fun_cod";
             this.fun_cod.Visible = false;
             // 
+            // txt_busca
+            // 
+            this.txt_busca.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_busca.Location = new System.Drawing.Point(134, 51);
+            this.txt_busca.Name = "txt_busca";
+            this.txt_busca.Size = new System.Drawing.Size(171, 24);
+            this.txt_busca.TabIndex = 1;
+            // 
+            // btn_buscar
+            // 
+            this.btn_buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_buscar.Location = new System.Drawing.Point(515, 61);
+            this.btn_buscar.Name = "btn_buscar";
+            this.btn_buscar.Size = new System.Drawing.Size(108, 44);
+            this.btn_buscar.TabIndex = 2;
+            this.btn_buscar.Text = "Aplicar";
+            this.btn_buscar.UseVisualStyleBackColor = true;
+            this.btn_buscar.Click += new System.EventHandler(this.Btn_buscar_Click);
+            // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.cb_tudo);
             this.groupBox1.Controls.Add(this.cb_funcionario);
             this.groupBox1.Controls.Add(this.cb_cliente);
@@ -169,40 +172,21 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filtrar";
             // 
-            // cb_data
+            // cb_tudo
             // 
-            this.cb_data.AutoSize = true;
-            this.cb_data.Location = new System.Drawing.Point(30, 33);
-            this.cb_data.Name = "cb_data";
-            this.cb_data.Size = new System.Drawing.Size(66, 17);
-            this.cb_data.TabIndex = 3;
-            this.cb_data.Text = "Por data";
-            this.cb_data.UseVisualStyleBackColor = true;
-            // 
-            // dtp_Venda
-            // 
-            this.dtp_Venda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtp_Venda.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtp_Venda.Location = new System.Drawing.Point(30, 75);
-            this.dtp_Venda.Name = "dtp_Venda";
-            this.dtp_Venda.Size = new System.Drawing.Size(111, 26);
-            this.dtp_Venda.TabIndex = 4;
-            // 
-            // cb_cliente
-            // 
-            this.cb_cliente.AutoSize = true;
-            this.cb_cliente.Location = new System.Drawing.Point(216, 33);
-            this.cb_cliente.Name = "cb_cliente";
-            this.cb_cliente.Size = new System.Drawing.Size(76, 17);
-            this.cb_cliente.TabIndex = 5;
-            this.cb_cliente.Text = "Por cliente";
-            this.cb_cliente.UseVisualStyleBackColor = true;
-            this.cb_cliente.CheckedChanged += new System.EventHandler(this.Cb_cliente_CheckedChanged);
+            this.cb_tudo.AutoSize = true;
+            this.cb_tudo.Location = new System.Drawing.Point(528, 25);
+            this.cb_tudo.Name = "cb_tudo";
+            this.cb_tudo.Size = new System.Drawing.Size(72, 17);
+            this.cb_tudo.TabIndex = 7;
+            this.cb_tudo.Text = "Sem Filtro";
+            this.cb_tudo.UseVisualStyleBackColor = true;
+            this.cb_tudo.CheckedChanged += new System.EventHandler(this.Cb_tudo_CheckedChanged);
             // 
             // cb_funcionario
             // 
             this.cb_funcionario.AutoSize = true;
-            this.cb_funcionario.Location = new System.Drawing.Point(325, 33);
+            this.cb_funcionario.Location = new System.Drawing.Point(336, 28);
             this.cb_funcionario.Name = "cb_funcionario";
             this.cb_funcionario.Size = new System.Drawing.Size(97, 17);
             this.cb_funcionario.TabIndex = 6;
@@ -210,15 +194,36 @@
             this.cb_funcionario.UseVisualStyleBackColor = true;
             this.cb_funcionario.CheckedChanged += new System.EventHandler(this.Cb_funcionario_CheckedChanged);
             // 
-            // cb_tudo
+            // cb_cliente
             // 
-            this.cb_tudo.AutoSize = true;
-            this.cb_tudo.Location = new System.Drawing.Point(507, 33);
-            this.cb_tudo.Name = "cb_tudo";
-            this.cb_tudo.Size = new System.Drawing.Size(72, 17);
-            this.cb_tudo.TabIndex = 7;
-            this.cb_tudo.Text = "Sem Filtro";
-            this.cb_tudo.UseVisualStyleBackColor = true;
+            this.cb_cliente.AutoSize = true;
+            this.cb_cliente.Location = new System.Drawing.Point(134, 25);
+            this.cb_cliente.Name = "cb_cliente";
+            this.cb_cliente.Size = new System.Drawing.Size(76, 17);
+            this.cb_cliente.TabIndex = 5;
+            this.cb_cliente.Text = "Por cliente";
+            this.cb_cliente.UseVisualStyleBackColor = true;
+            this.cb_cliente.CheckedChanged += new System.EventHandler(this.Cb_cliente_CheckedChanged);
+            // 
+            // dtp_Venda
+            // 
+            this.dtp_Venda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtp_Venda.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtp_Venda.Location = new System.Drawing.Point(6, 49);
+            this.dtp_Venda.Name = "dtp_Venda";
+            this.dtp_Venda.Size = new System.Drawing.Size(111, 26);
+            this.dtp_Venda.TabIndex = 4;
+            // 
+            // cb_data
+            // 
+            this.cb_data.AutoSize = true;
+            this.cb_data.Location = new System.Drawing.Point(6, 26);
+            this.cb_data.Name = "cb_data";
+            this.cb_data.Size = new System.Drawing.Size(66, 17);
+            this.cb_data.TabIndex = 3;
+            this.cb_data.Text = "Por data";
+            this.cb_data.UseVisualStyleBackColor = true;
+            this.cb_data.CheckedChanged += new System.EventHandler(this.Cb_data_CheckedChanged);
             // 
             // button1
             // 
@@ -229,6 +234,14 @@
             this.button1.TabIndex = 4;
             this.button1.Text = "Detalhes";
             this.button1.UseVisualStyleBackColor = true;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(336, 51);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 8;
             // 
             // frmVendas
             // 
@@ -270,5 +283,6 @@
         private System.Windows.Forms.CheckBox cb_data;
         private System.Windows.Forms.CheckBox cb_tudo;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
