@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             this.dgv_parcelas = new System.Windows.Forms.DataGridView();
+            this.parcelasVenda_cod = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.parcelasVenda_valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.parcelasVenda_tadavecto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.parcelasVenda_datapagto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.venda_cod = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -40,22 +45,17 @@
             this.txt_valor = new System.Windows.Forms.TextBox();
             this.dgv_itens = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
-            this.parcelasVenda_cod = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.parcelasVenda_valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.parcelasVenda_tadavecto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.parcelasVenda_datapagto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.venda_cod = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.itensVenda_cod = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.itensVenda_qtde = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.itensVenda_valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cod_venda = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.produto_cod = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txt_taxa = new System.Windows.Forms.TextBox();
+            this.txt_nota = new System.Windows.Forms.TextBox();
+            this.txt_status = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txt_tipoPag = new System.Windows.Forms.TextBox();
+            this.itensVenda_qtde = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.itensVenda_valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.produto_nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_parcelas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_itens)).BeginInit();
             this.SuspendLayout();
@@ -73,6 +73,38 @@
             this.dgv_parcelas.Name = "dgv_parcelas";
             this.dgv_parcelas.Size = new System.Drawing.Size(354, 150);
             this.dgv_parcelas.TabIndex = 0;
+            // 
+            // parcelasVenda_cod
+            // 
+            this.parcelasVenda_cod.DataPropertyName = "parcelasVenda_cod";
+            this.parcelasVenda_cod.HeaderText = "Codigo";
+            this.parcelasVenda_cod.Name = "parcelasVenda_cod";
+            this.parcelasVenda_cod.Visible = false;
+            // 
+            // parcelasVenda_valor
+            // 
+            this.parcelasVenda_valor.DataPropertyName = "parcelasVenda_valor";
+            this.parcelasVenda_valor.HeaderText = "Valor";
+            this.parcelasVenda_valor.Name = "parcelasVenda_valor";
+            // 
+            // parcelasVenda_tadavecto
+            // 
+            this.parcelasVenda_tadavecto.DataPropertyName = "parcelasVenda_tadavecto";
+            this.parcelasVenda_tadavecto.HeaderText = "Vencimento";
+            this.parcelasVenda_tadavecto.Name = "parcelasVenda_tadavecto";
+            // 
+            // parcelasVenda_datapagto
+            // 
+            this.parcelasVenda_datapagto.DataPropertyName = "parcelasVenda_datapagto";
+            this.parcelasVenda_datapagto.HeaderText = "Pagamento";
+            this.parcelasVenda_datapagto.Name = "parcelasVenda_datapagto";
+            // 
+            // venda_cod
+            // 
+            this.venda_cod.DataPropertyName = "venda_cod";
+            this.venda_cod.HeaderText = "venda_cod";
+            this.venda_cod.Name = "venda_cod";
+            this.venda_cod.Visible = false;
             // 
             // label1
             // 
@@ -121,6 +153,8 @@
             // 
             // txt_cliente
             // 
+            this.txt_cliente.Enabled = false;
+            this.txt_cliente.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.txt_cliente.Location = new System.Drawing.Point(128, 27);
             this.txt_cliente.Name = "txt_cliente";
             this.txt_cliente.Size = new System.Drawing.Size(100, 20);
@@ -128,6 +162,7 @@
             // 
             // txt_funcionario
             // 
+            this.txt_funcionario.Enabled = false;
             this.txt_funcionario.Location = new System.Drawing.Point(128, 74);
             this.txt_funcionario.Name = "txt_funcionario";
             this.txt_funcionario.Size = new System.Drawing.Size(100, 20);
@@ -135,6 +170,7 @@
             // 
             // txt_data
             // 
+            this.txt_data.Enabled = false;
             this.txt_data.Location = new System.Drawing.Point(128, 120);
             this.txt_data.Name = "txt_data";
             this.txt_data.Size = new System.Drawing.Size(100, 20);
@@ -142,6 +178,7 @@
             // 
             // txt_valor
             // 
+            this.txt_valor.Enabled = false;
             this.txt_valor.Location = new System.Drawing.Point(416, 27);
             this.txt_valor.Name = "txt_valor";
             this.txt_valor.Size = new System.Drawing.Size(100, 20);
@@ -151,11 +188,9 @@
             // 
             this.dgv_itens.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_itens.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.itensVenda_cod,
             this.itensVenda_qtde,
             this.itensVenda_valor,
-            this.cod_venda,
-            this.produto_cod});
+            this.produto_nome});
             this.dgv_itens.Location = new System.Drawing.Point(416, 195);
             this.dgv_itens.Name = "dgv_itens";
             this.dgv_itens.Size = new System.Drawing.Size(355, 150);
@@ -169,70 +204,6 @@
             this.label6.Size = new System.Drawing.Size(80, 13);
             this.label6.TabIndex = 11;
             this.label6.Text = "Itens Vendidos:";
-            // 
-            // parcelasVenda_cod
-            // 
-            this.parcelasVenda_cod.DataPropertyName = "parcelasVenda_cod";
-            this.parcelasVenda_cod.HeaderText = "Codigo";
-            this.parcelasVenda_cod.Name = "parcelasVenda_cod";
-            this.parcelasVenda_cod.Visible = false;
-            // 
-            // parcelasVenda_valor
-            // 
-            this.parcelasVenda_valor.DataPropertyName = "parcelasVenda_valor";
-            this.parcelasVenda_valor.HeaderText = "Valor";
-            this.parcelasVenda_valor.Name = "parcelasVenda_valor";
-            // 
-            // parcelasVenda_tadavecto
-            // 
-            this.parcelasVenda_tadavecto.DataPropertyName = "parcelasVenda_tadavecto";
-            this.parcelasVenda_tadavecto.HeaderText = "Vencimento";
-            this.parcelasVenda_tadavecto.Name = "parcelasVenda_tadavecto";
-            // 
-            // parcelasVenda_datapagto
-            // 
-            this.parcelasVenda_datapagto.DataPropertyName = "parcelasVenda_datapagto";
-            this.parcelasVenda_datapagto.HeaderText = "Pagamento";
-            this.parcelasVenda_datapagto.Name = "parcelasVenda_datapagto";
-            // 
-            // venda_cod
-            // 
-            this.venda_cod.DataPropertyName = "venda_cod";
-            this.venda_cod.HeaderText = "venda_cod";
-            this.venda_cod.Name = "venda_cod";
-            this.venda_cod.Visible = false;
-            // 
-            // itensVenda_cod
-            // 
-            this.itensVenda_cod.DataPropertyName = "itensVenda_cod";
-            this.itensVenda_cod.HeaderText = "codigo";
-            this.itensVenda_cod.Name = "itensVenda_cod";
-            this.itensVenda_cod.Visible = false;
-            // 
-            // itensVenda_qtde
-            // 
-            this.itensVenda_qtde.DataPropertyName = "itensVenda_qtde";
-            this.itensVenda_qtde.HeaderText = "Quantidade";
-            this.itensVenda_qtde.Name = "itensVenda_qtde";
-            // 
-            // itensVenda_valor
-            // 
-            this.itensVenda_valor.DataPropertyName = "itensVenda_valor";
-            this.itensVenda_valor.HeaderText = "Valor";
-            this.itensVenda_valor.Name = "itensVenda_valor";
-            // 
-            // cod_venda
-            // 
-            this.cod_venda.DataPropertyName = "venda_cod";
-            this.cod_venda.HeaderText = "venda_cod";
-            this.cod_venda.Name = "cod_venda";
-            this.cod_venda.Visible = false;
-            // 
-            // produto_cod
-            // 
-            this.produto_cod.DataPropertyName = "produto_cod";
-            this.produto_cod.HeaderText = "Produto";
-            this.produto_cod.Name = "produto_cod";
             // 
             // label7
             // 
@@ -261,35 +232,75 @@
             this.label9.TabIndex = 14;
             this.label9.Text = "Status:";
             // 
-            // textBox1
+            // txt_taxa
             // 
-            this.textBox1.Location = new System.Drawing.Point(609, 27);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 15;
+            this.txt_taxa.Enabled = false;
+            this.txt_taxa.Location = new System.Drawing.Point(620, 27);
+            this.txt_taxa.Name = "txt_taxa";
+            this.txt_taxa.Size = new System.Drawing.Size(100, 20);
+            this.txt_taxa.TabIndex = 15;
             // 
-            // textBox2
+            // txt_nota
             // 
-            this.textBox2.Location = new System.Drawing.Point(416, 74);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 16;
+            this.txt_nota.Enabled = false;
+            this.txt_nota.Location = new System.Drawing.Point(416, 74);
+            this.txt_nota.Name = "txt_nota";
+            this.txt_nota.Size = new System.Drawing.Size(100, 20);
+            this.txt_nota.TabIndex = 16;
             // 
-            // textBox3
+            // txt_status
             // 
-            this.textBox3.Location = new System.Drawing.Point(416, 120);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 17;
+            this.txt_status.Enabled = false;
+            this.txt_status.Location = new System.Drawing.Point(416, 120);
+            this.txt_status.Name = "txt_status";
+            this.txt_status.Size = new System.Drawing.Size(100, 20);
+            this.txt_status.TabIndex = 17;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(594, 92);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(102, 13);
+            this.label10.TabIndex = 18;
+            this.label10.Text = "Tipo de pagamento:";
+            // 
+            // txt_tipoPag
+            // 
+            this.txt_tipoPag.Enabled = false;
+            this.txt_tipoPag.Location = new System.Drawing.Point(596, 113);
+            this.txt_tipoPag.Name = "txt_tipoPag";
+            this.txt_tipoPag.Size = new System.Drawing.Size(100, 20);
+            this.txt_tipoPag.TabIndex = 19;
+            // 
+            // itensVenda_qtde
+            // 
+            this.itensVenda_qtde.DataPropertyName = "itensVenda_qtde";
+            this.itensVenda_qtde.HeaderText = "Quantidade";
+            this.itensVenda_qtde.Name = "itensVenda_qtde";
+            // 
+            // itensVenda_valor
+            // 
+            this.itensVenda_valor.DataPropertyName = "itensVenda_valor";
+            this.itensVenda_valor.HeaderText = "Valor";
+            this.itensVenda_valor.Name = "itensVenda_valor";
+            // 
+            // produto_nome
+            // 
+            this.produto_nome.DataPropertyName = "produto_nome";
+            this.produto_nome.HeaderText = "Produto";
+            this.produto_nome.Name = "produto_nome";
             // 
             // frmVendaDetalhada
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 388);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txt_tipoPag);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.txt_status);
+            this.Controls.Add(this.txt_nota);
+            this.Controls.Add(this.txt_taxa);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -334,16 +345,16 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn parcelasVenda_tadavecto;
         private System.Windows.Forms.DataGridViewTextBoxColumn parcelasVenda_datapagto;
         private System.Windows.Forms.DataGridViewTextBoxColumn venda_cod;
-        private System.Windows.Forms.DataGridViewTextBoxColumn itensVenda_cod;
-        private System.Windows.Forms.DataGridViewTextBoxColumn itensVenda_qtde;
-        private System.Windows.Forms.DataGridViewTextBoxColumn itensVenda_valor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cod_venda;
-        private System.Windows.Forms.DataGridViewTextBoxColumn produto_cod;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txt_taxa;
+        private System.Windows.Forms.TextBox txt_nota;
+        private System.Windows.Forms.TextBox txt_status;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txt_tipoPag;
+        private System.Windows.Forms.DataGridViewTextBoxColumn itensVenda_qtde;
+        private System.Windows.Forms.DataGridViewTextBoxColumn itensVenda_valor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn produto_nome;
     }
 }

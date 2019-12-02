@@ -40,9 +40,9 @@
             this.tipoPag_cod = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fun_cod = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txt_busca = new System.Windows.Forms.TextBox();
-            this.btn_buscar = new System.Windows.Forms.Button();
+            this.btn_aplicar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cb_fun = new System.Windows.Forms.ComboBox();
             this.cb_tudo = new System.Windows.Forms.CheckBox();
             this.cb_funcionario = new System.Windows.Forms.CheckBox();
             this.cb_cliente = new System.Windows.Forms.CheckBox();
@@ -144,26 +144,26 @@
             this.txt_busca.Size = new System.Drawing.Size(171, 24);
             this.txt_busca.TabIndex = 1;
             // 
-            // btn_buscar
+            // btn_aplicar
             // 
-            this.btn_buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_buscar.Location = new System.Drawing.Point(515, 61);
-            this.btn_buscar.Name = "btn_buscar";
-            this.btn_buscar.Size = new System.Drawing.Size(108, 44);
-            this.btn_buscar.TabIndex = 2;
-            this.btn_buscar.Text = "Aplicar";
-            this.btn_buscar.UseVisualStyleBackColor = true;
-            this.btn_buscar.Click += new System.EventHandler(this.Btn_buscar_Click);
+            this.btn_aplicar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_aplicar.Location = new System.Drawing.Point(515, 61);
+            this.btn_aplicar.Name = "btn_aplicar";
+            this.btn_aplicar.Size = new System.Drawing.Size(108, 44);
+            this.btn_aplicar.TabIndex = 2;
+            this.btn_aplicar.Text = "Aplicar";
+            this.btn_aplicar.UseVisualStyleBackColor = true;
+            this.btn_aplicar.Click += new System.EventHandler(this.Btn_aplicar_Click);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.cb_fun);
             this.groupBox1.Controls.Add(this.cb_tudo);
             this.groupBox1.Controls.Add(this.cb_funcionario);
             this.groupBox1.Controls.Add(this.cb_cliente);
             this.groupBox1.Controls.Add(this.dtp_Venda);
             this.groupBox1.Controls.Add(this.cb_data);
-            this.groupBox1.Controls.Add(this.btn_buscar);
+            this.groupBox1.Controls.Add(this.btn_aplicar);
             this.groupBox1.Controls.Add(this.txt_busca);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
@@ -172,13 +172,13 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filtrar";
             // 
-            // comboBox1
+            // cb_fun
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(336, 51);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 8;
+            this.cb_fun.FormattingEnabled = true;
+            this.cb_fun.Location = new System.Drawing.Point(336, 51);
+            this.cb_fun.Name = "cb_fun";
+            this.cb_fun.Size = new System.Drawing.Size(121, 21);
+            this.cb_fun.TabIndex = 8;
             // 
             // cb_tudo
             // 
@@ -266,7 +266,7 @@
 
         private System.Windows.Forms.DataGridView dgvVendas;
         private System.Windows.Forms.TextBox txt_busca;
-        private System.Windows.Forms.Button btn_buscar;
+        private System.Windows.Forms.Button btn_aplicar;
         private System.Windows.Forms.DataGridViewTextBoxColumn venda_cod;
         private System.Windows.Forms.DataGridViewTextBoxColumn venda_data;
         private System.Windows.Forms.DataGridViewTextBoxColumn venda_nfiscal;
@@ -284,6 +284,6 @@
         private System.Windows.Forms.CheckBox cb_data;
         private System.Windows.Forms.CheckBox cb_tudo;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cb_fun;
     }
 }

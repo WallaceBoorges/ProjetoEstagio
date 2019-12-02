@@ -24,6 +24,13 @@ namespace GUI
             dgvVendas.DataSource = DALVenda.CarregarGrid();
             cb_data.Checked = true;
             txt_busca.Enabled = false;
+            cb_fun.Enabled = false;
+
+            //iniciando o combobox de funcionário
+            cb_fun.DataSource = DALFuncionario.CarregarGrid();
+            cb_fun.ValueMember = "fun_cod";
+            cb_fun.DisplayMember = "fun_nome";
+            cb_fun.SelectedIndex = -1;
         }
 
         private void Cb_cliente_CheckedChanged(object sender, EventArgs e)
@@ -33,16 +40,13 @@ namespace GUI
                 cb_funcionario.Checked = false;
                 cb_tudo.Checked = false;
                 cb_data.Checked = false;
-                if (!txt_busca.Enabled && !btn_buscar.Enabled)
+                if (!txt_busca.Enabled)
                 {
                     txt_busca.Enabled = true;
                 }
             } else
             {
-                if (!cb_funcionario.Checked)
-                {
-                    txt_busca.Enabled = false;
-                }
+                txt_busca.Enabled = false;
             }
         }
 
@@ -53,19 +57,14 @@ namespace GUI
                 cb_cliente.Checked = false;
                 cb_tudo.Checked = false;
                 cb_data.Checked = false;
-                if (!txt_busca.Enabled && !btn_buscar.Enabled)
+                if (!cb_fun.Enabled)
                 {
-                    txt_busca.Enabled = true;
-                    btn_buscar.Enabled = true;
+                    cb_fun.Enabled = true;
                 }
             }
             else
             {
-                if (!cb_cliente.Checked)
-                {
-                    txt_busca.Enabled = false;
-                    btn_buscar.Enabled = false;
-                }
+                cb_fun.Enabled = false;
             }
         }
 
@@ -83,10 +82,7 @@ namespace GUI
             }
             else
             {
-                if (!cb_data.Checked)
-                {
-                    dtp_Venda.Enabled = false;
-                }
+                dtp_Venda.Enabled = false;
             }
         }
 
@@ -100,15 +96,31 @@ namespace GUI
             }
         }
 
-        private void Btn_buscar_Click(object sender, EventArgs e)
-        {
-            
-        }
 
         private void Button1_Click(object sender, EventArgs e)
         {
             frmVendaDetalhada vd = new frmVendaDetalhada(int.Parse(dgvVendas.CurrentRow.Cells["venda_cod"].Value.ToString()));
             vd.Show();
+        }
+
+        private void Btn_aplicar_Click(object sender, EventArgs e)
+        {
+            if (cb_data.Checked)
+            {
+                dgvVendas.DataSource = DALVenda.Filtrar(1, dtp_Venda.Value.Year.ToString() + "-" + dtp_Venda.Value.Month.ToString() + "-" + dtp_Venda.Value.Day.ToString());
+            }
+            else if (cb_cliente.Checked)
+            {
+                dgvVendas.DataSource = DALVenda.Filtrar(2, txt_busca.Text);
+            }
+            else if (cb_funcionario.Checked)
+            {
+                dgvVendas.DataSource = DALVenda.Filtrar(3, cb_fun.Text);
+            }
+            else
+            {
+                dgvVendas.DataSource = DALVenda.CarregarGrid();
+            }
         }
     }
 }

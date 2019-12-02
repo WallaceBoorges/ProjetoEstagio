@@ -28,6 +28,73 @@ namespace DAL
             }
         }
 
+        private static int BuscarNome(String nome, int tipo)
+        {
+            using (var conn = ConexaoBD.AbrirConexao()) //Passando a string de conexão
+            {
+                conn.Open(); //Abrindo a conexão
+                using (var comm = conn.CreateCommand()) //Criando o comando SQL
+                {
+                    if (tipo == 1)
+                    {
+                        comm.CommandText = "SELECT * FROM cliente WHERE cliente_nome LIKE '" + nome + "'";
+                    }
+                    else
+                    {
+                        comm.CommandText = "SELECT * FROM funcionario WHERE fun_nome LIKE '" + nome + "'";
+                    }
+                    var reader = comm.ExecuteReader(); //Passando o comando 
+                    reader.Read();
+                    return reader.GetInt32(0);
+                }
+            }
+        }
+
+        public static DataTable Filtrar(int tipo, String valor)
+        {
+            using (var conn = ConexaoBD.AbrirConexao()) //Passando a string de conexão
+            {
+                conn.Open(); //Abrindo a conexão
+                using (var comm = conn.CreateCommand()) //Criando o comando SQL
+                {
+                    if(tipo == 1)
+                    {
+                        comm.CommandText = "SELECT CONVERT(date, GETDATE()) venda_data, venda_cod, venda_nfiscal, venda_total, venda_nparcelas, venda_taxaParcela, venda_status, cliente_cod, tipoPag_cod, fun_cod FROM venda WHERE venda_data = '" + valor +"'";
+                    }
+                    else if (tipo == 2)
+                    {
+                        int codigo = BuscarNome(valor, 1);
+                        comm.CommandText = "SELECT * FROM venda WHERE cliente_cod = " + codigo;
+                    }
+                    else
+                    {
+                        int codigo = BuscarNome(valor, 2);
+                        comm.CommandText = "SELECT * FROM venda WHERE fun_cod = " + codigo;
+                    }
+
+                    var reader = comm.ExecuteReader(); //Passando o comando 
+                    var table = new DataTable(); //Passando a tabela
+                    table.Load(reader); //Carregando a tabela 
+                    return table; //Retornando a consulta ao Banco de Dados
+                }
+            }
+        }
+        public static DataTable FiltrarData(DateTime valor)
+        {
+            using (var conn = ConexaoBD.AbrirConexao()) //Passando a string de conexão
+            {
+                conn.Open(); //Abrindo a conexão
+                using (var comm = conn.CreateCommand()) //Criando o comando SQL
+                {
+                    comm.CommandText = "SELECT * FROM venda WHERE venda_data = " + valor;
+                    var reader = comm.ExecuteReader(); //Passando o comando 
+                    var table = new DataTable(); //Passando a tabela
+                    table.Load(reader); //Carregando a tabela 
+                    return table; //Retornando a consulta ao Banco de Dados
+                }
+            }
+        }
+
         public static void Incluir(MVenda modelo)
         {
             try
