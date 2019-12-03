@@ -21,7 +21,7 @@ namespace GUI
         private void FrmVendas_Load(object sender, EventArgs e)
         {
             //dgvVendas.DataSource = DALVenda.CustomLoad(1, dtp_Venda.Value.Year.ToString() + "-" + dtp_Venda.Value.Month.ToString() + "-" + dtp_Venda.Value.Day.ToString());
-            dgvVendas.DataSource = DALVenda.CarregarGrid();
+            dgvVendas.DataSource = DALVenda.Filtrar(1, dtp_Venda.Value.Year.ToString() + "-" + dtp_Venda.Value.Month.ToString() + "-" + dtp_Venda.Value.Day.ToString());
             cb_data.Checked = true;
             txt_busca.Enabled = false;
             cb_fun.Enabled = false;
