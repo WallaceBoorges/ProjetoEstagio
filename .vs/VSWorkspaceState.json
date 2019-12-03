@@ -1,12 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Banco De Dados",
-    "\\BLL",
-    "\\DAL",
-    "\\GUI",
-    "\\Modelo"
+    "\\DAL"
   ],
-  "SelectedNode": "\\GUI\\frmFuncionario.resx",
+  "SelectedNode": "\\DAL\\DALVenda.cs",
   "PreviewInSolutionExplorer": false
 }

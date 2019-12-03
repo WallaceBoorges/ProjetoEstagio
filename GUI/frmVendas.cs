@@ -113,7 +113,14 @@ namespace GUI
             {
                 if(txt_busca.Text != "")
                 {
-                    dgvVendas.DataSource = DALVenda.Filtrar(2, txt_busca.Text);
+                    try
+                    {
+                        dgvVendas.DataSource = DALVenda.Filtrar(2, txt_busca.Text);
+                    }
+                    catch
+                    {
+                        MessageBox.Show("cliente não cadastrado");
+                    }
                 }
                 else
                 {

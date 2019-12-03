@@ -291,5 +291,10 @@ namespace GUI
             frmVendas vendas = new frmVendas();
             vendas.Show();
         }
+
+        private void FrmPrincipal_Activated(object sender, EventArgs e)
+        {
+            dgvProduto.DataSource = DALProduto.CarregarProdutosDisponiveisParaCompra();
+        }
     }
 }

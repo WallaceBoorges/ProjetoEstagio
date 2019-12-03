@@ -37,15 +37,16 @@ namespace DAL
                 {
                     if (tipo == 1)
                     {
-                        comm.CommandText = "SELECT * FROM cliente WHERE cliente_nome LIKE '" + nome + "'";
+                        comm.CommandText = "SELECT * FROM cliente WHERE cliente_nome LIKE '" + nome + "%'";
                     }
                     else
                     {
-                        comm.CommandText = "SELECT * FROM funcionario WHERE fun_nome LIKE '" + nome + "'";
+                        comm.CommandText = "SELECT * FROM funcionario WHERE fun_nome LIKE '" + nome + "%'";
                     }
                     var reader = comm.ExecuteReader(); //Passando o comando 
                     reader.Read();
                     return reader.GetInt32(0);
+
                 }
             }
         }
@@ -72,21 +73,6 @@ namespace DAL
                         comm.CommandText = "SELECT * FROM venda WHERE fun_cod = " + codigo;
                     }
 
-                    var reader = comm.ExecuteReader(); //Passando o comando 
-                    var table = new DataTable(); //Passando a tabela
-                    table.Load(reader); //Carregando a tabela 
-                    return table; //Retornando a consulta ao Banco de Dados
-                }
-            }
-        }
-        public static DataTable FiltrarData(DateTime valor)
-        {
-            using (var conn = ConexaoBD.AbrirConexao()) //Passando a string de conexão
-            {
-                conn.Open(); //Abrindo a conexão
-                using (var comm = conn.CreateCommand()) //Criando o comando SQL
-                {
-                    comm.CommandText = "SELECT * FROM venda WHERE venda_data = " + valor;
                     var reader = comm.ExecuteReader(); //Passando o comando 
                     var table = new DataTable(); //Passando a tabela
                     table.Load(reader); //Carregando a tabela 
