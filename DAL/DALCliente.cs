@@ -19,7 +19,8 @@ namespace DAL
                 conn.Open(); //Abrindo a conexão
                 using (var comm = conn.CreateCommand()) //Criando o comando SQL
                 {
-                    comm.CommandText = "SELECT forn.*, ende.endereco_cep, ende.endereco_logradouro, ende.endereco_bairro, ende.endereco_numero, ende.endereco_cidade, ende.endereco_estado FROM cliente as forn inner join endereco as ende on forn.endereco_cod = ende.endereco_cod";
+                    comm.CommandText = "SELECT forn.*, ende.endereco_cep, ende.endereco_logradouro, ende.endereco_bairro, ende.endereco_numero, ende.endereco_cidade, ende.endereco_estado " +
+                        "FROM cliente as forn inner join endereco as ende on forn.endereco_cod = ende.endereco_cod";
                     var reader = comm.ExecuteReader(); //Passando o comando 
                     var table = new DataTable(); //Passando a tabela
                     table.Load(reader); //Carregando a tabela 
@@ -36,8 +37,8 @@ namespace DAL
                 conn.Open(); //Abrindo a conexão
                 using (var comm = conn.CreateCommand()) //Criando o comando SQL
                 {
-                    comm.CommandText = "SELECT * FROM  cliente as forn inner join endereco as ende on " +
-                        " forn.endereco_cod = ende.endereco_cod WHERE forn.cliente_nome LIKE @nome order by forn.cliente_cod desc";
+                    comm.CommandText = "SELECT forn.*, ende.endereco_cep, ende.endereco_logradouro, ende.endereco_bairro, ende.endereco_numero, ende.endereco_cidade, ende.endereco_estado  " +
+                        "FROM  cliente as forn inner join endereco as ende on forn.endereco_cod = ende.endereco_cod WHERE forn.cliente_nome LIKE @nome order by forn.cliente_cod desc";
 
                     //Passando valores por parametro
                     comm.Parameters.Add(new SqlParameter("@nome", valor + "%"));

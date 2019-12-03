@@ -45,7 +45,7 @@ namespace GUI
         }
 
         //Função para preencher o dg_disciplinas com as disciplinas selecionada
-        public void PreencherDisciplinas()
+        public void PreencherCliente()
         {
             int TotalRows = dgvCliente.RowCount; //Pegando a quantidade de linhas
             for (int i = 0; i < TotalRows; i++) //Pecorrendo o DataGrid marcando o checklist
@@ -81,21 +81,23 @@ namespace GUI
             try
             {
                 //Analisando se já foram selecionado as materias
-                if (venda.ClienteCod == 0 || (dgvCliente.CurrentRow.Cells[0].Value != null && (bool)dgvCliente.CurrentRow.Cells[0].Value))
+                if ((venda.ClienteCod == 0) || (dgvCliente.CurrentRow.Cells[0].Value != null && (bool)dgvCliente.CurrentRow.Cells[0].Value))
                 {
                     //Checando se o checklist foi desmarcado
                     if (dgvCliente.CurrentRow.Cells[0].Value != null && (bool)dgvCliente.CurrentRow.Cells[0].Value)
                     {
-                        venda.ClienteCod = 0;
+                        venda.ClienteCod = 0; //Removendo o id
                         //Definindo como falso o checklist
                         dgvCliente.CurrentRow.Cells[0].Value = false;
                         dgvCliente.CurrentRow.Cells[0].Value = null;
+                        cbxQuantParcela.Enabled = false;
                     }
                     else if (dgvCliente.CurrentRow.Cells[0].Value == null) //Checando se o checklist foi selecionado
                     {
                         //Definindo como true o checklist
                         venda.ClienteCod = (int)dgvCliente.CurrentRow.Cells[1].Value;
                         dgvCliente.CurrentRow.Cells[0].Value = true;
+                        cbxQuantParcela.Enabled = true;
                     }
                 }
                 else
@@ -131,13 +133,13 @@ namespace GUI
                 {
                     dgvCliente.DataSource = DALCliente.CarregarGrid(); //Carregando todo o DataGrid
 
-                    PreencherDisciplinas(); //Preenchendo as disciplinas
+                    PreencherCliente(); //Preenchendo as disciplinas
                 }
                 else //Pesquisando o nome
                 {
                     dgvCliente.DataSource = BLLCliente.LocalizarDados(txtConsultaCliente.Text); //Exibindo os clientes da pesquisa
 
-                    PreencherDisciplinas(); //Preenchendo as disciplinas
+                    PreencherCliente(); //Preenchendo as disciplinas
                 }
             }
             catch (Exception erro)

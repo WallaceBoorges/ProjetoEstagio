@@ -111,11 +111,25 @@ namespace GUI
             }
             else if (cb_cliente.Checked)
             {
-                dgvVendas.DataSource = DALVenda.Filtrar(2, txt_busca.Text);
+                if(txt_busca.Text != "")
+                {
+                    dgvVendas.DataSource = DALVenda.Filtrar(2, txt_busca.Text);
+                }
+                else
+                {
+                    MessageBox.Show("Informe o nome do cliente");
+                }
             }
             else if (cb_funcionario.Checked)
             {
-                dgvVendas.DataSource = DALVenda.Filtrar(3, cb_fun.Text);
+                if (cb_fun.Text != "")
+                {
+                    dgvVendas.DataSource = DALVenda.Filtrar(3, cb_fun.Text);
+                }
+                else
+                {
+                    MessageBox.Show("Informe o nome do funcionario");
+                }                                
             }
             else
             {

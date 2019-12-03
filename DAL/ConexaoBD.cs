@@ -205,6 +205,10 @@ namespace DAL
                     throw new Exception("BANCO NÃO EXISTE!\nNão é possivel realizar restauração para conexão remota");
                 }
             }
+            catch (InvalidOperationException)
+            {
+                throw new IOException("Erro de Conexão"); //Mensagem de erro caso exista
+            }
             catch (SqlException)
             {
                 throw new IOException("Erro de Conexão"); //Mensagem de erro caso exista

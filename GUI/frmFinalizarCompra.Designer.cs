@@ -46,27 +46,26 @@
             this.cbxTaxa = new System.Windows.Forms.CheckBox();
             this.txtConsultaCliente = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.dgvCliente = new System.Windows.Forms.DataGridView();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnFinalizarVenda = new System.Windows.Forms.Button();
-            this.cliente_cod = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SeleçãoCliente = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.dgvCliente = new System.Windows.Forms.DataGridView();
+            this.check = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.idCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CPF = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rg = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cpf = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rsocial = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.celular = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.endereco_cod1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.endereco_cod = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cep = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.logradouro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bairro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).BeginInit();
             this.SuspendLayout();
             // 
@@ -203,6 +202,7 @@
             // cbxQuantParcela
             // 
             this.cbxQuantParcela.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxQuantParcela.Enabled = false;
             this.cbxQuantParcela.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.cbxQuantParcela.FormattingEnabled = true;
             this.cbxQuantParcela.Items.AddRange(new object[] {
@@ -273,38 +273,6 @@
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // dgvCliente
-            // 
-            this.dgvCliente.AllowUserToAddRows = false;
-            this.dgvCliente.AllowUserToDeleteRows = false;
-            this.dgvCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCliente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.cliente_cod,
-            this.SeleçãoCliente,
-            this.nome,
-            this.tipo,
-            this.rg,
-            this.cpf,
-            this.rsocial,
-            this.fone,
-            this.celular,
-            this.email,
-            this.endereco_cod1,
-            this.endereco_cod,
-            this.cep,
-            this.logradouro,
-            this.bairro,
-            this.numero,
-            this.cidade,
-            this.estado});
-            this.dgvCliente.Location = new System.Drawing.Point(75, 52);
-            this.dgvCliente.Name = "dgvCliente";
-            this.dgvCliente.ReadOnly = true;
-            this.dgvCliente.RowHeadersVisible = false;
-            this.dgvCliente.Size = new System.Drawing.Size(240, 187);
-            this.dgvCliente.TabIndex = 226;
-            this.dgvCliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCliente_CellContentClick);
-            // 
             // btnCancelar
             // 
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
@@ -327,20 +295,50 @@
             this.btnFinalizarVenda.UseVisualStyleBackColor = true;
             this.btnFinalizarVenda.Click += new System.EventHandler(this.btnFinalizarVenda_Click);
             // 
-            // cliente_cod
+            // dgvCliente
             // 
-            this.cliente_cod.DataPropertyName = "cliente_cod";
-            this.cliente_cod.HeaderText = "Código";
-            this.cliente_cod.Name = "cliente_cod";
-            this.cliente_cod.ReadOnly = true;
-            this.cliente_cod.Visible = false;
+            this.dgvCliente.AllowUserToAddRows = false;
+            this.dgvCliente.AllowUserToDeleteRows = false;
+            this.dgvCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCliente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.check,
+            this.idCliente,
+            this.nome,
+            this.tipo,
+            this.CPF,
+            this.rg,
+            this.rsocial,
+            this.Cel,
+            this.email,
+            this.fone,
+            this.endereco_cod,
+            this.cep,
+            this.logradouro,
+            this.bairro,
+            this.numero,
+            this.cidade,
+            this.Estado});
+            this.dgvCliente.Location = new System.Drawing.Point(17, 54);
+            this.dgvCliente.Name = "dgvCliente";
+            this.dgvCliente.ReadOnly = true;
+            this.dgvCliente.Size = new System.Drawing.Size(298, 172);
+            this.dgvCliente.TabIndex = 246;
+            this.dgvCliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCliente_CellContentClick);
             // 
-            // SeleçãoCliente
+            // check
             // 
-            this.SeleçãoCliente.HeaderText = "";
-            this.SeleçãoCliente.Name = "SeleçãoCliente";
-            this.SeleçãoCliente.ReadOnly = true;
-            this.SeleçãoCliente.Width = 40;
+            this.check.HeaderText = "";
+            this.check.Name = "check";
+            this.check.ReadOnly = true;
+            this.check.Width = 30;
+            // 
+            // idCliente
+            // 
+            this.idCliente.DataPropertyName = "cliente_cod";
+            this.idCliente.HeaderText = "ID";
+            this.idCliente.Name = "idCliente";
+            this.idCliente.ReadOnly = true;
+            this.idCliente.Visible = false;
             // 
             // nome
             // 
@@ -348,7 +346,7 @@
             this.nome.HeaderText = "Nome";
             this.nome.Name = "nome";
             this.nome.ReadOnly = true;
-            this.nome.Width = 180;
+            this.nome.Width = 125;
             // 
             // tipo
             // 
@@ -358,6 +356,14 @@
             this.tipo.ReadOnly = true;
             this.tipo.Visible = false;
             // 
+            // CPF
+            // 
+            this.CPF.DataPropertyName = "cliente_cpfcnpj";
+            this.CPF.HeaderText = "CPF";
+            this.CPF.Name = "CPF";
+            this.CPF.ReadOnly = true;
+            this.CPF.Width = 125;
+            // 
             // rg
             // 
             this.rg.DataPropertyName = "cliente_rg";
@@ -365,14 +371,6 @@
             this.rg.Name = "rg";
             this.rg.ReadOnly = true;
             this.rg.Visible = false;
-            // 
-            // cpf
-            // 
-            this.cpf.DataPropertyName = "cliente_cpfcnpj";
-            this.cpf.HeaderText = "CPF";
-            this.cpf.Name = "cpf";
-            this.cpf.ReadOnly = true;
-            this.cpf.Visible = false;
             // 
             // rsocial
             // 
@@ -382,6 +380,22 @@
             this.rsocial.ReadOnly = true;
             this.rsocial.Visible = false;
             // 
+            // Cel
+            // 
+            this.Cel.DataPropertyName = "cliente_cel";
+            this.Cel.HeaderText = "Celular";
+            this.Cel.Name = "Cel";
+            this.Cel.ReadOnly = true;
+            this.Cel.Visible = false;
+            // 
+            // email
+            // 
+            this.email.DataPropertyName = "cliente_email";
+            this.email.HeaderText = "email";
+            this.email.Name = "email";
+            this.email.ReadOnly = true;
+            this.email.Visible = false;
+            // 
             // fone
             // 
             this.fone.DataPropertyName = "cliente_fone";
@@ -390,33 +404,10 @@
             this.fone.ReadOnly = true;
             this.fone.Visible = false;
             // 
-            // celular
-            // 
-            this.celular.DataPropertyName = "cliente_cel";
-            this.celular.HeaderText = "Celular";
-            this.celular.Name = "celular";
-            this.celular.ReadOnly = true;
-            this.celular.Visible = false;
-            // 
-            // email
-            // 
-            this.email.DataPropertyName = "cliente_email";
-            this.email.HeaderText = "Email";
-            this.email.Name = "email";
-            this.email.ReadOnly = true;
-            this.email.Visible = false;
-            // 
-            // endereco_cod1
-            // 
-            this.endereco_cod1.HeaderText = "endereco_cod";
-            this.endereco_cod1.Name = "endereco_cod1";
-            this.endereco_cod1.ReadOnly = true;
-            this.endereco_cod1.Visible = false;
-            // 
             // endereco_cod
             // 
             this.endereco_cod.DataPropertyName = "endereco_cod";
-            this.endereco_cod.HeaderText = "endereco_cod";
+            this.endereco_cod.HeaderText = "cod_endereco";
             this.endereco_cod.Name = "endereco_cod";
             this.endereco_cod.ReadOnly = true;
             this.endereco_cod.Visible = false;
@@ -424,7 +415,7 @@
             // cep
             // 
             this.cep.DataPropertyName = "endereco_cep";
-            this.cep.HeaderText = "CEP";
+            this.cep.HeaderText = "cep";
             this.cep.Name = "cep";
             this.cep.ReadOnly = true;
             this.cep.Visible = false;
@@ -432,7 +423,7 @@
             // logradouro
             // 
             this.logradouro.DataPropertyName = "endereco_logradouro";
-            this.logradouro.HeaderText = "Logradouro";
+            this.logradouro.HeaderText = "logradouro";
             this.logradouro.Name = "logradouro";
             this.logradouro.ReadOnly = true;
             this.logradouro.Visible = false;
@@ -461,19 +452,20 @@
             this.cidade.ReadOnly = true;
             this.cidade.Visible = false;
             // 
-            // estado
+            // Estado
             // 
-            this.estado.DataPropertyName = "endereco_estado";
-            this.estado.HeaderText = "Estado";
-            this.estado.Name = "estado";
-            this.estado.ReadOnly = true;
-            this.estado.Visible = false;
+            this.Estado.DataPropertyName = "endereco_estado";
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
+            this.Estado.ReadOnly = true;
+            this.Estado.Visible = false;
             // 
             // frmFinalizarCompra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 417);
+            this.Controls.Add(this.dgvCliente);
             this.Controls.Add(this.lblTipoPagamento);
             this.Controls.Add(this.cbxTipoPagamento);
             this.Controls.Add(this.label3);
@@ -492,7 +484,6 @@
             this.Controls.Add(this.cbxTaxa);
             this.Controls.Add(this.txtConsultaCliente);
             this.Controls.Add(this.btnBuscar);
-            this.Controls.Add(this.dgvCliente);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnFinalizarVenda);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -526,26 +517,25 @@
         private System.Windows.Forms.CheckBox cbxTaxa;
         private System.Windows.Forms.TextBox txtConsultaCliente;
         private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.DataGridView dgvCliente;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnFinalizarVenda;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cliente_cod;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn SeleçãoCliente;
+        private System.Windows.Forms.DataGridView dgvCliente;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn check;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idCliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn nome;
         private System.Windows.Forms.DataGridViewTextBoxColumn tipo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CPF;
         private System.Windows.Forms.DataGridViewTextBoxColumn rg;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cpf;
         private System.Windows.Forms.DataGridViewTextBoxColumn rsocial;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fone;
-        private System.Windows.Forms.DataGridViewTextBoxColumn celular;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cel;
         private System.Windows.Forms.DataGridViewTextBoxColumn email;
-        private System.Windows.Forms.DataGridViewTextBoxColumn endereco_cod1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fone;
         private System.Windows.Forms.DataGridViewTextBoxColumn endereco_cod;
         private System.Windows.Forms.DataGridViewTextBoxColumn cep;
         private System.Windows.Forms.DataGridViewTextBoxColumn logradouro;
         private System.Windows.Forms.DataGridViewTextBoxColumn bairro;
         private System.Windows.Forms.DataGridViewTextBoxColumn numero;
         private System.Windows.Forms.DataGridViewTextBoxColumn cidade;
-        private System.Windows.Forms.DataGridViewTextBoxColumn estado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
     }
 }

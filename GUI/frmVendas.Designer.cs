@@ -55,6 +55,8 @@
             // 
             // dgvVendas
             // 
+            this.dgvVendas.AllowUserToAddRows = false;
+            this.dgvVendas.AllowUserToDeleteRows = false;
             this.dgvVendas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVendas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.venda_cod,
@@ -69,6 +71,7 @@
             this.fun_cod});
             this.dgvVendas.Location = new System.Drawing.Point(12, 157);
             this.dgvVendas.Name = "dgvVendas";
+            this.dgvVendas.ReadOnly = true;
             this.dgvVendas.Size = new System.Drawing.Size(661, 281);
             this.dgvVendas.TabIndex = 0;
             // 
@@ -174,6 +177,7 @@
             // 
             // cb_fun
             // 
+            this.cb_fun.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_fun.FormattingEnabled = true;
             this.cb_fun.Location = new System.Drawing.Point(336, 51);
             this.cb_fun.Name = "cb_fun";

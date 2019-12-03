@@ -44,6 +44,9 @@
             this.txt_data = new System.Windows.Forms.TextBox();
             this.txt_valor = new System.Windows.Forms.TextBox();
             this.dgv_itens = new System.Windows.Forms.DataGridView();
+            this.itensVenda_qtde = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.itensVenda_valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.produto_nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -53,15 +56,14 @@
             this.txt_status = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txt_tipoPag = new System.Windows.Forms.TextBox();
-            this.itensVenda_qtde = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.itensVenda_valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.produto_nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_parcelas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_itens)).BeginInit();
             this.SuspendLayout();
             // 
             // dgv_parcelas
             // 
+            this.dgv_parcelas.AllowUserToAddRows = false;
+            this.dgv_parcelas.AllowUserToDeleteRows = false;
             this.dgv_parcelas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_parcelas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.parcelasVenda_cod,
@@ -71,6 +73,7 @@
             this.venda_cod});
             this.dgv_parcelas.Location = new System.Drawing.Point(12, 195);
             this.dgv_parcelas.Name = "dgv_parcelas";
+            this.dgv_parcelas.ReadOnly = true;
             this.dgv_parcelas.Size = new System.Drawing.Size(354, 150);
             this.dgv_parcelas.TabIndex = 0;
             // 
@@ -79,6 +82,7 @@
             this.parcelasVenda_cod.DataPropertyName = "parcelasVenda_cod";
             this.parcelasVenda_cod.HeaderText = "Codigo";
             this.parcelasVenda_cod.Name = "parcelasVenda_cod";
+            this.parcelasVenda_cod.ReadOnly = true;
             this.parcelasVenda_cod.Visible = false;
             // 
             // parcelasVenda_valor
@@ -86,24 +90,28 @@
             this.parcelasVenda_valor.DataPropertyName = "parcelasVenda_valor";
             this.parcelasVenda_valor.HeaderText = "Valor";
             this.parcelasVenda_valor.Name = "parcelasVenda_valor";
+            this.parcelasVenda_valor.ReadOnly = true;
             // 
             // parcelasVenda_tadavecto
             // 
             this.parcelasVenda_tadavecto.DataPropertyName = "parcelasVenda_tadavecto";
             this.parcelasVenda_tadavecto.HeaderText = "Vencimento";
             this.parcelasVenda_tadavecto.Name = "parcelasVenda_tadavecto";
+            this.parcelasVenda_tadavecto.ReadOnly = true;
             // 
             // parcelasVenda_datapagto
             // 
             this.parcelasVenda_datapagto.DataPropertyName = "parcelasVenda_datapagto";
             this.parcelasVenda_datapagto.HeaderText = "Pagamento";
             this.parcelasVenda_datapagto.Name = "parcelasVenda_datapagto";
+            this.parcelasVenda_datapagto.ReadOnly = true;
             // 
             // venda_cod
             // 
             this.venda_cod.DataPropertyName = "venda_cod";
             this.venda_cod.HeaderText = "venda_cod";
             this.venda_cod.Name = "venda_cod";
+            this.venda_cod.ReadOnly = true;
             this.venda_cod.Visible = false;
             // 
             // label1
@@ -186,6 +194,8 @@
             // 
             // dgv_itens
             // 
+            this.dgv_itens.AllowUserToAddRows = false;
+            this.dgv_itens.AllowUserToDeleteRows = false;
             this.dgv_itens.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_itens.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.itensVenda_qtde,
@@ -193,8 +203,30 @@
             this.produto_nome});
             this.dgv_itens.Location = new System.Drawing.Point(416, 195);
             this.dgv_itens.Name = "dgv_itens";
+            this.dgv_itens.ReadOnly = true;
             this.dgv_itens.Size = new System.Drawing.Size(355, 150);
             this.dgv_itens.TabIndex = 10;
+            // 
+            // itensVenda_qtde
+            // 
+            this.itensVenda_qtde.DataPropertyName = "itensVenda_qtde";
+            this.itensVenda_qtde.HeaderText = "Quantidade";
+            this.itensVenda_qtde.Name = "itensVenda_qtde";
+            this.itensVenda_qtde.ReadOnly = true;
+            // 
+            // itensVenda_valor
+            // 
+            this.itensVenda_valor.DataPropertyName = "itensVenda_valor";
+            this.itensVenda_valor.HeaderText = "Valor";
+            this.itensVenda_valor.Name = "itensVenda_valor";
+            this.itensVenda_valor.ReadOnly = true;
+            // 
+            // produto_nome
+            // 
+            this.produto_nome.DataPropertyName = "produto_nome";
+            this.produto_nome.HeaderText = "Produto";
+            this.produto_nome.Name = "produto_nome";
+            this.produto_nome.ReadOnly = true;
             // 
             // label6
             // 
@@ -272,24 +304,6 @@
             this.txt_tipoPag.Name = "txt_tipoPag";
             this.txt_tipoPag.Size = new System.Drawing.Size(100, 20);
             this.txt_tipoPag.TabIndex = 19;
-            // 
-            // itensVenda_qtde
-            // 
-            this.itensVenda_qtde.DataPropertyName = "itensVenda_qtde";
-            this.itensVenda_qtde.HeaderText = "Quantidade";
-            this.itensVenda_qtde.Name = "itensVenda_qtde";
-            // 
-            // itensVenda_valor
-            // 
-            this.itensVenda_valor.DataPropertyName = "itensVenda_valor";
-            this.itensVenda_valor.HeaderText = "Valor";
-            this.itensVenda_valor.Name = "itensVenda_valor";
-            // 
-            // produto_nome
-            // 
-            this.produto_nome.DataPropertyName = "produto_nome";
-            this.produto_nome.HeaderText = "Produto";
-            this.produto_nome.Name = "produto_nome";
             // 
             // frmVendaDetalhada
             // 
