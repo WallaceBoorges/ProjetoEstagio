@@ -318,3 +318,14 @@ C:\Users\Matheus Gois\Desktop\Projeto Pronto\ProjetoEstagio\BLL\obj\Debug\BLL.cs
 C:\Users\Matheus Gois\Desktop\Projeto Pronto\ProjetoEstagio\BLL\obj\Debug\BLL.csproj.CopyComplete
 C:\Users\Matheus Gois\Desktop\Projeto Pronto\ProjetoEstagio\BLL\obj\Debug\BLL.dll
 C:\Users\Matheus Gois\Desktop\Projeto Pronto\ProjetoEstagio\BLL\obj\Debug\BLL.pdb
+C:\Users\Marangoni\Source\Repos\ProjetoEstagio\BLL\bin\Debug\ProjetoEstagio.bak
+C:\Users\Marangoni\Source\Repos\ProjetoEstagio\BLL\bin\Debug\BLL.dll
+C:\Users\Marangoni\Source\Repos\ProjetoEstagio\BLL\bin\Debug\BLL.pdb
+C:\Users\Marangoni\Source\Repos\ProjetoEstagio\BLL\bin\Debug\DAL.dll
+C:\Users\Marangoni\Source\Repos\ProjetoEstagio\BLL\bin\Debug\Modelo.dll
+C:\Users\Marangoni\Source\Repos\ProjetoEstagio\BLL\bin\Debug\DAL.pdb
+C:\Users\Marangoni\Source\Repos\ProjetoEstagio\BLL\bin\Debug\Modelo.pdb
+C:\Users\Marangoni\Source\Repos\ProjetoEstagio\BLL\obj\Debug\BLL.csprojAssemblyReference.cache
+C:\Users\Marangoni\Source\Repos\ProjetoEstagio\BLL\obj\Debug\BLL.csproj.CopyComplete
+C:\Users\Marangoni\Source\Repos\ProjetoEstagio\BLL\obj\Debug\BLL.dll
+C:\Users\Marangoni\Source\Repos\ProjetoEstagio\BLL\obj\Debug\BLL.pdb

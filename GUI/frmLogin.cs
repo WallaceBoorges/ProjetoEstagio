@@ -82,5 +82,10 @@ namespace GUI
             Resultado = "Fechar";
             Close();
         }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

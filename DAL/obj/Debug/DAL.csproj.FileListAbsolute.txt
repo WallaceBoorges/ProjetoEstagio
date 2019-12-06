@@ -287,3 +287,16 @@ C:\Users\Matheus Gois\Desktop\Projeto Pronto\ProjetoEstagio\DAL\obj\Debug\DAL.cs
 C:\Users\Matheus Gois\Desktop\Projeto Pronto\ProjetoEstagio\DAL\obj\Debug\DAL.csproj.CopyComplete
 C:\Users\Matheus Gois\Desktop\Projeto Pronto\ProjetoEstagio\DAL\obj\Debug\DAL.dll
 C:\Users\Matheus Gois\Desktop\Projeto Pronto\ProjetoEstagio\DAL\obj\Debug\DAL.pdb
+C:\Users\Marangoni\Source\Repos\ProjetoEstagio\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Users\Marangoni\Source\Repos\ProjetoEstagio\DAL\obj\Debug\DAL.dll
+C:\Users\Marangoni\Source\Repos\ProjetoEstagio\DAL\obj\Debug\DAL.pdb
+C:\Users\Marangoni\Source\Repos\ProjetoEstagio\DAL\bin\Debug\ProjetoEstagio.bak
+C:\Users\Marangoni\Source\Repos\ProjetoEstagio\DAL\bin\Debug\DAL.dll
+C:\Users\Marangoni\Source\Repos\ProjetoEstagio\DAL\bin\Debug\DAL.pdb
+C:\Users\Marangoni\Source\Repos\ProjetoEstagio\DAL\bin\Debug\Microsoft.SqlServer.ConnectionInfo.enc.dll
+C:\Users\Marangoni\Source\Repos\ProjetoEstagio\DAL\bin\Debug\Microsoft.SqlServer.Management.Sdk.Sfc.enc.dll
+C:\Users\Marangoni\Source\Repos\ProjetoEstagio\DAL\bin\Debug\Microsoft.SqlServer.Smo.enc.dll
+C:\Users\Marangoni\Source\Repos\ProjetoEstagio\DAL\bin\Debug\Microsoft.SqlServer.SmoExtended.enc.dll
+C:\Users\Marangoni\Source\Repos\ProjetoEstagio\DAL\bin\Debug\Modelo.dll
+C:\Users\Marangoni\Source\Repos\ProjetoEstagio\DAL\bin\Debug\Modelo.pdb
+C:\Users\Marangoni\Source\Repos\ProjetoEstagio\DAL\obj\Debug\DAL.csproj.CopyComplete

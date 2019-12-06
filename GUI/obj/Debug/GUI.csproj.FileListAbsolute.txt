@@ -568,3 +568,34 @@ C:\Users\Matheus Gois\Desktop\ProjetoEstagio\GUI\obj\Debug\GUI.frmFuncionario.re
 C:\Users\Matheus Gois\Desktop\ProjetoEstagio\GUI\obj\Debug\GUI.frmQuantidadeProduto.resources
 C:\Users\Matheus Gois\Desktop\ProjetoEstagio\GUI\obj\Debug\GUI.frmVendaDetalhada.resources
 C:\Users\Matheus Gois\Desktop\ProjetoEstagio\GUI\obj\Debug\GUI.frmVendas.resources
+C:\Users\Marangoni\Source\Repos\ProjetoEstagio\GUI\bin\Debug\ProjetoEstagio.bak
+C:\Users\Marangoni\Source\Repos\ProjetoEstagio\GUI\bin\Debug\GUI.exe.config
+C:\Users\Marangoni\Source\Repos\ProjetoEstagio\GUI\bin\Debug\GUI.exe
+C:\Users\Marangoni\Source\Repos\ProjetoEstagio\GUI\bin\Debug\GUI.pdb
+C:\Users\Marangoni\Source\Repos\ProjetoEstagio\GUI\bin\Debug\BLL.dll
+C:\Users\Marangoni\Source\Repos\ProjetoEstagio\GUI\bin\Debug\DAL.dll
+C:\Users\Marangoni\Source\Repos\ProjetoEstagio\GUI\bin\Debug\Modelo.dll
+C:\Users\Marangoni\Source\Repos\ProjetoEstagio\GUI\bin\Debug\BLL.pdb
+C:\Users\Marangoni\Source\Repos\ProjetoEstagio\GUI\bin\Debug\DAL.pdb
+C:\Users\Marangoni\Source\Repos\ProjetoEstagio\GUI\bin\Debug\Modelo.pdb
+C:\Users\Marangoni\Source\Repos\ProjetoEstagio\GUI\obj\Debug\GUI.csprojAssemblyReference.cache
+C:\Users\Marangoni\Source\Repos\ProjetoEstagio\GUI\obj\Debug\GUI.frmCadastroCategoria.resources
+C:\Users\Marangoni\Source\Repos\ProjetoEstagio\GUI\obj\Debug\GUI.frmCadastroCliente.resources
+C:\Users\Marangoni\Source\Repos\ProjetoEstagio\GUI\obj\Debug\GUI.frmCadastroProduto.resources
+C:\Users\Marangoni\Source\Repos\ProjetoEstagio\GUI\obj\Debug\GUI.frmCadastroSubCategoria.resources
+C:\Users\Marangoni\Source\Repos\ProjetoEstagio\GUI\obj\Debug\GUI.frmCadastrarCompra.resources
+C:\Users\Marangoni\Source\Repos\ProjetoEstagio\GUI\obj\Debug\GUI.frmCadastroFornecedor.resources
+C:\Users\Marangoni\Source\Repos\ProjetoEstagio\GUI\obj\Debug\GUI.frmConexaoBD.resources
+C:\Users\Marangoni\Source\Repos\ProjetoEstagio\GUI\obj\Debug\GUI.frmFinalizarCompra.resources
+C:\Users\Marangoni\Source\Repos\ProjetoEstagio\GUI\obj\Debug\GUI.frmFuncionario.resources
+C:\Users\Marangoni\Source\Repos\ProjetoEstagio\GUI\obj\Debug\GUI.frmLogin.resources
+C:\Users\Marangoni\Source\Repos\ProjetoEstagio\GUI\obj\Debug\GUI.frmParcelasCompra.resources
+C:\Users\Marangoni\Source\Repos\ProjetoEstagio\GUI\obj\Debug\GUI.frmPrincipal.resources
+C:\Users\Marangoni\Source\Repos\ProjetoEstagio\GUI\obj\Debug\GUI.frmQuantidadeProduto.resources
+C:\Users\Marangoni\Source\Repos\ProjetoEstagio\GUI\obj\Debug\GUI.frmVendaDetalhada.resources
+C:\Users\Marangoni\Source\Repos\ProjetoEstagio\GUI\obj\Debug\GUI.frmVendas.resources
+C:\Users\Marangoni\Source\Repos\ProjetoEstagio\GUI\obj\Debug\GUI.Properties.Resources.resources
+C:\Users\Marangoni\Source\Repos\ProjetoEstagio\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
+C:\Users\Marangoni\Source\Repos\ProjetoEstagio\GUI\obj\Debug\GUI.csproj.CopyComplete
+C:\Users\Marangoni\Source\Repos\ProjetoEstagio\GUI\obj\Debug\GUI.exe
+C:\Users\Marangoni\Source\Repos\ProjetoEstagio\GUI\obj\Debug\GUI.pdb

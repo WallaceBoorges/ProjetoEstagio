@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVendas));
             this.dgvVendas = new System.Windows.Forms.DataGridView();
             this.venda_cod = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.venda_data = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -80,6 +81,7 @@
             this.venda_cod.DataPropertyName = "venda_cod";
             this.venda_cod.HeaderText = "venda_cod";
             this.venda_cod.Name = "venda_cod";
+            this.venda_cod.ReadOnly = true;
             this.venda_cod.Visible = false;
             // 
             // venda_data
@@ -87,42 +89,49 @@
             this.venda_data.DataPropertyName = "venda_data";
             this.venda_data.HeaderText = "Data";
             this.venda_data.Name = "venda_data";
+            this.venda_data.ReadOnly = true;
             // 
             // venda_nfiscal
             // 
             this.venda_nfiscal.DataPropertyName = "venda_nfiscal";
             this.venda_nfiscal.HeaderText = "Nota";
             this.venda_nfiscal.Name = "venda_nfiscal";
+            this.venda_nfiscal.ReadOnly = true;
             // 
             // venda_total
             // 
             this.venda_total.DataPropertyName = "venda_total";
             this.venda_total.HeaderText = "Valor";
             this.venda_total.Name = "venda_total";
+            this.venda_total.ReadOnly = true;
             // 
             // venda_nparcelas
             // 
             this.venda_nparcelas.DataPropertyName = "venda_nparcelas";
             this.venda_nparcelas.HeaderText = "Numero de Parcelas";
             this.venda_nparcelas.Name = "venda_nparcelas";
+            this.venda_nparcelas.ReadOnly = true;
             // 
             // venda_taxaParcela
             // 
             this.venda_taxaParcela.DataPropertyName = "venda_taxaParcela";
             this.venda_taxaParcela.HeaderText = "Taxa";
             this.venda_taxaParcela.Name = "venda_taxaParcela";
+            this.venda_taxaParcela.ReadOnly = true;
             // 
             // venda_status
             // 
             this.venda_status.DataPropertyName = "venda_status";
             this.venda_status.HeaderText = "Status";
             this.venda_status.Name = "venda_status";
+            this.venda_status.ReadOnly = true;
             // 
             // cliente_cod
             // 
             this.cliente_cod.DataPropertyName = "cliente_cod";
             this.cliente_cod.HeaderText = "cliente_cod";
             this.cliente_cod.Name = "cliente_cod";
+            this.cliente_cod.ReadOnly = true;
             this.cliente_cod.Visible = false;
             // 
             // tipoPag_cod
@@ -130,6 +139,7 @@
             this.tipoPag_cod.DataPropertyName = "tipoPag_cod";
             this.tipoPag_cod.HeaderText = "tipoPag_cod";
             this.tipoPag_cod.Name = "tipoPag_cod";
+            this.tipoPag_cod.ReadOnly = true;
             this.tipoPag_cod.Visible = false;
             // 
             // fun_cod
@@ -137,6 +147,7 @@
             this.fun_cod.DataPropertyName = "fun_cod";
             this.fun_cod.HeaderText = "fun_cod";
             this.fun_cod.Name = "fun_cod";
+            this.fun_cod.ReadOnly = true;
             this.fun_cod.Visible = false;
             // 
             // txt_busca
@@ -149,7 +160,8 @@
             // 
             // btn_aplicar
             // 
-            this.btn_aplicar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_aplicar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_aplicar.Image = ((System.Drawing.Image)(resources.GetObject("btn_aplicar.Image")));
             this.btn_aplicar.Location = new System.Drawing.Point(515, 61);
             this.btn_aplicar.Name = "btn_aplicar";
             this.btn_aplicar.Size = new System.Drawing.Size(108, 44);
@@ -160,6 +172,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("groupBox1.BackgroundImage")));
             this.groupBox1.Controls.Add(this.cb_fun);
             this.groupBox1.Controls.Add(this.cb_tudo);
             this.groupBox1.Controls.Add(this.cb_funcionario);
@@ -239,8 +252,9 @@
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(519, 444);
+            this.button1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(558, 444);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(116, 36);
             this.button1.TabIndex = 4;
@@ -252,6 +266,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(686, 507);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);

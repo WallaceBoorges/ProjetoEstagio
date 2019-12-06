@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVendaDetalhada));
             this.dgv_parcelas = new System.Windows.Forms.DataGridView();
             this.parcelasVenda_cod = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.parcelasVenda_valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -309,6 +310,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 388);
             this.Controls.Add(this.txt_tipoPag);
             this.Controls.Add(this.label10);

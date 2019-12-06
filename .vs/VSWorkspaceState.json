@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
+    "\\Banco De Dados",
     "\\DAL"
   ],
-  "SelectedNode": "\\DAL\\DALVenda.cs",
+  "SelectedNode": "\\DAL\\ConexaoBD.cs",
   "PreviewInSolutionExplorer": false
 }

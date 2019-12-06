@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmQuantidadeProduto));
             this.btnCancelar = new System.Windows.Forms.Button();
             this.lblProduto = new System.Windows.Forms.Label();
             this.txtQuantidadeProduto = new System.Windows.Forms.TextBox();
@@ -37,7 +38,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(152, 130);
+            this.btnCancelar.Location = new System.Drawing.Point(133, 130);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 127;
@@ -49,7 +50,7 @@
             // 
             this.lblProduto.AutoSize = true;
             this.lblProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.lblProduto.Location = new System.Drawing.Point(20, 20);
+            this.lblProduto.Location = new System.Drawing.Point(20, 29);
             this.lblProduto.Name = "lblProduto";
             this.lblProduto.Size = new System.Drawing.Size(65, 17);
             this.lblProduto.TabIndex = 126;
@@ -65,7 +66,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(38, 130);
+            this.btnAdd.Location = new System.Drawing.Point(23, 130);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 23);
             this.btnAdd.TabIndex = 124;
@@ -87,6 +88,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(246, 172);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.lblProduto);
