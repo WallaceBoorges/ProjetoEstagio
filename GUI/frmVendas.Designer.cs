@@ -181,6 +181,7 @@
             this.groupBox1.Controls.Add(this.cb_data);
             this.groupBox1.Controls.Add(this.btn_aplicar);
             this.groupBox1.Controls.Add(this.txt_busca);
+            this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(661, 125);
@@ -271,8 +272,12 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgvVendas);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmVendas";
-            this.Text = "frmVendas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Vendas";
             this.Load += new System.EventHandler(this.FrmVendas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvVendas)).EndInit();
             this.groupBox1.ResumeLayout(false);

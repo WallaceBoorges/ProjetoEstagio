@@ -332,8 +332,12 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgv_parcelas);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmVendaDetalhada";
-            this.Text = "frmVendaDetalhada";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Venda Detalhada";
             this.Load += new System.EventHandler(this.FrmVendaDetalhada_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_parcelas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_itens)).EndInit();

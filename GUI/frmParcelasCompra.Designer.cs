@@ -163,8 +163,12 @@
             this.Controls.Add(this.btn_confPag);
             this.Controls.Add(this.lb_titulo);
             this.Controls.Add(this.dgvParcelasCompra);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmParcelasCompra";
-            this.Text = "frmParcelas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Parcelas";
             this.Load += new System.EventHandler(this.FrmParcelasCompra_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvParcelasCompra)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.parcelascompraBindingSource)).EndInit();

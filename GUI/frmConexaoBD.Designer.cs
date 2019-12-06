@@ -42,6 +42,7 @@
             this.btnVoltar = new System.Windows.Forms.Button();
             this.btnTestarConexao = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
+            this.btnFecha = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblTipoConexao
@@ -160,12 +161,23 @@
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
+            // btnFecha
+            // 
+            this.btnFecha.Location = new System.Drawing.Point(28, 342);
+            this.btnFecha.Name = "btnFecha";
+            this.btnFecha.Size = new System.Drawing.Size(84, 25);
+            this.btnFecha.TabIndex = 108;
+            this.btnFecha.Text = "Fechar";
+            this.btnFecha.UseVisualStyleBackColor = true;
+            this.btnFecha.Click += new System.EventHandler(this.btnFecha_Click);
+            // 
             // frmConexaoBD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(428, 397);
+            this.Controls.Add(this.btnFecha);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.btnTestarConexao);
             this.Controls.Add(this.btnVoltar);
@@ -179,8 +191,11 @@
             this.Controls.Add(this.txtServidor);
             this.Controls.Add(this.lblTipoConexao);
             this.Controls.Add(this.cbxTipoConexao);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmConexaoBD";
-            this.Text = "frmConexaoBD";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Configuração de Conexão";
             this.Load += new System.EventHandler(this.frmConexaoBD_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -202,5 +217,6 @@
         public System.Windows.Forms.Button btnVoltar;
         public System.Windows.Forms.Button btnTestarConexao;
         public System.Windows.Forms.Button btnSalvar;
+        public System.Windows.Forms.Button btnFecha;
     }
 }

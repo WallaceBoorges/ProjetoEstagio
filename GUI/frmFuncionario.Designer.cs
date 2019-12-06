@@ -825,8 +825,11 @@
             this.Controls.Add(this.lblRsocial);
             this.Controls.Add(this.lblNome);
             this.Controls.Add(this.txtNome);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmFuncionario";
-            this.Text = "frmFuncionario";
+            this.Text = "Funcionário";
             this.Load += new System.EventHandler(this.frmFuncionario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvFuncionario)).EndInit();
             this.ResumeLayout(false);

@@ -71,6 +71,7 @@ namespace GUI
         private void conexãoBancoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmConexaoBD f = new frmConexaoBD();
+            f.btnFecha.Visible = false;
             f.ShowDialog();
             f.Dispose();
         }

@@ -280,9 +280,9 @@
             this.lblProduto.AutoSize = true;
             this.lblProduto.Location = new System.Drawing.Point(25, 382);
             this.lblProduto.Name = "lblProduto";
-            this.lblProduto.Size = new System.Drawing.Size(71, 13);
+            this.lblProduto.Size = new System.Drawing.Size(75, 13);
             this.lblProduto.TabIndex = 80;
-            this.lblProduto.Text = "SubCategoria";
+            this.lblProduto.Text = "Nome Produto";
             // 
             // txtConsultaProduto
             // 
@@ -512,9 +512,12 @@
             this.Controls.Add(this.lblNome);
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.lblCodigo);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmCadastroProduto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmCadastroProduto";
+            this.Text = "Produto";
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

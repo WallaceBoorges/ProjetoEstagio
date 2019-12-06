@@ -15,6 +15,8 @@ namespace GUI
 
         public string Resultado { get; private set; } //Criando um atributo para armazenar o resultado
 
+
+
         //Metodo Mostrar SIM ou Não
         public static string PegarDadosBanco()
         {
@@ -134,6 +136,11 @@ namespace GUI
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btnFecha_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
         }
     }
 }

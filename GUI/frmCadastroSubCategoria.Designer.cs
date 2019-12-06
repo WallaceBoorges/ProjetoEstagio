@@ -236,9 +236,12 @@
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnAlterar);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmCadastroSubCategoria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmCadastroSubCategoria";
+            this.Text = "SubCategoria";
             this.Load += new System.EventHandler(this.frmCadastroSubCategoria_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubCategoria)).EndInit();
             this.ResumeLayout(false);

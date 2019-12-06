@@ -201,7 +201,7 @@
             // conexãoBancoToolStripMenuItem
             // 
             this.conexãoBancoToolStripMenuItem.Name = "conexãoBancoToolStripMenuItem";
-            this.conexãoBancoToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.conexãoBancoToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.conexãoBancoToolStripMenuItem.Text = "Conexão Banco";
             this.conexãoBancoToolStripMenuItem.Click += new System.EventHandler(this.conexãoBancoToolStripMenuItem_Click);
             // 
@@ -289,7 +289,6 @@
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(151, 66);
             this.btnEditar.TabIndex = 133;
-            this.btnEditar.Text = "o";
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
@@ -534,9 +533,10 @@
             this.Controls.Add(this.lblCod);
             this.Controls.Add(this.txtCod);
             this.Controls.Add(this.menu);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmPrincipal";
+            this.Text = "Principal";
             this.Activated += new System.EventHandler(this.FrmPrincipal_Activated);
             this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.menu.ResumeLayout(false);
