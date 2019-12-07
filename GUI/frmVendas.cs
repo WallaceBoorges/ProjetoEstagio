@@ -99,8 +99,15 @@ namespace GUI
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            frmVendaDetalhada vd = new frmVendaDetalhada(int.Parse(dgvVendas.CurrentRow.Cells["venda_cod"].Value.ToString()));
-            vd.Show();
+            if (dgvVendas.Rows.Count > 0)
+            {
+                frmVendaDetalhada vd = new frmVendaDetalhada(int.Parse(dgvVendas.CurrentRow.Cells["venda_cod"].Value.ToString()));
+                vd.Show();
+            }
+            else
+            {
+                MessageBox.Show("Não há nenhuma venda!");
+            }
         }
 
         private void Btn_aplicar_Click(object sender, EventArgs e)

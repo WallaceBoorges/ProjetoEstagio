@@ -55,7 +55,6 @@
             this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(192, 20);
             this.txtSenha.TabIndex = 87;
-            this.txtSenha.Text = "12345678";
             // 
             // lblSenha
             // 
@@ -73,7 +72,6 @@
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(192, 20);
             this.txtUsuario.TabIndex = 85;
-            this.txtUsuario.Text = "admin";
             // 
             // lblUsuario
             // 

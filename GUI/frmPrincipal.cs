@@ -162,45 +162,52 @@ namespace GUI
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            if (VerificarExistenciaNaLista(int.Parse(dgvProduto.CurrentRow.Cells["codigo"].Value.ToString())) == true) //Verificando a existencia do produto na lista
+            if (dgvProduto.Rows.Count > 0)
             {
-                try
+                if (VerificarExistenciaNaLista(int.Parse(dgvProduto.CurrentRow.Cells["codigo"].Value.ToString())) == true) //Verificando a existencia do produto na lista
                 {
-                    //Pegando dados do DataGrid                
-                    int cod = int.Parse(dgvProduto.CurrentRow.Cells["codigo"].Value.ToString());
-                    string nome = dgvProduto.CurrentRow.Cells["nome"].Value.ToString();
-                    double quantEstoque = double.Parse(dgvProduto.CurrentRow.Cells["quant"].Value.ToString());
-                    double valorVenda = double.Parse(dgvProduto.CurrentRow.Cells["valorVenda"].Value.ToString());
-
-                    //Pegando a quantidade de produto
-                    Double quantProduto = frmQuantidadeProduto.AddQuantidade(dgvProduto.CurrentRow.Cells["nome"].Value.ToString(), double.Parse(dgvProduto.CurrentRow.Cells["quant"].Value.ToString()));
-
-                    //Analisando se o usuário não fechou a tela e consequentemente retornou a quantidade 0
-                    if (quantProduto != 0.0)
+                    try
                     {
-                        //Instanciando um produto apenas com o campos necessário
-                        MProduto ProdTemp = new MProduto();
-                        ProdTemp.CodigoProduto = cod;
-                        ProdTemp.NomeProduto = nome;
-                        ProdTemp.ValorVendaProduto = valorVenda;
-                        ProdTemp.QuantProduto = quantEstoque;
-                        //Instanciando um iten 
-                        MItensVenda temp = new MItensVenda(quantProduto, ProdTemp);
-                        temp.Valor();
-                        //Add os dados ao objeto venda 
-                        Venda.Itens.Add(temp);
-                        //Carregando o Grid com as novas alterações
-                        CarregarGrid();
+                        //Pegando dados do DataGrid                
+                        int cod = int.Parse(dgvProduto.CurrentRow.Cells["codigo"].Value.ToString());
+                        string nome = dgvProduto.CurrentRow.Cells["nome"].Value.ToString();
+                        double quantEstoque = double.Parse(dgvProduto.CurrentRow.Cells["quant"].Value.ToString());
+                        double valorVenda = double.Parse(dgvProduto.CurrentRow.Cells["valorVenda"].Value.ToString());
+
+                        //Pegando a quantidade de produto
+                        Double quantProduto = frmQuantidadeProduto.AddQuantidade(dgvProduto.CurrentRow.Cells["nome"].Value.ToString(), double.Parse(dgvProduto.CurrentRow.Cells["quant"].Value.ToString()));
+
+                        //Analisando se o usuário não fechou a tela e consequentemente retornou a quantidade 0
+                        if (quantProduto != 0.0)
+                        {
+                            //Instanciando um produto apenas com o campos necessário
+                            MProduto ProdTemp = new MProduto();
+                            ProdTemp.CodigoProduto = cod;
+                            ProdTemp.NomeProduto = nome;
+                            ProdTemp.ValorVendaProduto = valorVenda;
+                            ProdTemp.QuantProduto = quantEstoque;
+                            //Instanciando um iten 
+                            MItensVenda temp = new MItensVenda(quantProduto, ProdTemp);
+                            temp.Valor();
+                            //Add os dados ao objeto venda 
+                            Venda.Itens.Add(temp);
+                            //Carregando o Grid com as novas alterações
+                            CarregarGrid();
+                        }
+                    }
+                    catch (Exception erro)
+                    {
+                        MessageBox.Show(erro.Message, "OK");
                     }
                 }
-                catch (Exception erro)
+                else
                 {
-                    MessageBox.Show(erro.Message, "OK");
+                    MessageBox.Show("O produto já existe na lista!", "OK");                    
                 }
             }
             else
             {
-                MessageBox.Show("O produto já existe na lista!", "OK");
+                MessageBox.Show("Não existe produto cadastrado!");
             }
         }
 

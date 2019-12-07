@@ -160,14 +160,16 @@
             // 
             // btn_aplicar
             // 
+            this.btn_aplicar.BackColor = System.Drawing.SystemColors.Control;
             this.btn_aplicar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_aplicar.ForeColor = System.Drawing.Color.Black;
             this.btn_aplicar.Image = ((System.Drawing.Image)(resources.GetObject("btn_aplicar.Image")));
             this.btn_aplicar.Location = new System.Drawing.Point(515, 61);
             this.btn_aplicar.Name = "btn_aplicar";
             this.btn_aplicar.Size = new System.Drawing.Size(108, 44);
             this.btn_aplicar.TabIndex = 2;
             this.btn_aplicar.Text = "Aplicar";
-            this.btn_aplicar.UseVisualStyleBackColor = true;
+            this.btn_aplicar.UseVisualStyleBackColor = false;
             this.btn_aplicar.Click += new System.EventHandler(this.Btn_aplicar_Click);
             // 
             // groupBox1
@@ -201,34 +203,40 @@
             // cb_tudo
             // 
             this.cb_tudo.AutoSize = true;
+            this.cb_tudo.BackColor = System.Drawing.SystemColors.Control;
+            this.cb_tudo.ForeColor = System.Drawing.Color.Black;
             this.cb_tudo.Location = new System.Drawing.Point(528, 25);
             this.cb_tudo.Name = "cb_tudo";
             this.cb_tudo.Size = new System.Drawing.Size(72, 17);
             this.cb_tudo.TabIndex = 7;
             this.cb_tudo.Text = "Sem Filtro";
-            this.cb_tudo.UseVisualStyleBackColor = true;
+            this.cb_tudo.UseVisualStyleBackColor = false;
             this.cb_tudo.CheckedChanged += new System.EventHandler(this.Cb_tudo_CheckedChanged);
             // 
             // cb_funcionario
             // 
             this.cb_funcionario.AutoSize = true;
+            this.cb_funcionario.BackColor = System.Drawing.SystemColors.Control;
+            this.cb_funcionario.ForeColor = System.Drawing.Color.Black;
             this.cb_funcionario.Location = new System.Drawing.Point(336, 28);
             this.cb_funcionario.Name = "cb_funcionario";
             this.cb_funcionario.Size = new System.Drawing.Size(97, 17);
             this.cb_funcionario.TabIndex = 6;
             this.cb_funcionario.Text = "Por funcionário";
-            this.cb_funcionario.UseVisualStyleBackColor = true;
+            this.cb_funcionario.UseVisualStyleBackColor = false;
             this.cb_funcionario.CheckedChanged += new System.EventHandler(this.Cb_funcionario_CheckedChanged);
             // 
             // cb_cliente
             // 
             this.cb_cliente.AutoSize = true;
+            this.cb_cliente.BackColor = System.Drawing.SystemColors.Control;
+            this.cb_cliente.ForeColor = System.Drawing.Color.Black;
             this.cb_cliente.Location = new System.Drawing.Point(134, 25);
             this.cb_cliente.Name = "cb_cliente";
             this.cb_cliente.Size = new System.Drawing.Size(76, 17);
             this.cb_cliente.TabIndex = 5;
             this.cb_cliente.Text = "Por cliente";
-            this.cb_cliente.UseVisualStyleBackColor = true;
+            this.cb_cliente.UseVisualStyleBackColor = false;
             this.cb_cliente.CheckedChanged += new System.EventHandler(this.Cb_cliente_CheckedChanged);
             // 
             // dtp_Venda
@@ -243,12 +251,14 @@
             // cb_data
             // 
             this.cb_data.AutoSize = true;
+            this.cb_data.BackColor = System.Drawing.SystemColors.Control;
+            this.cb_data.ForeColor = System.Drawing.Color.Black;
             this.cb_data.Location = new System.Drawing.Point(6, 26);
             this.cb_data.Name = "cb_data";
             this.cb_data.Size = new System.Drawing.Size(66, 17);
             this.cb_data.TabIndex = 3;
             this.cb_data.Text = "Por data";
-            this.cb_data.UseVisualStyleBackColor = true;
+            this.cb_data.UseVisualStyleBackColor = false;
             this.cb_data.CheckedChanged += new System.EventHandler(this.Cb_data_CheckedChanged);
             // 
             // button1

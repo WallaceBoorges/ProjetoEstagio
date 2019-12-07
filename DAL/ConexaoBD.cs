@@ -144,7 +144,8 @@ namespace DAL
 
                 if (!bancoExiste)
                 {
-                    RestaurarDBPadrao(); //Restaurando o Banco                
+                    throw new Exception("Banco Não Inexistente");
+                    //RestaurarDBPadrao(); //Restaurando o Banco                
                 }
 
                 TesteConexao(); //Restando a conexão
@@ -221,7 +222,7 @@ namespace DAL
             return retorno; //Retornando o valorr resultado 
         }
         //Pegando os diretorios padrões 
-        public void DescobrirDiretoriosPadrao(out String diretorioDados, out string diretorioLog, out string diretorioBackup)
+        /*public void DescobrirDiretoriosPadrao(out String diretorioDados, out string diretorioLog, out string diretorioBackup)
         {
             using (var connection = new System.Data.SqlClient.SqlConnection(@"Data Source=" + Servidor + ";Initial Catalog=master;Integrated Security=True;"))
             {
@@ -265,7 +266,7 @@ namespace DAL
             {
                 throw new Exception("Erro ao tentar restaurar o banco de dados!"); //Mensagem de erro caso exista
             }
-        }
+        }*/
 
 
     }

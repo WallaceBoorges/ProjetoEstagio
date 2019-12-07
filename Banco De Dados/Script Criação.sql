@@ -244,3 +244,63 @@ ALTER TABLE funcionario ADD CONSTRAINT FK_funcionario_endereco
     FOREIGN KEY (endereco_cod)
     REFERENCES endereco (endereco_cod)
     ON DELETE CASCADE ON UPDATE NO ACTION;
+
+USE [ProjetoEstagio]
+GO
+
+INSERT INTO [dbo].[endereco]
+           ([endereco_cep]
+           ,[endereco_logradouro]
+           ,[endereco_bairro]
+           ,[endereco_numero]
+           ,[endereco_cidade]
+           ,[endereco_estado])
+     VALUES
+           ('13235',
+		   'rua',
+		   'centro',
+		   '64',
+		   'Paripiranga',
+		   'Bahia')
+GO
+
+USE [ProjetoEstagio]
+GO
+
+INSERT INTO [dbo].[funcionario]
+           ([fun_nome]
+           ,[fun_usuario]
+           ,[fun_senha]
+           ,[fun_cpf]
+           ,[fun_rg]
+           ,[fun_datanascimento]
+           ,[fun_sexo]
+           ,[fun_estadocivil]
+           ,[fun_celular]
+           ,[fun_funcaoexercida]
+           ,[fun_admissao]
+           ,[fun_demissao]
+           ,[fun_salariobase]
+           ,[fun_banconome]
+           ,[fun_bancoagencia]
+           ,[fun_bancoconta]
+           ,[endereco_cod])
+     VALUES
+           ('admin',
+		   'admin',
+		   'admin',
+		   '1226563563',
+		   '23526536',
+		   '01/01/2012',
+		   'Masculino',
+		   'Solteiro',
+		   '235546354',
+		   'Administrador',
+		   '01/12/2019',
+		   null,
+		   '10000',
+		   'Nubank',
+		   '0001',
+		   '4856486',
+		   '1')
+GO
